@@ -17,8 +17,8 @@ namespace HorarioMaster
         static public string PathDataBase = Path.GetDirectoryName(Application.ExecutablePath) + @"\Global.mdb";
         private static OleDbConnection cnn = new OleDbConnection();
         
-        public DataBaseUtilities() { }       
-        
+        public DataBaseUtilities() { }
+
         public static void OpenConnection(string DataBasePath)
         {
             if (cnn.State.ToString() == "Open")

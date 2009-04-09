@@ -1,4 +1,4 @@
-﻿namespace frmCaptura
+﻿namespace HorarioMaster
 {
     partial class frmCaptura
     {

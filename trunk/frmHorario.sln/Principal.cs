@@ -9,7 +9,7 @@ using System.Windows.Forms;
 using System.IO;
 //using captura;
 
-namespace frmCaptura
+namespace HorarioMaster
 {
     public partial class Principal : Form
     {
@@ -30,6 +30,17 @@ namespace frmCaptura
             childForm.Dock = DockStyle.Fill;
             childForm.Show();
             
+        }
+
+        private void horarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form childForm = new frmHorario();
+            childForm.TopLevel = false;
+            childForm.Parent = this.splitContainer1.Panel2;
+            childForm.Height = this.splitContainer1.Panel2.Height;
+            childForm.Width = this.splitContainer1.Panel2.Width;
+            childForm.Dock = DockStyle.Fill;
+            childForm.Show();
         }
     }
 }

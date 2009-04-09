@@ -15,3 +15,14 @@ C:\Documents and Settings\Administrador\Escritorio\HorarioMaster C#\frmPrincipal
 C:\Documents and Settings\Administrador\Escritorio\HorarioMaster C#\frmPrincipal\frmPrincipal\obj\Debug\frmCaptura.Principal.resources
 C:\Documents and Settings\Administrador\Escritorio\HorarioMaster C#\frmPrincipal\frmPrincipal\obj\Debug\frmCaptura.Properties.Resources.resources
 C:\Documents and Settings\Administrador\Escritorio\HorarioMaster C#\frmPrincipal\frmPrincipal\obj\Debug\frmPrincipal.csproj.GenerateResource.Cache
+C:\HorarioMaster\obj\Debug\frmPrincipal.exe
+C:\HorarioMaster\obj\Debug\ResolveAssemblyReference.cache
+C:\HorarioMaster\obj\Debug\frmCaptura.Properties.Resources.resources
+C:\HorarioMaster\obj\Debug\frmPrincipal.csproj.GenerateResource.Cache
+C:\HorarioMaster\bin\Debug\frmPrincipal.exe
+C:\HorarioMaster\bin\Debug\frmPrincipal.pdb
+C:\HorarioMaster\obj\Debug\frmPrincipal.pdb
+C:\HorarioMaster\obj\Debug\HorarioMaster.frmCaptura.resources
+C:\HorarioMaster\obj\Debug\HorarioMaster.frmHorario.resources
+C:\HorarioMaster\obj\Debug\HorarioMaster.Principal.resources
+C:\HorarioMaster\obj\Debug\HorarioMaster.MaestroMateria.resources

@@ -7,7 +7,7 @@ using System.IO;
 using HorarioMaster;
 
 
-namespace frmHorario
+namespace HorarioMaster
 {
     public partial class frmHorario : Form
     {

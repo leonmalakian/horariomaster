@@ -61,6 +61,12 @@
     <Compile Include="frmHorario.designer.cs">
       <DependentUpon>frmHorario.cs</DependentUpon>
     </Compile>
+    <Compile Include="MaestroMateria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaestroMateria.Designer.cs">
+      <DependentUpon>MaestroMateria.cs</DependentUpon>
+    </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmHorario.resx">
       <DependentUpon>frmHorario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaestroMateria.resx">
+      <DependentUpon>MaestroMateria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>

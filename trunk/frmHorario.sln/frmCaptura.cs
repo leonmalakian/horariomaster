@@ -9,7 +9,7 @@ using System.Windows.Forms;
 using HorarioMaster;
 using System.IO;
 
-namespace frmCaptura
+namespace HorarioMaster
 {
     public partial class frmCaptura : Form
     {
@@ -23,7 +23,7 @@ namespace frmCaptura
         private void frmCaptura_Load(object sender, EventArgs e)
         {
             string[] Headers = new string[] { "Nombre", "Plan de Estudios", "Numero de Materia", "Periodos" };
-            DataBaseUtilities.AbrirConnexion(PathDataBase);
+            DataBaseUtilities.OpenConnection(PathDataBase);
             Especialidad = DataBaseUtilities.FillDataGridView("Select Nombre,Plan,Materia,Periodos From Especialidad", Especialidad, "Especialidad", Headers);
             DataGridViewComboBoxColumn i = new DataGridViewComboBoxColumn();
             DataGridViewComboBoxColumn j = new DataGridViewComboBoxColumn();
@@ -37,7 +37,7 @@ namespace frmCaptura
             j.Width = 20;
             Especialidad.Columns.Add(i);
             Especialidad.Columns.Add(j);
-            DataBaseUtilities.CerrarConexion();
+            DataBaseUtilities.CloseConnection();
         }
 
         

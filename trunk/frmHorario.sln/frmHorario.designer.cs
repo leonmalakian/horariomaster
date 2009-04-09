@@ -1,4 +1,4 @@
-﻿namespace frmHorario
+﻿namespace HorarioMaster
 {
     partial class frmHorario
     {
