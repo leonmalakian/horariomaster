@@ -1,9 +1,0 @@
-D:\Visual Studio 2008\Projects\frmHorario\frmHorario\bin\Debug\frmHorario.exe
-D:\Visual Studio 2008\Projects\frmHorario\frmHorario\bin\Debug\frmHorario.pdb
-D:\Visual Studio 2008\Projects\frmHorario\frmHorario\obj\Debug\ResolveAssemblyReference.cache
-D:\Visual Studio 2008\Projects\frmHorario\frmHorario\obj\Debug\frmHorario.Properties.Resources.resources
-D:\Visual Studio 2008\Projects\frmHorario\frmHorario\obj\Debug\frmHorario.csproj.GenerateResource.Cache
-D:\Visual Studio 2008\Projects\frmHorario\frmHorario\obj\Debug\frmHorario.exe
-D:\Visual Studio 2008\Projects\frmHorario\frmHorario\obj\Debug\frmHorario.pdb
-D:\Visual Studio 2008\Projects\frmHorario\frmHorario\obj\Debug\frmHorario.frmHorario.resources
-D:\Visual Studio 2008\Projects\frmHorario\frmHorario\obj\Debug\frmHorario.MaestroMateria.resources
