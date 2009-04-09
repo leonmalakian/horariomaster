@@ -19,7 +19,7 @@ namespace HorarioMaster
         
         public DataBaseUtilities() { }       
         
-        public static void AbrirConnexion(string DataBasePath)
+        public static void OpenConnection(string DataBasePath)
         {
             if (cnn.State.ToString() == "Open")
             {
@@ -36,19 +36,19 @@ namespace HorarioMaster
             }
         }
 
-        public static void CerrarConexion()
+        public static void CloseConnection()
         {
             cnn.Close();
         }
 
-        public static OleDbDataReader EjecutaSql(string SqlString)
+        public static OleDbDataReader ExecuteSql(string SqlString)
         {            
             OleDbCommand SentenciaSql = new OleDbCommand(SqlString, cnn);
             OleDbDataReader dr = SentenciaSql.ExecuteReader();            
             return dr;     
         }
 
-        public static void EjecutaNonSql(string SqlString)
+        public static void ExecuteNonSql(string SqlString)
         {            
             OleDbCommand cmd = new OleDbCommand();
             cmd.CommandText = SqlString;
@@ -56,13 +56,13 @@ namespace HorarioMaster
             cmd.ExecuteNonQuery();            
         }
 
-        public static void UpdateDB(string SqlString)
-        {
+        //public static void UpdateDB(string SqlString)
+        //{
             
-            OleDbCommand SentenciaSql = new OleDbCommand(SqlString, cnn);
-            OleDbDataReader dr = SentenciaSql.ExecuteReader();
+        //    OleDbCommand SentenciaSql = new OleDbCommand(SqlString, cnn);
+        //    OleDbDataReader dr = SentenciaSql.ExecuteReader();
             
-        }
+        //}
 
         public static ComboBox FillComboBox(string SqlString,string Campo,ComboBox CB)
         {
@@ -100,7 +100,7 @@ namespace HorarioMaster
             return DGV;
         }
 
-        public OleDbConnection RegresaConexion
+        public OleDbConnection ConnectionState
         {
             get
             {
@@ -108,7 +108,7 @@ namespace HorarioMaster
             }
         }
 
-        public static bool ExisteEnTabla(string SqlString)
+        public static bool RecordExist(string SqlString)
         {             
             OleDbCommand SentenciaSql = new OleDbCommand(SqlString, cnn);
             OleDbDataReader dr = SentenciaSql.ExecuteReader();
@@ -119,6 +119,22 @@ namespace HorarioMaster
             }
             dr.Close();            
             return false;                       
+        }
+
+        public static object ReturnRecord(string SqlString,string Field)
+        {
+            object sTemp = null;
+            OleDbCommand SentenciaSql = new OleDbCommand(SqlString, cnn);
+            OleDbDataReader dr = SentenciaSql.ExecuteReader();
+            if (dr.HasRows)
+            {
+                dr.Read();
+                sTemp = dr[Field];
+                dr.Close();
+                return sTemp;
+            }
+            dr.Close();
+            return "";   
         }
     }
 }
