@@ -99,7 +99,18 @@ namespace HorarioMaster
             
             return DGV;
         }
+        
+        public static DataGridView FillDataGridViewX(string SqlString, DataGridView DGV, string Table)
+        {
 
+            OleDbDataAdapter da = new OleDbDataAdapter(SqlString, cnn);
+            DataSet ds = new DataSet();
+            da.Fill(ds, Table);
+            DGV.DataSource = ds.Tables[0];
+            DGV.AutoSize = DGV.AutoSize;
+            return DGV;
+        }
+        
         public OleDbConnection ConnectionState
         {
             get

@@ -49,6 +49,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataBaseUtilities.cs" />
+    <Compile Include="DGVMaster.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DGVMaster.Designer.cs">
+      <DependentUpon>DGVMaster.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCaptura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DGVMaster.resx">
+      <DependentUpon>DGVMaster.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCaptura.resx">
       <DependentUpon>frmCaptura.cs</DependentUpon>
       <SubType>Designer</SubType>

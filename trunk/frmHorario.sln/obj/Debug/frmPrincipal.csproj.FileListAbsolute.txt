@@ -26,3 +26,15 @@ C:\HorarioMaster\obj\Debug\HorarioMaster.frmCaptura.resources
 C:\HorarioMaster\obj\Debug\HorarioMaster.frmHorario.resources
 C:\HorarioMaster\obj\Debug\HorarioMaster.Principal.resources
 C:\HorarioMaster\obj\Debug\HorarioMaster.MaestroMateria.resources
+C:\Users\jando\Desktop\HorarioMaster\frmHorario.sln\obj\Debug\frmPrincipal.exe
+C:\Users\jando\Desktop\HorarioMaster\frmHorario.sln\bin\Debug\frmPrincipal.exe
+C:\Users\jando\Desktop\HorarioMaster\frmHorario.sln\bin\Debug\frmPrincipal.pdb
+C:\Users\jando\Desktop\HorarioMaster\frmHorario.sln\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\jando\Desktop\HorarioMaster\frmHorario.sln\obj\Debug\HorarioMaster.frmCaptura.resources
+C:\Users\jando\Desktop\HorarioMaster\frmHorario.sln\obj\Debug\HorarioMaster.frmHorario.resources
+C:\Users\jando\Desktop\HorarioMaster\frmHorario.sln\obj\Debug\HorarioMaster.MaestroMateria.resources
+C:\Users\jando\Desktop\HorarioMaster\frmHorario.sln\obj\Debug\HorarioMaster.Principal.resources
+C:\Users\jando\Desktop\HorarioMaster\frmHorario.sln\obj\Debug\frmCaptura.Properties.Resources.resources
+C:\Users\jando\Desktop\HorarioMaster\frmHorario.sln\obj\Debug\frmPrincipal.csproj.GenerateResource.Cache
+C:\Users\jando\Desktop\HorarioMaster\frmHorario.sln\obj\Debug\frmPrincipal.pdb
+C:\Users\jando\Desktop\HorarioMaster\frmHorario.sln\obj\Debug\frmCaptura.DGVMaster.resources

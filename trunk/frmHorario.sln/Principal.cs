@@ -22,13 +22,13 @@ namespace HorarioMaster
 
         private void capturarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form childForm = new frmCaptura();
-            childForm.TopLevel = false;
-            childForm.Parent = this.splitContainer1.Panel2;
-            childForm.Height = this.splitContainer1.Panel2.Height;
-            childForm.Width = this.splitContainer1.Panel2.Width;
-            childForm.Dock = DockStyle.Fill;
-            childForm.Show();
+            Form childFormC = new frmCaptura();
+            childFormC.TopLevel = false;
+            childFormC.Parent = this.splitContainer1.Panel2;
+            childFormC.Height = this.splitContainer1.Panel2.Height;
+            childFormC.Width = this.splitContainer1.Panel2.Width;
+            childFormC.Dock = DockStyle.Fill;
+            childFormC.Show();
             
         }
 
@@ -42,5 +42,36 @@ namespace HorarioMaster
             childForm.Dock = DockStyle.Fill;
             childForm.Show();
         }
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            
+            
+            switch (e.Node.Name)
+            {
+                 case "NodeCaptura":
+                    Form childFormC = new frmCaptura();
+                    childFormC.TopLevel = false;
+                    childFormC.Parent = this.splitContainer1.Panel2;
+                    childFormC.Height = this.splitContainer1.Panel2.Height;
+                    childFormC.Width = this.splitContainer1.Panel2.Width;
+                    childFormC.Dock = DockStyle.Fill;
+                    childFormC.Show();
+                    //if(e.Node.Name = "NodeHorario")
+                    break;
+                case "NodeHorario":
+                    Form childForm = new frmHorario();
+                    childForm.TopLevel = false;
+                    childForm.Parent = this.splitContainer1.Panel2;
+                    childForm.Height = this.splitContainer1.Panel2.Height;
+                    childForm.Width = this.splitContainer1.Panel2.Width;
+                    childForm.Dock = DockStyle.Fill;
+                    childForm.Show();
+                    break;
+            }
+        }
+
+        
+       
     }
 }

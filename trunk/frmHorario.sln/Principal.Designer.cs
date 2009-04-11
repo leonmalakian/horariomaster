@@ -28,12 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Captura");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Horario");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Principal", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2});
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.capturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.capturarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.horarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.treeView1 = new System.Windows.Forms.TreeView();
             this.menuStrip1.SuspendLayout();
+            this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,20 +61,20 @@
             this.capturarToolStripMenuItem,
             this.horarioToolStripMenuItem});
             this.capturaToolStripMenuItem.Name = "capturaToolStripMenuItem";
-            this.capturaToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
+            this.capturaToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.capturaToolStripMenuItem.Text = "Menu";
             // 
             // capturarToolStripMenuItem
             // 
             this.capturarToolStripMenuItem.Name = "capturarToolStripMenuItem";
-            this.capturarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.capturarToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.capturarToolStripMenuItem.Text = "Capturar";
             this.capturarToolStripMenuItem.Click += new System.EventHandler(this.capturarToolStripMenuItem_Click);
             // 
             // horarioToolStripMenuItem
             // 
             this.horarioToolStripMenuItem.Name = "horarioToolStripMenuItem";
-            this.horarioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.horarioToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.horarioToolStripMenuItem.Text = "Horario";
             this.horarioToolStripMenuItem.Click += new System.EventHandler(this.horarioToolStripMenuItem_Click);
             // 
@@ -80,6 +87,7 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.splitContainer1.Panel1.Controls.Add(this.treeView1);
             // 
             // splitContainer1.Panel2
             // 
@@ -87,6 +95,29 @@
             this.splitContainer1.Size = new System.Drawing.Size(999, 500);
             this.splitContainer1.SplitterDistance = 129;
             this.splitContainer1.TabIndex = 1;
+            // 
+            // treeView1
+            // 
+            this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeView1.FullRowSelect = true;
+            this.treeView1.Location = new System.Drawing.Point(0, 0);
+            this.treeView1.Name = "treeView1";
+            treeNode1.Checked = true;
+            treeNode1.Name = "NodeCaptura";
+            treeNode1.NodeFont = new System.Drawing.Font("Tahoma", 8.25F);
+            treeNode1.Text = "Captura";
+            treeNode2.Name = "NodeHorario";
+            treeNode2.NodeFont = new System.Drawing.Font("Tahoma", 8.25F);
+            treeNode2.Text = "Horario";
+            treeNode3.Checked = true;
+            treeNode3.Name = "NodePrincipal";
+            treeNode3.NodeFont = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            treeNode3.Text = "Principal";
+            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode3});
+            this.treeView1.Size = new System.Drawing.Size(129, 500);
+            this.treeView1.TabIndex = 0;
+            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
             // Principal
             // 
@@ -101,6 +132,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -114,6 +146,7 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.ToolStripMenuItem capturarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem horarioToolStripMenuItem;
+        private System.Windows.Forms.TreeView treeView1;
 
     }
 }
