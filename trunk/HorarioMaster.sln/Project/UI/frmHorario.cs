@@ -84,21 +84,36 @@ namespace HorarioMaster
         #endregion       
 
         #region Labels Horario
+        
 
         private void HA1_DragDrop(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            DROP[1] = DROP[0];
-            DRAG[1] = DRAG[0];
-            FillDragDrop();
-            ChangeFields();
-            FillSchedules();
-            e.Effect = DragDropEffects.Move;          
+            if (lbComplementaryActivities.SelectedItem != null)
+            {                
+                HA1.Text = lbComplementaryActivities.SelectedItem.ToString();
+                DragDropLB("Lunes", "7:00:8:00", 0, 0);
+                e.Effect = DragDropEffects.Move;
+            }
+            else
+            {
+                DROP[1] = DROP[0];
+                DRAG[1] = DRAG[0];
+                FillDragDrop();
+                ChangeFields();
+                FillSchedules();
+                e.Effect = DragDropEffects.Move;
+            }                        
         }
 
         private void HA1_DragEnter(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            DROP[0] = DataSchedule[0][0];
-            e.Effect = DragDropEffects.Link;            
+            if (cmbScheduleType.Text == "Maestro")
+            {
+                DragEnterTeacher(0, 0);
+                e.Effect = DragDropEffects.Link;  
+            }
+            else { DROP[0] = DataSchedule[0][0]; e.Effect = DragDropEffects.Link; }
+              
         }
 
         private void HA1_MouseDown(object sender, MouseEventArgs e)
@@ -109,566 +124,1235 @@ namespace HorarioMaster
 
         private void HA2_DragDrop(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            DROP[1] = DROP[0];
-            DRAG[1] = DRAG[0];
-            FillDragDrop();
-            ChangeFields();
-            FillSchedules();
-            e.Effect = DragDropEffects.Move;
+            if (lbComplementaryActivities.SelectedItem != null)
+            {
+                HA2.Text = lbComplementaryActivities.SelectedItem.ToString();
+                DragDropLB("Martes", "7:00:8:00", 0, 1);
+                e.Effect = DragDropEffects.Move;
+            }
+            else
+            {
+                DROP[1] = DROP[0];
+                DRAG[1] = DRAG[0];
+                FillDragDrop();
+                ChangeFields();
+                FillSchedules();
+                e.Effect = DragDropEffects.Move;
+            }
         }
 
         private void HA2_DragEnter(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            DROP[0] = DataSchedule[0][1];            
-            e.Effect = DragDropEffects.Link;            
+            if (cmbScheduleType.Text == "Maestro")
+            {
+                DragEnterTeacher(0, 1);
+                e.Effect = DragDropEffects.Link;
+            }
+            else { DROP[0] = DataSchedule[0][1]; e.Effect = DragDropEffects.Link; }
+
         }
 
         private void HA2_MouseDown(object sender, MouseEventArgs e)
         {
-            DRAG[0] = DataSchedule[0][1];     
+            DRAG[0] = DataSchedule[0][1];
             HA2.DoDragDrop(HA2, DragDropEffects.Link);
         }
 
+
         private void HA3_DragDrop(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Move;         
+            if (lbComplementaryActivities.SelectedItem != null)
+            {
+                HA3.Text = lbComplementaryActivities.SelectedItem.ToString();
+                DragDropLB("Miercoles", "7:00:8:00", 0, 2);
+                e.Effect = DragDropEffects.Move;
+            }
+            else
+            {
+                DROP[1] = DROP[0];
+                DRAG[1] = DRAG[0];
+                FillDragDrop();
+                ChangeFields();
+                FillSchedules();
+                e.Effect = DragDropEffects.Move;
+            }
         }
 
         private void HA3_DragEnter(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Link;
+            if (cmbScheduleType.Text == "Maestro")
+            {
+                DragEnterTeacher(0, 2);
+                e.Effect = DragDropEffects.Link;
+            }
+            else { DROP[0] = DataSchedule[0][2]; e.Effect = DragDropEffects.Link; }
+
         }
 
         private void HA3_MouseDown(object sender, MouseEventArgs e)
         {
+            DRAG[0] = DataSchedule[0][2];
             HA3.DoDragDrop(HA3, DragDropEffects.Link);
         }
 
         private void HA4_DragDrop(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Move;                   
+            if (lbComplementaryActivities.SelectedItem != null)
+            {
+                HA4.Text = lbComplementaryActivities.SelectedItem.ToString();
+                DragDropLB("Jueves", "7:00:8:00", 0, 3);
+                e.Effect = DragDropEffects.Move;
+            }
+            else
+            {
+                DROP[1] = DROP[0];
+                DRAG[1] = DRAG[0];
+                FillDragDrop();
+                ChangeFields();
+                FillSchedules();
+                e.Effect = DragDropEffects.Move;
+            }
         }
 
         private void HA4_DragEnter(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Link;
+            if (cmbScheduleType.Text == "Maestro")
+            {
+                DragEnterTeacher(0, 3);
+                e.Effect = DragDropEffects.Link;
+            }
+            else { DROP[0] = DataSchedule[0][3]; e.Effect = DragDropEffects.Link; }
 
         }
 
         private void HA4_MouseDown(object sender, MouseEventArgs e)
         {
+            DRAG[0] = DataSchedule[0][3];
             HA4.DoDragDrop(HA4, DragDropEffects.Link);
         }
 
         private void HA5_DragDrop(object sender, System.Windows.Forms.DragEventArgs e)
-        {           
-                    e.Effect = DragDropEffects.Move;
-        
+        {
+            if (lbComplementaryActivities.SelectedItem != null)
+            {
+                HA5.Text = lbComplementaryActivities.SelectedItem.ToString();
+                DragDropLB("Viernes", "7:00:8:00", 0, 4);
+                e.Effect = DragDropEffects.Move;
+            }
+            else
+            {
+                DROP[1] = DROP[0];
+                DRAG[1] = DRAG[0];
+                FillDragDrop();
+                ChangeFields();
+                FillSchedules();
+                e.Effect = DragDropEffects.Move;
+            }
         }
 
         private void HA5_DragEnter(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Link;
+            if (cmbScheduleType.Text == "Maestro")
+            {
+                DragEnterTeacher(0, 4);
+                e.Effect = DragDropEffects.Link;
+            }
+            else { DROP[0] = DataSchedule[0][4]; e.Effect = DragDropEffects.Link; }
 
         }
 
         private void HA5_MouseDown(object sender, MouseEventArgs e)
         {
+            DRAG[0] = DataSchedule[0][4];
             HA5.DoDragDrop(HA5, DragDropEffects.Link);
         }
 
         private void HA6_DragDrop(object sender, System.Windows.Forms.DragEventArgs e)
         {
-                    e.Effect = DragDropEffects.Move;
-           
+            if (lbComplementaryActivities.SelectedItem != null)
+            {
+                HA6.Text = lbComplementaryActivities.SelectedItem.ToString();
+                DragDropLB("Lunes", "8:00:9:00", 1, 0);
+                e.Effect = DragDropEffects.Move;
+            }
+            else
+            {
+                DROP[1] = DROP[0];
+                DRAG[1] = DRAG[0];
+                FillDragDrop();
+                ChangeFields();
+                FillSchedules();
+                e.Effect = DragDropEffects.Move;
+            }
         }
 
         private void HA6_DragEnter(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Link;
+            if (cmbScheduleType.Text == "Maestro")
+            {
+                DragEnterTeacher(1, 0);
+                e.Effect = DragDropEffects.Link;
+            }
+            else { DROP[0] = DataSchedule[1][0]; e.Effect = DragDropEffects.Link; }
 
         }
 
         private void HA6_MouseDown(object sender, MouseEventArgs e)
         {
+            DRAG[0] = DataSchedule[1][0];
             HA6.DoDragDrop(HA6, DragDropEffects.Link);
         }
 
         private void HA7_DragDrop(object sender, System.Windows.Forms.DragEventArgs e)
         {
-                    e.Effect = DragDropEffects.Move;
-            
+            if (lbComplementaryActivities.SelectedItem != null)
+            {
+                HA7.Text = lbComplementaryActivities.SelectedItem.ToString();
+                DragDropLB("Martes", "8:00:9:00", 1, 1);
+                e.Effect = DragDropEffects.Move;
+            }
+            else
+            {
+                DROP[1] = DROP[0];
+                DRAG[1] = DRAG[0];
+                FillDragDrop();
+                ChangeFields();
+                FillSchedules();
+                e.Effect = DragDropEffects.Move;
+            }
         }
 
         private void HA7_DragEnter(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Link;
-
-         
+            if (cmbScheduleType.Text == "Maestro")
+            {
+                DragEnterTeacher(1, 1);
+                e.Effect = DragDropEffects.Link;
+            }
+            else { DROP[0] = DataSchedule[1][1]; e.Effect = DragDropEffects.Link; }
 
         }
 
         private void HA7_MouseDown(object sender, MouseEventArgs e)
         {
+            DRAG[0] = DataSchedule[1][1];
             HA7.DoDragDrop(HA7, DragDropEffects.Link);
         }
 
+
         private void HA8_DragDrop(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            
-                    e.Effect = DragDropEffects.Move;
-          
+            if (lbComplementaryActivities.SelectedItem != null)
+            {
+                HA8.Text = lbComplementaryActivities.SelectedItem.ToString();
+                DragDropLB("Miercoles", "8:00:9:00", 1, 2);
+                e.Effect = DragDropEffects.Move;
+            }
+            else
+            {
+                DROP[1] = DROP[0];
+                DRAG[1] = DRAG[0];
+                FillDragDrop();
+                ChangeFields();
+                FillSchedules();
+                e.Effect = DragDropEffects.Move;
+            }
         }
 
         private void HA8_DragEnter(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Link;
+            if (cmbScheduleType.Text == "Maestro")
+            {
+                DragEnterTeacher(1, 2);
+                e.Effect = DragDropEffects.Link;
+            }
+            else { DROP[0] = DataSchedule[1][2]; e.Effect = DragDropEffects.Link; }
 
         }
 
         private void HA8_MouseDown(object sender, MouseEventArgs e)
         {
+            DRAG[0] = DataSchedule[1][2];
             HA8.DoDragDrop(HA8, DragDropEffects.Link);
         }
 
         private void HA9_DragDrop(object sender, System.Windows.Forms.DragEventArgs e)
         {
-                    e.Effect = DragDropEffects.Move;
-        
+            if (lbComplementaryActivities.SelectedItem != null)
+            {
+                HA9.Text = lbComplementaryActivities.SelectedItem.ToString();
+                DragDropLB("Jueves", "8:00:9:00", 1, 3);
+                e.Effect = DragDropEffects.Move;
+            }
+            else
+            {
+                DROP[1] = DROP[0];
+                DRAG[1] = DRAG[0];
+                FillDragDrop();
+                ChangeFields();
+                FillSchedules();
+                e.Effect = DragDropEffects.Move;
+            }
         }
 
         private void HA9_DragEnter(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Link;
+            if (cmbScheduleType.Text == "Maestro")
+            {
+                DragEnterTeacher(1, 3);
+                e.Effect = DragDropEffects.Link;
+            }
+            else { DROP[0] = DataSchedule[1][3]; e.Effect = DragDropEffects.Link; }
 
-        
         }
 
         private void HA9_MouseDown(object sender, MouseEventArgs e)
         {
+            DRAG[0] = DataSchedule[1][3];
             HA9.DoDragDrop(HA9, DragDropEffects.Link);
         }
 
         private void HA10_DragDrop(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Move;
+            if (lbComplementaryActivities.SelectedItem != null)
+            {
+                HA10.Text = lbComplementaryActivities.SelectedItem.ToString();
+                DragDropLB("Viernes", "8:00:9:00", 1, 4);
+                e.Effect = DragDropEffects.Move;
+            }
+            else
+            {
+                DROP[1] = DROP[0];
+                DRAG[1] = DRAG[0];
+                FillDragDrop();
+                ChangeFields();
+                FillSchedules();
+                e.Effect = DragDropEffects.Move;
+            }
         }
 
         private void HA10_DragEnter(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Link;
+            if (cmbScheduleType.Text == "Maestro")
+            {
+                DragEnterTeacher(1, 4);
+                e.Effect = DragDropEffects.Link;
+            }
+            else { DROP[0] = DataSchedule[1][4]; e.Effect = DragDropEffects.Link; }
 
         }
 
         private void HA10_MouseDown(object sender, MouseEventArgs e)
         {
+            DRAG[0] = DataSchedule[1][4];
             HA10.DoDragDrop(HA10, DragDropEffects.Link);
         }
 
         private void HA11_DragDrop(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Move;
+            if (lbComplementaryActivities.SelectedItem != null)
+            {
+                HA11.Text = lbComplementaryActivities.SelectedItem.ToString();
+                DragDropLB("Lunes", "9:00:10:00", 2, 0);
+                e.Effect = DragDropEffects.Move;
+            }
+            else
+            {
+                DROP[1] = DROP[0];
+                DRAG[1] = DRAG[0];
+                FillDragDrop();
+                ChangeFields();
+                FillSchedules();
+                e.Effect = DragDropEffects.Move;
+            }
         }
 
         private void HA11_DragEnter(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Link;
+            if (cmbScheduleType.Text == "Maestro")
+            {
+                DragEnterTeacher(2, 0);
+                e.Effect = DragDropEffects.Link;
+            }
+            else { DROP[0] = DataSchedule[2][0]; e.Effect = DragDropEffects.Link; }
 
         }
 
         private void HA11_MouseDown(object sender, MouseEventArgs e)
         {
+            DRAG[0] = DataSchedule[2][0];
             HA11.DoDragDrop(HA11, DragDropEffects.Link);
         }
 
         private void HA12_DragDrop(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Move;
+            if (lbComplementaryActivities.SelectedItem != null)
+            {
+                HA12.Text = lbComplementaryActivities.SelectedItem.ToString();
+                DragDropLB("Martes", "9:00:10:00", 2, 1);
+                e.Effect = DragDropEffects.Move;
+            }
+            else
+            {
+                DROP[1] = DROP[0];
+                DRAG[1] = DRAG[0];
+                FillDragDrop();
+                ChangeFields();
+                FillSchedules();
+                e.Effect = DragDropEffects.Move;
+            }
         }
 
         private void HA12_DragEnter(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Link;
+            if (cmbScheduleType.Text == "Maestro")
+            {
+                DragEnterTeacher(2, 1);
+                e.Effect = DragDropEffects.Link;
+            }
+            else { DROP[0] = DataSchedule[2][1]; e.Effect = DragDropEffects.Link; }
 
         }
 
         private void HA12_MouseDown(object sender, MouseEventArgs e)
         {
+            DRAG[0] = DataSchedule[2][1];
             HA12.DoDragDrop(HA12, DragDropEffects.Link);
         }
 
+
         private void HA13_DragDrop(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Move;
+            if (lbComplementaryActivities.SelectedItem != null)
+            {
+                HA13.Text = lbComplementaryActivities.SelectedItem.ToString();
+                DragDropLB("Miercoles", "9:00:10:00", 2, 2);
+                e.Effect = DragDropEffects.Move;
+            }
+            else
+            {
+                DROP[1] = DROP[0];
+                DRAG[1] = DRAG[0];
+                FillDragDrop();
+                ChangeFields();
+                FillSchedules();
+                e.Effect = DragDropEffects.Move;
+            }
         }
 
         private void HA13_DragEnter(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Link;
-
+            if (cmbScheduleType.Text == "Maestro")
+            {
+                DragEnterTeacher(2, 2);
+                e.Effect = DragDropEffects.Link;
+            }
+            else { DROP[0] = DataSchedule[2][2]; e.Effect = DragDropEffects.Link; }
 
         }
 
         private void HA13_MouseDown(object sender, MouseEventArgs e)
         {
+            DRAG[0] = DataSchedule[2][2];
             HA13.DoDragDrop(HA13, DragDropEffects.Link);
         }
 
         private void HA14_DragDrop(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Move;
+            if (lbComplementaryActivities.SelectedItem != null)
+            {
+                HA14.Text = lbComplementaryActivities.SelectedItem.ToString();
+                DragDropLB("Jueves", "9:00:10:00", 2, 3);
+                e.Effect = DragDropEffects.Move;
+            }
+            else
+            {
+                DROP[1] = DROP[0];
+                DRAG[1] = DRAG[0];
+                FillDragDrop();
+                ChangeFields();
+                FillSchedules();
+                e.Effect = DragDropEffects.Move;
+            }
         }
 
         private void HA14_DragEnter(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Link;
+            if (cmbScheduleType.Text == "Maestro")
+            {
+                DragEnterTeacher(2, 3);
+                e.Effect = DragDropEffects.Link;
+            }
+            else { DROP[0] = DataSchedule[2][3]; e.Effect = DragDropEffects.Link; }
 
         }
 
         private void HA14_MouseDown(object sender, MouseEventArgs e)
         {
+            DRAG[0] = DataSchedule[2][3];
             HA14.DoDragDrop(HA14, DragDropEffects.Link);
         }
 
         private void HA15_DragDrop(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Move;
+            if (lbComplementaryActivities.SelectedItem != null)
+            {
+                HA15.Text = lbComplementaryActivities.SelectedItem.ToString();
+                DragDropLB("Viernes", "9:00:10:00", 2, 4);
+                e.Effect = DragDropEffects.Move;
+            }
+            else
+            {
+                DROP[1] = DROP[0];
+                DRAG[1] = DRAG[0];
+                FillDragDrop();
+                ChangeFields();
+                FillSchedules();
+                e.Effect = DragDropEffects.Move;
+            }
         }
 
         private void HA15_DragEnter(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Link;
+            if (cmbScheduleType.Text == "Maestro")
+            {
+                DragEnterTeacher(2, 4);
+                e.Effect = DragDropEffects.Link;
+            }
+            else { DROP[0] = DataSchedule[2][4]; e.Effect = DragDropEffects.Link; }
 
         }
 
         private void HA15_MouseDown(object sender, MouseEventArgs e)
         {
+            DRAG[0] = DataSchedule[2][4];
             HA15.DoDragDrop(HA15, DragDropEffects.Link);
         }
 
         private void HA16_DragDrop(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Move;
+            if (lbComplementaryActivities.SelectedItem != null)
+            {
+                HA16.Text = lbComplementaryActivities.SelectedItem.ToString();
+                DragDropLB("Lunes", "10:00:11:00", 3, 0);
+                e.Effect = DragDropEffects.Move;
+            }
+            else
+            {
+                DROP[1] = DROP[0];
+                DRAG[1] = DRAG[0];
+                FillDragDrop();
+                ChangeFields();
+                FillSchedules();
+                e.Effect = DragDropEffects.Move;
+            }
         }
 
         private void HA16_DragEnter(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Link;
+            if (cmbScheduleType.Text == "Maestro")
+            {
+                DragEnterTeacher(3, 0);
+                e.Effect = DragDropEffects.Link;
+            }
+            else { DROP[0] = DataSchedule[3][0]; e.Effect = DragDropEffects.Link; }
 
         }
 
         private void HA16_MouseDown(object sender, MouseEventArgs e)
         {
+            DRAG[0] = DataSchedule[3][0];
             HA16.DoDragDrop(HA16, DragDropEffects.Link);
         }
 
         private void HA17_DragDrop(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Move;
+            if (lbComplementaryActivities.SelectedItem != null)
+            {
+                HA17.Text = lbComplementaryActivities.SelectedItem.ToString();
+                DragDropLB("Martes", "10:00:11:00", 3, 1);
+                e.Effect = DragDropEffects.Move;
+            }
+            else
+            {
+                DROP[1] = DROP[0];
+                DRAG[1] = DRAG[0];
+                FillDragDrop();
+                ChangeFields();
+                FillSchedules();
+                e.Effect = DragDropEffects.Move;
+            }
         }
 
         private void HA17_DragEnter(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Link;
+            if (cmbScheduleType.Text == "Maestro")
+            {
+                DragEnterTeacher(3, 1);
+                e.Effect = DragDropEffects.Link;
+            }
+            else { DROP[0] = DataSchedule[3][1]; e.Effect = DragDropEffects.Link; }
 
         }
 
         private void HA17_MouseDown(object sender, MouseEventArgs e)
         {
+            DRAG[0] = DataSchedule[3][1];
             HA17.DoDragDrop(HA17, DragDropEffects.Link);
         }
 
+
         private void HA18_DragDrop(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Move;
+            if (lbComplementaryActivities.SelectedItem != null)
+            {
+                HA18.Text = lbComplementaryActivities.SelectedItem.ToString();
+                DragDropLB("Miercoles", "10:00:11:00", 3, 2);
+                e.Effect = DragDropEffects.Move;
+            }
+            else
+            {
+                DROP[1] = DROP[0];
+                DRAG[1] = DRAG[0];
+                FillDragDrop();
+                ChangeFields();
+                FillSchedules();
+                e.Effect = DragDropEffects.Move;
+            }
         }
 
         private void HA18_DragEnter(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Link;
+            if (cmbScheduleType.Text == "Maestro")
+            {
+                DragEnterTeacher(3, 2);
+                e.Effect = DragDropEffects.Link;
+            }
+            else { DROP[0] = DataSchedule[3][2]; e.Effect = DragDropEffects.Link; }
 
         }
 
         private void HA18_MouseDown(object sender, MouseEventArgs e)
         {
+            DRAG[0] = DataSchedule[3][2];
             HA18.DoDragDrop(HA18, DragDropEffects.Link);
         }
 
         private void HA19_DragDrop(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Move;
-
+            if (lbComplementaryActivities.SelectedItem != null)
+            {
+                HA19.Text = lbComplementaryActivities.SelectedItem.ToString();
+                DragDropLB("Jueves", "10:00:11:00", 3, 3);
+                e.Effect = DragDropEffects.Move;
+            }
+            else
+            {
+                DROP[1] = DROP[0];
+                DRAG[1] = DRAG[0];
+                FillDragDrop();
+                ChangeFields();
+                FillSchedules();
+                e.Effect = DragDropEffects.Move;
+            }
         }
 
         private void HA19_DragEnter(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Link;
+            if (cmbScheduleType.Text == "Maestro")
+            {
+                DragEnterTeacher(3, 3);
+                e.Effect = DragDropEffects.Link;
+            }
+            else { DROP[0] = DataSchedule[3][3]; e.Effect = DragDropEffects.Link; }
 
         }
 
         private void HA19_MouseDown(object sender, MouseEventArgs e)
         {
+            DRAG[0] = DataSchedule[3][3];
             HA19.DoDragDrop(HA19, DragDropEffects.Link);
         }
 
         private void HA20_DragDrop(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Move;
+            if (lbComplementaryActivities.SelectedItem != null)
+            {
+                HA20.Text = lbComplementaryActivities.SelectedItem.ToString();
+                DragDropLB("Viernes", "10:00:11:00", 3, 4);
+                e.Effect = DragDropEffects.Move;
+            }
+            else
+            {
+                DROP[1] = DROP[0];
+                DRAG[1] = DRAG[0];
+                FillDragDrop();
+                ChangeFields();
+                FillSchedules();
+                e.Effect = DragDropEffects.Move;
+            }
         }
 
         private void HA20_DragEnter(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Link;
+            if (cmbScheduleType.Text == "Maestro")
+            {
+                DragEnterTeacher(3, 4);
+                e.Effect = DragDropEffects.Link;
+            }
+            else { DROP[0] = DataSchedule[3][4]; e.Effect = DragDropEffects.Link; }
 
         }
 
         private void HA20_MouseDown(object sender, MouseEventArgs e)
         {
+            DRAG[0] = DataSchedule[3][4];
             HA20.DoDragDrop(HA20, DragDropEffects.Link);
-        }
+        }      
 
         private void HA21_DragDrop(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Move;
+            if (lbComplementaryActivities.SelectedItem != null)
+            {
+                HA21.Text = lbComplementaryActivities.SelectedItem.ToString();
+                DragDropLB("Lunes", "11:00:12:00", 4, 0);
+                e.Effect = DragDropEffects.Move;
+            }
+            else
+            {
+                DROP[1] = DROP[0];
+                DRAG[1] = DRAG[0];
+                FillDragDrop();
+                ChangeFields();
+                FillSchedules();
+                e.Effect = DragDropEffects.Move;
+            }
         }
 
         private void HA21_DragEnter(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Link;
-
+            if (cmbScheduleType.Text == "Maestro")
+            {
+                DragEnterTeacher(4, 0);
+                e.Effect = DragDropEffects.Link;
+            }
+            else { DROP[0] = DataSchedule[4][0]; e.Effect = DragDropEffects.Link; }
 
         }
 
         private void HA21_MouseDown(object sender, MouseEventArgs e)
         {
+            DRAG[0] = DataSchedule[4][0];
             HA21.DoDragDrop(HA21, DragDropEffects.Link);
         }
 
         private void HA22_DragDrop(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Move;
+            if (lbComplementaryActivities.SelectedItem != null)
+            {
+                HA22.Text = lbComplementaryActivities.SelectedItem.ToString();
+                DragDropLB("Martes", "11:00:12:00", 4, 1);
+                e.Effect = DragDropEffects.Move;
+            }
+            else
+            {
+                DROP[1] = DROP[0];
+                DRAG[1] = DRAG[0];
+                FillDragDrop();
+                ChangeFields();
+                FillSchedules();
+                e.Effect = DragDropEffects.Move;
+            }
         }
 
         private void HA22_DragEnter(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Link;
+            if (cmbScheduleType.Text == "Maestro")
+            {
+                DragEnterTeacher(4, 1);
+                e.Effect = DragDropEffects.Link;
+            }
+            else { DROP[0] = DataSchedule[4][1]; e.Effect = DragDropEffects.Link; }
 
         }
 
         private void HA22_MouseDown(object sender, MouseEventArgs e)
         {
+            DRAG[0] = DataSchedule[4][1];
             HA22.DoDragDrop(HA22, DragDropEffects.Link);
         }
 
+
         private void HA23_DragDrop(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Move;
+            if (lbComplementaryActivities.SelectedItem != null)
+            {
+                HA23.Text = lbComplementaryActivities.SelectedItem.ToString();
+                DragDropLB("Miercoles", "11:00:12:00", 4, 2);
+                e.Effect = DragDropEffects.Move;
+            }
+            else
+            {
+                DROP[1] = DROP[0];
+                DRAG[1] = DRAG[0];
+                FillDragDrop();
+                ChangeFields();
+                FillSchedules();
+                e.Effect = DragDropEffects.Move;
+            }
         }
 
         private void HA23_DragEnter(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Link;
+            if (cmbScheduleType.Text == "Maestro")
+            {
+                DragEnterTeacher(4, 2);
+                e.Effect = DragDropEffects.Link;
+            }
+            else { DROP[0] = DataSchedule[4][2]; e.Effect = DragDropEffects.Link; }
 
         }
 
         private void HA23_MouseDown(object sender, MouseEventArgs e)
         {
+            DRAG[0] = DataSchedule[4][2];
             HA23.DoDragDrop(HA23, DragDropEffects.Link);
         }
 
         private void HA24_DragDrop(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Move;
+            if (lbComplementaryActivities.SelectedItem != null)
+            {
+                HA24.Text = lbComplementaryActivities.SelectedItem.ToString();
+                DragDropLB("Jueves", "11:00:12:00", 4, 3);
+                e.Effect = DragDropEffects.Move;
+            }
+            else
+            {
+                DROP[1] = DROP[0];
+                DRAG[1] = DRAG[0];
+                FillDragDrop();
+                ChangeFields();
+                FillSchedules();
+                e.Effect = DragDropEffects.Move;
+            }
         }
 
         private void HA24_DragEnter(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Link;
+            if (cmbScheduleType.Text == "Maestro")
+            {
+                DragEnterTeacher(4, 3);
+                e.Effect = DragDropEffects.Link;
+            }
+            else { DROP[0] = DataSchedule[4][3]; e.Effect = DragDropEffects.Link; }
 
         }
 
         private void HA24_MouseDown(object sender, MouseEventArgs e)
         {
+            DRAG[0] = DataSchedule[4][3];
             HA24.DoDragDrop(HA24, DragDropEffects.Link);
         }
 
         private void HA25_DragDrop(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Move;
+            if (lbComplementaryActivities.SelectedItem != null)
+            {
+                HA25.Text = lbComplementaryActivities.SelectedItem.ToString();
+                DragDropLB("Viernes", "11:00:12:00", 4, 4);
+                e.Effect = DragDropEffects.Move;
+            }
+            else
+            {
+                DROP[1] = DROP[0];
+                DRAG[1] = DRAG[0];
+                FillDragDrop();
+                ChangeFields();
+                FillSchedules();
+                e.Effect = DragDropEffects.Move;
+            }
         }
 
         private void HA25_DragEnter(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Link;
+            if (cmbScheduleType.Text == "Maestro")
+            {
+                DragEnterTeacher(4, 4);
+                e.Effect = DragDropEffects.Link;
+            }
+            else { DROP[0] = DataSchedule[4][4]; e.Effect = DragDropEffects.Link; }
 
         }
 
         private void HA25_MouseDown(object sender, MouseEventArgs e)
         {
+            DRAG[0] = DataSchedule[4][4];
             HA25.DoDragDrop(HA25, DragDropEffects.Link);
         }
 
         private void HA26_DragDrop(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Move;
+            if (lbComplementaryActivities.SelectedItem != null)
+            {
+                HA26.Text = lbComplementaryActivities.SelectedItem.ToString();
+                DragDropLB("Lunes", "12:00:13:00", 5, 0);
+                e.Effect = DragDropEffects.Move;
+            }
+            else
+            {
+                DROP[1] = DROP[0];
+                DRAG[1] = DRAG[0];
+                FillDragDrop();
+                ChangeFields();
+                FillSchedules();
+                e.Effect = DragDropEffects.Move;
+            }
         }
 
         private void HA26_DragEnter(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Link;
+            if (cmbScheduleType.Text == "Maestro")
+            {
+                DragEnterTeacher(5, 0);
+                e.Effect = DragDropEffects.Link;
+            }
+            else { DROP[0] = DataSchedule[5][0]; e.Effect = DragDropEffects.Link; }
 
         }
 
         private void HA26_MouseDown(object sender, MouseEventArgs e)
         {
+            DRAG[0] = DataSchedule[5][0];
             HA26.DoDragDrop(HA26, DragDropEffects.Link);
         }
 
         private void HA27_DragDrop(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Move;
+            if (lbComplementaryActivities.SelectedItem != null)
+            {
+                HA27.Text = lbComplementaryActivities.SelectedItem.ToString();
+                DragDropLB("Martes", "12:00:13:00", 5, 1);
+                e.Effect = DragDropEffects.Move;
+            }
+            else
+            {
+                DROP[1] = DROP[0];
+                DRAG[1] = DRAG[0];
+                FillDragDrop();
+                ChangeFields();
+                FillSchedules();
+                e.Effect = DragDropEffects.Move;
+            }
         }
 
         private void HA27_DragEnter(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Link;
+            if (cmbScheduleType.Text == "Maestro")
+            {
+                DragEnterTeacher(5, 1);
+                e.Effect = DragDropEffects.Link;
+            }
+            else { DROP[0] = DataSchedule[5][1]; e.Effect = DragDropEffects.Link; }
 
         }
 
         private void HA27_MouseDown(object sender, MouseEventArgs e)
         {
+            DRAG[0] = DataSchedule[5][1];
             HA27.DoDragDrop(HA27, DragDropEffects.Link);
         }
 
+
         private void HA28_DragDrop(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Move;
+            if (lbComplementaryActivities.SelectedItem != null)
+            {
+                HA28.Text = lbComplementaryActivities.SelectedItem.ToString();
+                DragDropLB("Miercoles", "12:00:13:00", 5, 2);
+                e.Effect = DragDropEffects.Move;
+            }
+            else
+            {
+                DROP[1] = DROP[0];
+                DRAG[1] = DRAG[0];
+                FillDragDrop();
+                ChangeFields();
+                FillSchedules();
+                e.Effect = DragDropEffects.Move;
+            }
         }
 
         private void HA28_DragEnter(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Link;
+            if (cmbScheduleType.Text == "Maestro")
+            {
+                DragEnterTeacher(5, 2);
+                e.Effect = DragDropEffects.Link;
+            }
+            else { DROP[0] = DataSchedule[5][2]; e.Effect = DragDropEffects.Link; }
 
         }
 
         private void HA28_MouseDown(object sender, MouseEventArgs e)
         {
+            DRAG[0] = DataSchedule[5][2];
             HA28.DoDragDrop(HA28, DragDropEffects.Link);
         }
 
         private void HA29_DragDrop(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Move;
+            if (lbComplementaryActivities.SelectedItem != null)
+            {
+                HA29.Text = lbComplementaryActivities.SelectedItem.ToString();
+                DragDropLB("Jueves", "12:00:13:00", 5, 3);
+                e.Effect = DragDropEffects.Move;
+            }
+            else
+            {
+                DROP[1] = DROP[0];
+                DRAG[1] = DRAG[0];
+                FillDragDrop();
+                ChangeFields();
+                FillSchedules();
+                e.Effect = DragDropEffects.Move;
+            }
         }
 
         private void HA29_DragEnter(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Link;
+            if (cmbScheduleType.Text == "Maestro")
+            {
+                DragEnterTeacher(5, 3);
+                e.Effect = DragDropEffects.Link;
+            }
+            else { DROP[0] = DataSchedule[5][3]; e.Effect = DragDropEffects.Link; }
 
         }
 
         private void HA29_MouseDown(object sender, MouseEventArgs e)
         {
+            DRAG[0] = DataSchedule[5][3];
             HA29.DoDragDrop(HA29, DragDropEffects.Link);
         }
 
         private void HA30_DragDrop(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Move;
+            if (lbComplementaryActivities.SelectedItem != null)
+            {
+                HA30.Text = lbComplementaryActivities.SelectedItem.ToString();
+                DragDropLB("Viernes", "12:00:13:00", 5, 4);
+                e.Effect = DragDropEffects.Move;
+            }
+            else
+            {
+                DROP[1] = DROP[0];
+                DRAG[1] = DRAG[0];
+                FillDragDrop();
+                ChangeFields();
+                FillSchedules();
+                e.Effect = DragDropEffects.Move;
+            }
         }
 
         private void HA30_DragEnter(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Link;
+            if (cmbScheduleType.Text == "Maestro")
+            {
+                DragEnterTeacher(5, 4);
+                e.Effect = DragDropEffects.Link;
+            }
+            else { DROP[0] = DataSchedule[5][4]; e.Effect = DragDropEffects.Link; }
 
         }
 
         private void HA30_MouseDown(object sender, MouseEventArgs e)
         {
+            DRAG[0] = DataSchedule[5][4];
             HA30.DoDragDrop(HA30, DragDropEffects.Link);
         }
 
         private void HA31_DragDrop(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Move;
+            if (lbComplementaryActivities.SelectedItem != null)
+            {
+                HA31.Text = lbComplementaryActivities.SelectedItem.ToString();
+                DragDropLB("Lunes", "13:00:14:00", 6, 0);
+                e.Effect = DragDropEffects.Move;
+            }
+            else
+            {
+                DROP[1] = DROP[0];
+                DRAG[1] = DRAG[0];
+                FillDragDrop();
+                ChangeFields();
+                FillSchedules();
+                e.Effect = DragDropEffects.Move;
+            }
         }
 
         private void HA31_DragEnter(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Link;
+            if (cmbScheduleType.Text == "Maestro")
+            {
+                DragEnterTeacher(6, 0);
+                e.Effect = DragDropEffects.Link;
+            }
+            else { DROP[0] = DataSchedule[6][0]; e.Effect = DragDropEffects.Link; }
 
         }
 
         private void HA31_MouseDown(object sender, MouseEventArgs e)
         {
+            DRAG[0] = DataSchedule[6][0];
             HA31.DoDragDrop(HA31, DragDropEffects.Link);
         }
 
         private void HA32_DragDrop(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Move;
+            if (lbComplementaryActivities.SelectedItem != null)
+            {
+                HA32.Text = lbComplementaryActivities.SelectedItem.ToString();
+                DragDropLB("Martes", "13:00:14:00", 6, 1);
+                e.Effect = DragDropEffects.Move;
+            }
+            else
+            {
+                DROP[1] = DROP[0];
+                DRAG[1] = DRAG[0];
+                FillDragDrop();
+                ChangeFields();
+                FillSchedules();
+                e.Effect = DragDropEffects.Move;
+            }
         }
 
         private void HA32_DragEnter(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Link;
-
+            if (cmbScheduleType.Text == "Maestro")
+            {
+                DragEnterTeacher(6, 1);
+                e.Effect = DragDropEffects.Link;
+            }
+            else { DROP[0] = DataSchedule[6][1]; e.Effect = DragDropEffects.Link; }
 
         }
 
         private void HA32_MouseDown(object sender, MouseEventArgs e)
         {
+            DRAG[0] = DataSchedule[6][1];
             HA32.DoDragDrop(HA32, DragDropEffects.Link);
         }
 
+
         private void HA33_DragDrop(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Move;
+            if (lbComplementaryActivities.SelectedItem != null)
+            {
+                HA33.Text = lbComplementaryActivities.SelectedItem.ToString();
+                DragDropLB("Miercoles", "13:00:14:00", 6, 2);
+                e.Effect = DragDropEffects.Move;
+            }
+            else
+            {
+                DROP[1] = DROP[0];
+                DRAG[1] = DRAG[0];
+                FillDragDrop();
+                ChangeFields();
+                FillSchedules();
+                e.Effect = DragDropEffects.Move;
+            }
         }
 
         private void HA33_DragEnter(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Link;
+            if (cmbScheduleType.Text == "Maestro")
+            {
+                DragEnterTeacher(6, 2);
+                e.Effect = DragDropEffects.Link;
+            }
+            else { DROP[0] = DataSchedule[6][2]; e.Effect = DragDropEffects.Link; }
 
         }
 
         private void HA33_MouseDown(object sender, MouseEventArgs e)
         {
+            DRAG[0] = DataSchedule[6][2];
             HA33.DoDragDrop(HA33, DragDropEffects.Link);
         }
 
         private void HA34_DragDrop(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Move;
+            if (lbComplementaryActivities.SelectedItem != null)
+            {
+                HA34.Text = lbComplementaryActivities.SelectedItem.ToString();
+                DragDropLB("Jueves", "13:00:14:00", 6, 3);
+                e.Effect = DragDropEffects.Move;
+            }
+            else
+            {
+                DROP[1] = DROP[0];
+                DRAG[1] = DRAG[0];
+                FillDragDrop();
+                ChangeFields();
+                FillSchedules();
+                e.Effect = DragDropEffects.Move;
+            }
         }
 
         private void HA34_DragEnter(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Link;
+            if (cmbScheduleType.Text == "Maestro")
+            {
+                DragEnterTeacher(6, 3);
+                e.Effect = DragDropEffects.Link;
+            }
+            else { DROP[0] = DataSchedule[6][3]; e.Effect = DragDropEffects.Link; }
 
         }
 
         private void HA34_MouseDown(object sender, MouseEventArgs e)
         {
+            DRAG[0] = DataSchedule[6][3];
             HA34.DoDragDrop(HA34, DragDropEffects.Link);
         }
 
         private void HA35_DragDrop(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Move;
+            if (lbComplementaryActivities.SelectedItem != null)
+            {
+                HA35.Text = lbComplementaryActivities.SelectedItem.ToString();
+                DragDropLB("Viernes", "13:00:14:00", 6, 4);
+                e.Effect = DragDropEffects.Move;
+            }
+            else
+            {
+                DROP[1] = DROP[0];
+                DRAG[1] = DRAG[0];
+                FillDragDrop();
+                ChangeFields();
+                FillSchedules();
+                e.Effect = DragDropEffects.Move;
+            }
         }
 
         private void HA35_DragEnter(object sender, System.Windows.Forms.DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Link;
-         
+            if (cmbScheduleType.Text == "Maestro")
+            {
+                DragEnterTeacher(6, 4);
+                e.Effect = DragDropEffects.Link;
+            }
+            else { DROP[0] = DataSchedule[6][4]; e.Effect = DragDropEffects.Link; }
+
         }
 
         private void HA35_MouseDown(object sender, MouseEventArgs e)
         {
+            DRAG[0] = DataSchedule[6][4];
             HA35.DoDragDrop(HA35, DragDropEffects.Link);
         }
-
+        
         #endregion
         
         # region Controls events
@@ -700,6 +1384,7 @@ namespace HorarioMaster
                 InicilazeDatachedule();
                 FilllbSchedule();
                 FillSchedules();
+                AssignColor();
             }            
         }
 
@@ -716,16 +1401,23 @@ namespace HorarioMaster
                 cmbGroups = DataBaseUtilities.FillComboBox("Select Grupo From MaestroMateria", "Grupo", cmbGroups);
                 DataBaseUtilities.CloseConnection();  
                 cmbGroups.Text = cmbGroups.Items[0].ToString();                
-                SqlString = "Select Especialidad,Turno From Grupos Where SG ='" + cmbGroups.Text + "'";
+                //SqlString = "Select Especialidad,Semestre,Grupo From Grupos Where SG ='" + cmbGroups.Text + "'";
+                HEspecialidad.Text = "ESPECIALIDAD:";
                 DataBaseUtilities.OpenConnection(PathDataBase);
-                Especialidad.Text = DataBaseUtilities.ReturnRecord("Select Especialidad From Grupos Where SG ='" + cmbGroups.Text + "'", "Especialidad").ToString();
+                lEspecialidad.Text = DataBaseUtilities.ReturnRecord("Select Especialidad From Grupos Where SG ='" + cmbGroups.Text + "'", "Especialidad").ToString();
                 DataBaseUtilities.CloseConnection();
+                HTurno.Text = "TURNO:"; 
                 DataBaseUtilities.OpenConnection(PathDataBase);
-                Turno.Text = DataBaseUtilities.ReturnRecord("Select Turno From Grupos Where SG ='" + cmbGroups.Text + "'", "Turno").ToString();
+                lTurno.Text = DataBaseUtilities.ReturnRecord("Select Turno From Grupos Where SG ='" + cmbGroups.Text + "'", "Turno").ToString();
                 DataBaseUtilities.CloseConnection();               
                 LimpiarHorario.Visible = true;
-                Turno.Visible = true;
-                FilllbSchedule();               
+                lTurno.Visible = true;
+                lbComplementaryActivities.Visible = false;
+                button1.Visible = true;
+                button2.Visible = true;
+                LimpiarHorario.Visible = true;                
+                FilllbSchedule();
+                AssignColor();
             }
             else
             {
@@ -735,11 +1427,22 @@ namespace HorarioMaster
                 DataBaseUtilities.OpenConnection(PathDataBase);
                 cmbGroups = DataBaseUtilities.FillComboBox("Select Nombre From Personal WHERE Puesto='DOCENTE'", "Nombre", cmbGroups);
                 DataBaseUtilities.CloseConnection();
-                cmbGroups.Text = cmbGroups.Items[0].ToString();               
-                Turno.Visible = false;
+                cmbGroups.Text = cmbGroups.Items[0].ToString();                              
+                HEspecialidad.Text = "NUMERO DE TARJETA:";
+                DataBaseUtilities.OpenConnection(PathDataBase);
+                lEspecialidad.Text = DataBaseUtilities.ReturnRecord("Select NumeroTarjeta From Personal Where Nombre ='" + cmbGroups.Text + "'", "NumeroTarjeta").ToString();
+                DataBaseUtilities.CloseConnection();
+                HTurno.Text = "PERFIL:";
+                DataBaseUtilities.OpenConnection(PathDataBase);
+                lTurno.Text = DataBaseUtilities.ReturnRecord("Select Perfil From Personal Where Nombre ='" + cmbGroups.Text + "'", "Perfil").ToString();
+                DataBaseUtilities.CloseConnection();
+                button1.Visible = false;
+                button2.Visible = false;
+                LimpiarHorario.Visible = false;                
                 lbComplementaryActivities.Visible = true;
                 FillComplementaryActivities();
-                FilllbSchedule();              
+                FilllbSchedule();
+                AssignColor();
             }
         }
 
@@ -749,16 +1452,27 @@ namespace HorarioMaster
             if (cmbScheduleType.Text == "Grupo")
             {
                 DataBaseUtilities.OpenConnection(PathDataBase);
-                Especialidad.Text = DataBaseUtilities.ReturnRecord("Select Especialidad From Grupos Where SG ='" + cmbGroups.Text + "'", "Especialidad").ToString();
+                lEspecialidad.Text = DataBaseUtilities.ReturnRecord("Select Especialidad From Grupos Where SG ='" + cmbGroups.Text + "'", "Especialidad").ToString();
                 DataBaseUtilities.CloseConnection();
                 DataBaseUtilities.OpenConnection(PathDataBase);
-                Turno.Text = DataBaseUtilities.ReturnRecord("Select Turno From Grupos Where SG ='" + cmbGroups.Text + "'", "Turno").ToString();
+                lTurno.Text = DataBaseUtilities.ReturnRecord("Select Turno From Grupos Where SG ='" + cmbGroups.Text + "'", "Turno").ToString();
                 DataBaseUtilities.CloseConnection();               
                
             }
+            else
+            {               
+                HEspecialidad.Text = "NUMERO DE TARJETA:";
+                DataBaseUtilities.OpenConnection(PathDataBase);
+                lEspecialidad.Text = DataBaseUtilities.ReturnRecord("Select NumeroTarjeta From Personal Where Nombre ='" + cmbGroups.Text + "'", "NumeroTarjeta").ToString();
+                DataBaseUtilities.CloseConnection();
+                HTurno.Text = "PERFIL:";
+                DataBaseUtilities.OpenConnection(PathDataBase);
+                lTurno.Text = DataBaseUtilities.ReturnRecord("Select Perfil From Personal Where Nombre ='" + cmbGroups.Text + "'", "Perfil").ToString();
+                DataBaseUtilities.CloseConnection();                
+            }
             FilllbSchedule();
             FillSchedules();
-            //AssignColor();
+            AssignColor();
         }
 
         private void CmbShift_SelectedIndexChanged(object sender, EventArgs e)
@@ -766,6 +1480,7 @@ namespace HorarioMaster
             InicilazeDatachedule();
             FilllbSchedule();
             FillSchedules();
+            AssignColor();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -964,9 +1679,13 @@ namespace HorarioMaster
             else
             {
                 DataBaseUtilities.OpenConnection(PathDataBase);
-                SqlString = @"SELECT HorarioMaterias.Materia, HorarioMaterias.PosicionColumna,HorarioMaterias.PosicionFila,HorarioMaterias.Grupo, HorarioMaterias.ClaveHM, MaestroMateria.Maestro
-                              FROM MaestroMateria INNER JOIN HorarioMaterias ON MaestroMateria.Materia = HorarioMaterias.Materia
-                              WHERE (((HorarioMaterias.Maestro)='" + cmbGroups.Text + "' AND (HorarioMaterias.Turno)='" + cmbShift.Text + "'))";
+//                SqlString = @"SELECT HorarioMaterias.Materia, HorarioMaterias.PosicionColumna,HorarioMaterias.PosicionFila,HorarioMaterias.Grupo, HorarioMaterias.ClaveHM, MaestroMateria.Maestro
+//                              FROM MaestroMateria INNER JOIN HorarioMaterias ON MaestroMateria.Materia = HorarioMaterias.Materia
+//                              WHERE (((HorarioMaterias.Maestro)='" + cmbGroups.Text + "' AND (HorarioMaterias.Turno)='" + cmbShift.Text + "'))";
+                SqlString=@"SELECT ClaveHM, Materia, PosicionColumna, PosicionFila,Grupo,Maestro
+                            FROM HorarioMaterias
+                            WHERE (((HorarioMaterias.Maestro)='" + cmbGroups.Text + "') AND ((HorarioMaterias.Turno)='" + cmbShift.Text + "'))";
+
                 OleDbDataReader dr = DataBaseUtilities.ExecuteSql(SqlString);
                 while (dr.Read())
                 {
@@ -978,7 +1697,7 @@ namespace HorarioMaster
                 }
                 DataBaseUtilities.CloseConnection();
             }            
-        }
+        }      
 
         private void ClearSchedules()
         {
@@ -986,7 +1705,7 @@ namespace HorarioMaster
             {
                 for (int Columna = 0; Columna < 5; Columna++)
                 {
-                    VisualSchedule[Fila][Columna].BackColor = Color.White;
+                   // VisualSchedule[Fila][Columna].BackColor = Color.White;
                     VisualSchedule[Fila][Columna].Text = "";
                     DataSchedule[Fila][Columna].Key = -1;
                     DataSchedule[Fila][Columna].Subject = "";
@@ -1082,12 +1801,15 @@ namespace HorarioMaster
         private void ChangeFields()
         {
             DataField Temp = new DataField();
-            //Cambio en dos horarios donde el DRAG[0] = DROP[1] y DRAG[1] = DROP[0]  
+            Color cTemp = new Color();
             if (DRAG[0].Teacher == DROP[1].Teacher && DRAG[1].Teacher == DROP[0].Teacher && DRAG[1].Group == DROP[1].Group)
             {
                 int Key0 = DRAG[0].Key, Key1 = DROP[0].Key, Key2 = DRAG[1].Key, Key3 = DROP[1].Key;
                 Temp = DRAG[0];
+                cTemp = VisualSchedule[DRAG[0].Row][DRAG[0].Column].BackColor;
+                VisualSchedule[DRAG[0].Row][DRAG[0].Column].BackColor = VisualSchedule[DROP[0].Row][DROP[0].Column].BackColor;
                 DRAG[0] = DROP[0];
+                VisualSchedule[DROP[0].Row][DROP[0].Column].BackColor = cTemp;                
                 DROP[0] = Temp;
                 SqlString = "UPDATE HorarioMaterias SET Hora='" + DRAG[0].Hour + "',Dia='" + DRAG[0].Day + "',PosicionFila=" + DRAG[0].Row + ",PosicionColumna=" + DRAG[0].Column + " Where ClaveHM=" + Key0 + "";
                 DataBaseUtilities.OpenConnection(PathDataBase);
@@ -1110,7 +1832,10 @@ namespace HorarioMaster
             {
                 int Key0 = DRAG[0].Key, Key1 = DROP[0].Key, Key2 = DRAG[1].Key, Key3 = DROP[1].Key;
                 Temp = DRAG[0];
+                cTemp = VisualSchedule[DRAG[0].Row][DRAG[0].Column].BackColor;
+                VisualSchedule[DRAG[0].Row][DRAG[0].Column].BackColor = VisualSchedule[DROP[0].Row][DROP[0].Column].BackColor;
                 DRAG[0] = DROP[0];
+                VisualSchedule[DROP[0].Row][DROP[0].Column].BackColor = cTemp;                
                 DROP[0] = Temp;
                 SqlString = "UPDATE HorarioMaterias SET Hora='" + DRAG[0].Hour + "',Dia='" + DRAG[0].Day + "',PosicionFila=" + DRAG[0].Row + ",PosicionColumna=" + DRAG[0].Column + " Where ClaveHM=" + Key0 + "";
                 DataBaseUtilities.OpenConnection(PathDataBase);
@@ -1124,7 +1849,7 @@ namespace HorarioMaster
                 DataBaseUtilities.ExecuteNonSql(SqlString);
                 DataBaseUtilities.CloseConnection();
                 DataBaseUtilities.OpenConnection(PathDataBase);
-                DRAG[1] = FindBlankSpace(DRAG[1]);                
+                DRAG[1] = FindBlankSpace(DRAG[1]);
                 SqlString = "UPDATE HorarioMaterias SET Hora='" + DataSchedule[DRAG[1].Row][DRAG[1].Column].Hour + "',Dia='" + DataSchedule[DRAG[1].Row][DRAG[1].Column].Day + "',PosicionFila=" + DRAG[1].Row + ",PosicionColumna=" + DRAG[1].Column + " Where ClaveHM=" + Key3 + "";
                 DataBaseUtilities.ExecuteNonSql(SqlString);
                 DataBaseUtilities.CloseConnection();
@@ -1134,7 +1859,10 @@ namespace HorarioMaster
             {
                 int Key0 = DRAG[0].Key, Key1 = DROP[0].Key;
                 Temp = DRAG[0];
+                cTemp = VisualSchedule[DRAG[0].Row][DRAG[0].Column].BackColor;
+                VisualSchedule[DRAG[0].Row][DRAG[0].Column].BackColor = VisualSchedule[DROP[0].Row][DROP[0].Column].BackColor;
                 DRAG[0] = DROP[0];
+                VisualSchedule[DROP[0].Row][DROP[0].Column].BackColor = cTemp;
                 DROP[0] = Temp;
                 SqlString = "UPDATE HorarioMaterias SET Hora='" + DRAG[0].Hour + "',Dia='" + DRAG[0].Day + "',PosicionFila=" + DRAG[0].Row + ",PosicionColumna=" + DRAG[0].Column + " Where ClaveHM=" + Key0 + "";
                 DataBaseUtilities.OpenConnection(PathDataBase);
@@ -1148,8 +1876,11 @@ namespace HorarioMaster
             {
                 int Key0 = DRAG[0].Key, Key1 = DROP[0].Key, Key2 = DROP[1].Key;
                 Temp = DRAG[0];
+                cTemp = VisualSchedule[DRAG[0].Row][DRAG[0].Column].BackColor;
+                VisualSchedule[DRAG[0].Row][DRAG[0].Column].BackColor = VisualSchedule[DROP[0].Row][DROP[0].Column].BackColor;
                 DRAG[0] = DROP[0];
-                DROP[0] = Temp;
+                VisualSchedule[DROP[0].Row][DROP[0].Column].BackColor = cTemp;
+                DROP[0] = Temp;                
                 SqlString = "UPDATE HorarioMaterias SET Hora='" + DRAG[0].Hour + "',Dia='" + DRAG[0].Day + "',PosicionFila=" + DRAG[0].Row + ",PosicionColumna=" + DRAG[0].Column + " Where ClaveHM=" + Key0 + "";
                 DataBaseUtilities.OpenConnection(PathDataBase);
                 DataBaseUtilities.ExecuteNonSql(SqlString);
@@ -1165,9 +1896,12 @@ namespace HorarioMaster
             //Si solo el DROP[1] no tiene maestro = en otro lado
             else if (DROP[1].Teacher == null)
             {
-                int Key0 = DRAG[0].Key, Key1 = DROP[0].Key, Key2 = DROP[1].Key;
+                int Key0 = DRAG[0].Key, Key1 = DROP[0].Key, Key2 = DRAG[1].Key;
                 Temp = DRAG[0];
+                cTemp = VisualSchedule[DRAG[0].Row][DRAG[0].Column].BackColor;
+                VisualSchedule[DRAG[0].Row][DRAG[0].Column].BackColor = VisualSchedule[DROP[0].Row][DROP[0].Column].BackColor;
                 DRAG[0] = DROP[0];
+                VisualSchedule[DROP[0].Row][DROP[0].Column].BackColor = cTemp;                
                 DROP[0] = Temp;
                 SqlString = "UPDATE HorarioMaterias SET Hora='" + DRAG[0].Hour + "',Dia='" + DRAG[0].Day + "',PosicionFila=" + DRAG[0].Row + ",PosicionColumna=" + DRAG[0].Column + " Where ClaveHM=" + Key0 + "";
                 DataBaseUtilities.OpenConnection(PathDataBase);
@@ -1193,54 +1927,89 @@ namespace HorarioMaster
                 }
             }
             List<int> UsedColor = new List<int>();
+            List<string> UsedSubject = new List<string>();
             Random ColorRandom = new Random();
             bool ColorExist = true;
             int nColor = new int();
+            int nSubject = new int();
             if (cmbScheduleType.Text == "Grupo")
             {
                 SqlString = @"SELECT First(HorarioMaterias.Materia) AS MateriaCampo, Count(HorarioMaterias.Materia) AS NúmeroDeDuplicados
-                        FROM HorarioMaterias GROUP BY HorarioMaterias.Materia, HorarioMaterias.Grupo HAVING (((Count(HorarioMaterias.Materia))>1) 
+                        FROM HorarioMaterias GROUP BY HorarioMaterias.Materia, HorarioMaterias.Grupo HAVING (((Count(HorarioMaterias.Materia))>=1) 
                         AND ((HorarioMaterias.Grupo)='" + cmbGroups.Text + "'))";
             }
             else
             {
-                SqlString = @"SELECT First(HorarioMaterias.Materia) AS MateriaCampo, Count(HorarioMaterias.Materia) AS NúmeroDeDuplicados, Grupos.Turno
-                              FROM (MaestroMateria INNER JOIN HorarioMaterias ON MaestroMateria.Materia = HorarioMaterias.Materia) INNER JOIN Grupos ON HorarioMaterias.Grupo = Grupos.SG
-                              GROUP BY HorarioMaterias.Materia, MaestroMateria.Maestro, Grupos.Turno
-                              HAVING (((Count(HorarioMaterias.Materia))>1) AND ((MaestroMateria.Maestro)='" + cmbGroups.Text + "') AND ((Grupos.Turno)='" + cmbShift.Text + "'))";
+//                SqlString = @"SELECT First(HorarioMaterias.Materia) AS MateriaCampo, Count(HorarioMaterias.Materia) AS NúmeroDeDuplicados, Grupos.Turno
+//                              FROM (MaestroMateria INNER JOIN HorarioMaterias ON MaestroMateria.Materia = HorarioMaterias.Materia) INNER JOIN Grupos ON HorarioMaterias.Grupo = Grupos.SG
+//                              GROUP BY HorarioMaterias.Materia, MaestroMateria.Maestro, Grupos.Turno
+//                              HAVING (((Count(HorarioMaterias.Materia))>=1) AND ((MaestroMateria.Maestro)='" + cmbGroups.Text + "') AND ((Grupos.Turno)='" + cmbShift.Text + "'))";
+                SqlString=@"SELECT First(HorarioMaterias.Materia) AS MateriaCampo, Count(HorarioMaterias.Materia) AS NúmeroDeDuplicados, HorarioMaterias.Turno, HorarioMaterias.Maestro
+                            FROM HorarioMaterias
+                            GROUP BY HorarioMaterias.Materia, HorarioMaterias.Turno, HorarioMaterias.Maestro
+                            HAVING (((Count(HorarioMaterias.Materia))>=1) AND ((HorarioMaterias.Turno)='" + cmbShift.Text + "') AND ((HorarioMaterias.Maestro)='" + cmbGroups.Text + "'))";
 
             }
             DataBaseUtilities.OpenConnection(PathDataBase);
-            OleDbDataReader dr = DataBaseUtilities.ExecuteSql(SqlString);            
+            OleDbDataReader dr = DataBaseUtilities.ExecuteSql(SqlString);
             while (dr.Read())
-            {
-                nColor = ColorRandom.Next(115);
+            {                
                 while (ColorExist)
                 {
-                    System.Threading.Thread.Sleep(300);
+                    nColor = ColorRandom.Next(115);
                     if (UsedColor.BinarySearch(nColor) < 0)
                     {
                         UsedColor.Add(nColor);
-                        for (int nRow = 0; nRow < 7; nRow++)
-                        {
-                            for (int nColumn = 0; nColumn < 5; nColumn++)
-                            {
-                                if (VisualSchedule[nRow][nColumn].Text == dr["MateriaCampo"].ToString())
-                                {
-                                    VisualSchedule[nRow][nColumn].BackColor = color[nColor];
-                                }
-                            }
-                        }
+                        UsedSubject.Add(dr["MateriaCampo"].ToString());
                         ColorExist = false;
                     }
                 }
                 ColorExist = true;
             }
             DataBaseUtilities.CloseConnection();
+            for (int nRow = 0; nRow < 7; nRow++)
+            {
+                for (int nColumn = 0; nColumn < 5; nColumn++)
+                {
+                    if (VisualSchedule[nRow][nColumn].Text != "")
+                    {
+                        nSubject = UsedSubject.BinarySearch(VisualSchedule[nRow][nColumn].Text);
+                        VisualSchedule[nRow][nColumn].BackColor = color[UsedColor[nSubject]];                        
+                    }
+                }
+            }
+
+//            while (dr.Read())
+//            {
+//                nColor = ColorRandom.Next(115);
+//                while (ColorExist)
+//                {
+//                    System.Threading.Thread.Sleep(300);
+//                    if (UsedColor.BinarySearch(nColor) < 0)
+//                    {
+//                        UsedColor.Add(nColor);
+//                        for (int nRow = 0; nRow < 7; nRow++)
+//                        {
+//                            for (int nColumn = 0; nColumn < 5; nColumn++)
+//                            {
+//                                if (VisualSchedule[nRow][nColumn].Text == dr["MateriaCampo"].ToString())
+//                                {
+//                                    VisualSchedule[nRow][nColumn].BackColor = color[nColor];
+//                                }
+//                            }
+//                        }
+//                        ColorExist = false;
+//                    }
+//                }
+//                ColorExist = true;
+//            }
+//            DataBaseUtilities.CloseConnection();
         }
+
         private void FillComplementaryActivities()
         {
             lbComplementaryActivities.Items.Clear();
+            lbComplementaryActivities.Items.Add("Quitar Actividad Complementaria del Horario");
             SqlString = "Select Numero,Nombre From ActComp";
             DataBaseUtilities.OpenConnection(PathDataBase);
             OleDbDataReader dr = DataBaseUtilities.ExecuteSql(SqlString);
@@ -1251,13 +2020,68 @@ namespace HorarioMaster
             DataBaseUtilities.CloseConnection();
         }
 
+        private void DragEnterTeacher(int nRow,int nColumn)
+        {
+            DROP[0] = DataSchedule[nRow][nColumn];
+            SqlString = "SELECT ClaveHM,Grupo,Materia,Maestro FROM HorarioMaterias WHERE Maestro='" + cmbGroups.Text + "' AND Hora='" + DROP[0].Hour + "' AND Dia='" + DROP[0].Day + "'";
+            DataBaseUtilities.OpenConnection(PathDataBase);
+            OleDbDataReader dr = DataBaseUtilities.ExecuteSql(SqlString);
+            dr.Read();
+            if (dr.HasRows)
+            {
+                DROP[0].Key = Convert.ToInt32(dr["ClaveHM"]);
+                DROP[0].Group = dr["Grupo"].ToString();
+                DROP[0].Subject = dr["Materia"].ToString();
+                DROP[0].Teacher = dr["Maestro"].ToString();
+            }
+            DataBaseUtilities.CloseConnection();
+        }
+
+        private void DragDropLB(string Day,string Hour,int nRow,int nColumn)
+        {
+            DataBaseUtilities.OpenConnection(PathDataBase);
+            if (lbComplementaryActivities.SelectedItem.ToString() == "Quitar Actividad Complementaria del Horario")
+            {
+                VisualSchedule[nRow][nColumn].Text = "";
+                VisualSchedule[nRow][nColumn].BackColor = Color.White;
+                OleDbDataReader dr = DataBaseUtilities.ExecuteSql("Select ClaveHM From HorarioMaterias Where Maestro='" + cmbGroups.Text + "' and Hora='" + Hour  + "' and Dia='" + Day  + "'");
+                dr.Read();
+                if (dr.HasRows)
+                {
+                    SqlString = "DELETE FROM HorarioMaterias WHERE ClaveHM=" + Convert.ToInt32(dr["ClaveHM"]) + "";                    
+                    DataBaseUtilities.ExecuteNonSql(SqlString);
+                }
+            }
+            else
+            {                
+                OleDbDataReader dr = DataBaseUtilities.ExecuteSql("Select ClaveHM,Materia From HorarioMaterias Where Maestro='" + cmbGroups.Text + "' and Dia='" + Day + "' and Hora='" + Hour + "'");
+                dr.Read();
+                if (dr.HasRows)
+                {
+                    if (dr["Materia"].ToString() != lbComplementaryActivities.SelectedItem.ToString())
+                    {
+                        SqlString = "UPDATE HorarioMaterias SET Materia='" + lbComplementaryActivities.SelectedItem.ToString() + "' Where ClaveHM=" + Convert.ToInt32(dr["ClaveHM"]) + "";
+                        System.Threading.Thread.Sleep(100);
+                        DataBaseUtilities.ExecuteNonSql(SqlString);
+                    }
+                }
+                else
+                {
+                    SqlString = "Insert Into HorarioMaterias (Materia,Maestro,Hora,Dia,Turno,PosicionFila,PosicionColumna) Values ('" + lbComplementaryActivities.SelectedItem.ToString() + "','" + cmbGroups.Text + "','" + Hour + "','" + Day + "','" + cmbShift.Text + "'," + nRow + "," + nColumn + ")";
+                    System.Threading.Thread.Sleep(100);
+                    DataBaseUtilities.ExecuteNonSql(SqlString);
+                }                
+            }
+            DataBaseUtilities.CloseConnection();
+        }
+
         # endregion    
 
         private void button2_Click(object sender, EventArgs e)
         {
             MaestroMateria mm = new MaestroMateria();
             mm.Show();
-        }
+        }  
 
        
     }

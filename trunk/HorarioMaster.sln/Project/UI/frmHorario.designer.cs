@@ -30,12 +30,14 @@
         {
             this.GuardarHorario = new System.Windows.Forms.Button();
             this.lbSchedule = new System.Windows.Forms.ListBox();
-            this.Turno = new System.Windows.Forms.Label();
+            this.lTurno = new System.Windows.Forms.Label();
             this.Label6 = new System.Windows.Forms.Label();
             this.Label5 = new System.Windows.Forms.Label();
             this.Label4 = new System.Windows.Forms.Label();
-            this.Especialidad = new System.Windows.Forms.Label();
+            this.lEspecialidad = new System.Windows.Forms.Label();
             this.groupBoxDatos = new System.Windows.Forms.GroupBox();
+            this.HTurno = new System.Windows.Forms.Label();
+            this.HEspecialidad = new System.Windows.Forms.Label();
             this.Label3 = new System.Windows.Forms.Label();
             this.Label2 = new System.Windows.Forms.Label();
             this.cmbScheduleType = new System.Windows.Forms.ComboBox();
@@ -109,14 +111,14 @@
             this.lbSchedule.Size = new System.Drawing.Size(101, 336);
             this.lbSchedule.TabIndex = 41;
             // 
-            // Turno
+            // lTurno
             // 
-            this.Turno.AutoSize = true;
-            this.Turno.Location = new System.Drawing.Point(20, 26);
-            this.Turno.Name = "Turno";
-            this.Turno.Size = new System.Drawing.Size(13, 13);
-            this.Turno.TabIndex = 0;
-            this.Turno.Text = "0";
+            this.lTurno.AutoSize = true;
+            this.lTurno.Location = new System.Drawing.Point(166, 54);
+            this.lTurno.Name = "lTurno";
+            this.lTurno.Size = new System.Drawing.Size(35, 13);
+            this.lTurno.TabIndex = 0;
+            this.lTurno.Text = "Turno";
             // 
             // Label6
             // 
@@ -145,25 +147,47 @@
             this.Label4.TabIndex = 38;
             this.Label4.Text = "Miercoles";
             // 
-            // Especialidad
+            // lEspecialidad
             // 
-            this.Especialidad.AutoSize = true;
-            this.Especialidad.Location = new System.Drawing.Point(20, 54);
-            this.Especialidad.Name = "Especialidad";
-            this.Especialidad.Size = new System.Drawing.Size(13, 13);
-            this.Especialidad.TabIndex = 1;
-            this.Especialidad.Text = "1";
+            this.lEspecialidad.AutoSize = true;
+            this.lEspecialidad.Location = new System.Drawing.Point(6, 54);
+            this.lEspecialidad.Name = "lEspecialidad";
+            this.lEspecialidad.Size = new System.Drawing.Size(67, 13);
+            this.lEspecialidad.TabIndex = 1;
+            this.lEspecialidad.Text = "Especialidad";
             // 
             // groupBoxDatos
             // 
-            this.groupBoxDatos.Controls.Add(this.Especialidad);
-            this.groupBoxDatos.Controls.Add(this.Turno);
+            this.groupBoxDatos.Controls.Add(this.HTurno);
+            this.groupBoxDatos.Controls.Add(this.HEspecialidad);
+            this.groupBoxDatos.Controls.Add(this.lEspecialidad);
+            this.groupBoxDatos.Controls.Add(this.lTurno);
             this.groupBoxDatos.Location = new System.Drawing.Point(286, 12);
             this.groupBoxDatos.Name = "groupBoxDatos";
-            this.groupBoxDatos.Size = new System.Drawing.Size(415, 81);
+            this.groupBoxDatos.Size = new System.Drawing.Size(349, 81);
             this.groupBoxDatos.TabIndex = 35;
             this.groupBoxDatos.TabStop = false;
             this.groupBoxDatos.Text = "Informacion de Grupo";
+            // 
+            // HTurno
+            // 
+            this.HTurno.AutoSize = true;
+            this.HTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HTurno.Location = new System.Drawing.Point(166, 27);
+            this.HTurno.Name = "HTurno";
+            this.HTurno.Size = new System.Drawing.Size(55, 13);
+            this.HTurno.TabIndex = 47;
+            this.HTurno.Text = "TURNO:";
+            // 
+            // HEspecialidad
+            // 
+            this.HEspecialidad.AutoSize = true;
+            this.HEspecialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HEspecialidad.Location = new System.Drawing.Point(6, 27);
+            this.HEspecialidad.Name = "HEspecialidad";
+            this.HEspecialidad.Size = new System.Drawing.Size(100, 13);
+            this.HEspecialidad.TabIndex = 44;
+            this.HEspecialidad.Text = "ESPECIALIDAD:";
             // 
             // Label3
             // 
@@ -521,7 +545,7 @@
             this.horario_box.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.horario_box.Location = new System.Drawing.Point(12, 99);
             this.horario_box.Name = "horario_box";
-            this.horario_box.Size = new System.Drawing.Size(689, 410);
+            this.horario_box.Size = new System.Drawing.Size(689, 419);
             this.horario_box.TabIndex = 32;
             this.horario_box.TabStop = false;
             // 
@@ -841,7 +865,9 @@
             this.lbComplementaryActivities.Size = new System.Drawing.Size(167, 368);
             this.lbComplementaryActivities.TabIndex = 41;
             this.lbComplementaryActivities.Visible = false;
-            this.lbComplementaryActivities.DragDrop+=new System.Windows.Forms.DragEventHandler(lbComplementaryActivities_DragDrop);
+            this.lbComplementaryActivities.DragDrop += new System.Windows.Forms.DragEventHandler(this.lbComplementaryActivities_DragDrop);
+            this.lbComplementaryActivities.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lbComplementaryActivities_MouseDown);
+            this.lbComplementaryActivities.DragEnter += new System.Windows.Forms.DragEventHandler(this.lbComplementaryActivities_DragEnter);
             // 
             // frmHorario
             // 
@@ -877,11 +903,11 @@
 
         private System.Windows.Forms.Button GuardarHorario;
         internal System.Windows.Forms.ListBox lbSchedule;
-        private System.Windows.Forms.Label Turno;
+        private System.Windows.Forms.Label lTurno;
         internal System.Windows.Forms.Label Label6;
         internal System.Windows.Forms.Label Label5;
         internal System.Windows.Forms.Label Label4;
-        private System.Windows.Forms.Label Especialidad;
+        private System.Windows.Forms.Label lEspecialidad;
         private System.Windows.Forms.GroupBox groupBoxDatos;
         internal System.Windows.Forms.Label Label3;
         internal System.Windows.Forms.Label Label2;
@@ -929,6 +955,8 @@
         private System.Windows.Forms.Button LimpiarHorario;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ListBox lbComplementaryActivities;
+        private System.Windows.Forms.Label HTurno;
+        private System.Windows.Forms.Label HEspecialidad;
     }
 }
 
