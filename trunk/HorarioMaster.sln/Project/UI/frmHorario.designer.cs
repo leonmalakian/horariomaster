@@ -885,6 +885,7 @@
             this.Controls.Add(this.cmbShift);
             this.Controls.Add(this.horario_box);
             this.Controls.Add(this.LimpiarHorario);
+            this.Enabled = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmHorario";
             this.Text = "Form1";

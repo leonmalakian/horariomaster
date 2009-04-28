@@ -5,73 +5,104 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using HorarioMaster.UI;
 using System.Windows.Forms;
-using System.IO;
-//using captura;
 
 namespace HorarioMaster
 {
-    public partial class frmPrincipal : Form
+    public partial class FrmPrincipal : Form
     {
-        public frmPrincipal()
+        public FrmPrincipal()
         {
             InitializeComponent();
         }
 
-        private static Form childForm = new frmCaptura();
+        private Form Primera = new Portada();
+        private Form AltasModificaciones = new frmCaptura();
+        private Form CrearHorario = new frmHorario();
+        private Form Reportes = new Reportes();
 
-        private void capturarToolStripMenuItem_Click(object sender, EventArgs e)
+        private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-            Form childFormC = new frmCaptura();
-            childFormC.TopLevel = false;
-            childFormC.Parent = this.splitContainer1.Panel2;
-            childFormC.Height = this.splitContainer1.Panel2.Height;
-            childFormC.Width = this.splitContainer1.Panel2.Width;
-            childFormC.Dock = DockStyle.Fill;
-            childFormC.Show();
             
+            Primera.TopLevel = false;
+            Primera.Parent = this.splitContainer1.Panel2;
+            Primera.Dock = DockStyle.Fill;
+            Primera.Show();
         }
 
-        private void horarioToolStripMenuItem_Click(object sender, EventArgs e)
+        private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            Form childForm = new frmHorario();
-            childForm.TopLevel = false;
-            childForm.Parent = this.splitContainer1.Panel2;
-            childForm.Height = this.splitContainer1.Panel2.Height;
-            childForm.Width = this.splitContainer1.Panel2.Width;
-            childForm.Dock = DockStyle.Fill;
-            childForm.Show();
+            if (this.splitContainer1.Panel1Collapsed == true)
+            {
+                this.splitContainer1.Panel1Collapsed = false;
+            }
+            else
+            {
+                this.splitContainer1.Panel1Collapsed = true;
+            }
+        }
+
+        private void datosPlantelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form plantel = new DPlantel();
+            //plantel.TopLevel = false;
+            //plantel.Parent = this.splitContainer1.Panel2;
+            plantel.Show();
+        }
+
+        private void actividadesComplementariasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form AComplement = new AComplementarias();
+            AComplement.Show();
         }
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            
-            
             switch (e.Node.Name)
             {
-                 case "NodeCaptura":
-                    Form childFormC = new frmCaptura();
-                    childFormC.TopLevel = false;
-                    childFormC.Parent = this.splitContainer1.Panel2;
-                    childFormC.Height = this.splitContainer1.Panel2.Height;
-                    childFormC.Width = this.splitContainer1.Panel2.Width;
-                    childFormC.Dock = DockStyle.Fill;
-                    childFormC.Show();
-                    //if(e.Node.Name = "NodeHorario")
-                    break;
-                case "NodeHorario":
-                    Form childForm = new frmHorario();
-                    childForm.TopLevel = false;
-                    childForm.Parent = this.splitContainer1.Panel2;
-                    childForm.Height = this.splitContainer1.Panel2.Height;
-                    childForm.Width = this.splitContainer1.Panel2.Width;
-                    childForm.Dock = DockStyle.Fill;
-                    childForm.Show();
-                    break;
+                case "tNodeAltasModificaciones":
+                    Primera.Close();
+                    AltasModificaciones.TopLevel = false;
+                    AltasModificaciones.Parent = this.splitContainer1.Panel2;
+                    AltasModificaciones.Height = this.splitContainer1.Panel2.Height;
+                    AltasModificaciones.Width = this.splitContainer1.Panel2.Width;
+                    AltasModificaciones.Dock = DockStyle.Fill;
+                    AltasModificaciones.Show();
+                break;
+                case "tNodeCrearHorario":
+                    AltasModificaciones.Close();
+                    CrearHorario.TopLevel = false;
+                    CrearHorario.Parent = this.splitContainer1.Panel2;
+                    CrearHorario.Height = this.splitContainer1.Panel2.Height;
+                    CrearHorario.Width = this.splitContainer1.Panel2.Width;
+                    CrearHorario.Dock = DockStyle.Fill;
+                    CrearHorario.Show();
+                break;
+                case "tNodeReportes":
+                    CrearHorario.Close();
+                    Reportes.TopLevel = false;
+                    Reportes.Parent = this.splitContainer1.Panel2;
+                    Reportes.Height = this.splitContainer1.Panel2.Height;
+                    Reportes.Width = this.splitContainer1.Panel2.Width;
+                    Reportes.Dock = DockStyle.Fill;
+                    Reportes.Show();
+                break;
+                
             }
         }
 
+        private void altasYModificacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Primera.Close();
+            AltasModificaciones.TopLevel = false;
+            AltasModificaciones.Parent = this.splitContainer1.Panel2;
+            AltasModificaciones.Height = this.splitContainer1.Panel2.Height;
+            AltasModificaciones.Width = this.splitContainer1.Panel2.Width;
+            AltasModificaciones.Dock = DockStyle.Fill;
+            AltasModificaciones.Show();
+        }
+
         
-       
     }
 }
