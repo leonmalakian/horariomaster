@@ -1,0 +1,52 @@
+D:\Documents and Settings\cmurillo\Desktop\HorarioMaster\Project\bin\Debug\HorarioMaster.exe
+D:\Documents and Settings\cmurillo\Desktop\HorarioMaster\Project\bin\Debug\HorarioMaster.pdb
+D:\Documents and Settings\cmurillo\Desktop\HorarioMaster\Project\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents and Settings\cmurillo\Desktop\HorarioMaster\Project\obj\Debug\HorarioMaster.Controls.XtraDGVMaster.resources
+D:\Documents and Settings\cmurillo\Desktop\HorarioMaster\Project\obj\Debug\HorarioMaster.Properties.Resources.resources
+D:\Documents and Settings\cmurillo\Desktop\HorarioMaster\Project\obj\Debug\HorarioMaster.UI.frmAComplementarias.resources
+D:\Documents and Settings\cmurillo\Desktop\HorarioMaster\Project\obj\Debug\HorarioMaster.UI.frmDatosPlantel.resources
+D:\Documents and Settings\cmurillo\Desktop\HorarioMaster\Project\obj\Debug\HorarioMaster.UI.frmCaptura.resources
+D:\Documents and Settings\cmurillo\Desktop\HorarioMaster\Project\obj\Debug\HorarioMaster.UI.frmPrincipal.resources
+D:\Documents and Settings\cmurillo\Desktop\HorarioMaster\Project\obj\Debug\HorarioMaster.csproj.GenerateResource.Cache
+D:\Documents and Settings\cmurillo\Desktop\HorarioMaster\Project\obj\Debug\HorarioMaster.exe.licenses
+D:\Documents and Settings\cmurillo\Desktop\HorarioMaster\Project\obj\Debug\HorarioMaster.exe
+D:\Documents and Settings\cmurillo\Desktop\HorarioMaster\Project\obj\Debug\HorarioMaster.pdb
+D:\Documents and Settings\cmurillo\Desktop\HorarioMaster\Project\obj\Debug\HorarioMaster.UI.frmHorario.resources
+D:\Documents and Settings\cmurillo\Desktop\HorarioMaster\Project\obj\Debug\HorarioMaster.UI.frmParametersGroups.resources
+D:\Documents and Settings\cmurillo\Desktop\HorarioMaster\Project\obj\Debug\HorarioMaster.UI.frmReportGroups.resources
+C:\Users\jando\Desktop\New Folder (2)\HorarioMaster\Project\obj\Debug\HorarioMaster.exe
+C:\Users\jando\Desktop\New Folder (2)\HorarioMaster\Project\obj\Debug\HorarioMaster.pdb
+C:\Users\jando\Desktop\New Folder (2)\HorarioMaster\Project\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\jando\Desktop\New Folder (2)\HorarioMaster\Project\obj\Debug\HorarioMaster.Controls.XtraDGVMaster.resources
+C:\Users\jando\Desktop\New Folder (2)\HorarioMaster\Project\obj\Debug\HorarioMaster.UI.frmHorario.resources
+C:\Users\jando\Desktop\New Folder (2)\HorarioMaster\Project\obj\Debug\HorarioMaster.Properties.Resources.resources
+C:\Users\jando\Desktop\New Folder (2)\HorarioMaster\Project\obj\Debug\HorarioMaster.UI.frmDatosPlantel.resources
+C:\Users\jando\Desktop\New Folder (2)\HorarioMaster\Project\obj\Debug\HorarioMaster.UI.frmCaptura.resources
+C:\Users\jando\Desktop\New Folder (2)\HorarioMaster\Project\obj\Debug\HorarioMaster.UI.frmParametersGroups.resources
+C:\Users\jando\Desktop\New Folder (2)\HorarioMaster\Project\obj\Debug\HorarioMaster.UI.frmPrincipal.resources
+C:\Users\jando\Desktop\New Folder (2)\HorarioMaster\Project\obj\Debug\HorarioMaster.UI.frmReportGroups.resources
+C:\Users\jando\Desktop\New Folder (2)\HorarioMaster\Project\obj\Debug\HorarioMaster.csproj.GenerateResource.Cache
+C:\Users\jando\Desktop\New Folder (2)\HorarioMaster\Project\obj\Debug\HorarioMaster.exe.licenses
+C:\Users\jando\Desktop\New Folder (2)\HorarioMaster\Project\bin\Debug\HorarioMaster.exe
+C:\Users\jando\Desktop\New Folder (2)\HorarioMaster\Project\bin\Debug\HorarioMaster.pdb
+C:\Users\jando\Desktop\New Folder (2)\HorarioMaster\Project\obj\Debug\HorarioMaster.UI.AComplementarias.resources
+C:\Users\jando\Desktop\New Folder (2)\HorarioMaster\Project\obj\Debug\HorarioMaster.Controls.frmDGVMaster.resources
+C:\Users\jando\Desktop\may 7 2009\HorarioMaster\Project\obj\Debug\HorarioMaster.exe
+C:\Users\jando\Desktop\may 7 2009\HorarioMaster\Project\obj\Debug\HorarioMaster.pdb
+C:\Users\jando\Desktop\Horario Chilo\Project\obj\Debug\HorarioMaster.exe
+C:\Users\jando\Desktop\Horario Chilo\Project\obj\Debug\HorarioMaster.pdb
+C:\Users\jando\Desktop\Horario Chilo\Project\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\jando\Desktop\Horario Chilo\Project\obj\Debug\HorarioMaster.Controls.frmDGVMaster.resources
+C:\Users\jando\Desktop\Horario Chilo\Project\obj\Debug\HorarioMaster.UI.AComplementarias.resources
+C:\Users\jando\Desktop\Horario Chilo\Project\obj\Debug\HorarioMaster.UI.frmCaptura.resources
+C:\Users\jando\Desktop\Horario Chilo\Project\obj\Debug\HorarioMaster.UI.frmHorario.resources
+C:\Users\jando\Desktop\Horario Chilo\Project\obj\Debug\HorarioMaster.Properties.Resources.resources
+C:\Users\jando\Desktop\Horario Chilo\Project\obj\Debug\HorarioMaster.UI.frmDatosPlantel.resources
+C:\Users\jando\Desktop\Horario Chilo\Project\obj\Debug\HorarioMaster.UI.frmParametersGroups.resources
+C:\Users\jando\Desktop\Horario Chilo\Project\obj\Debug\HorarioMaster.UI.frmPrincipal.resources
+C:\Users\jando\Desktop\Horario Chilo\Project\obj\Debug\HorarioMaster.UI.frmReportGroups.resources
+C:\Users\jando\Desktop\Horario Chilo\Project\obj\Debug\HorarioMaster.csproj.GenerateResource.Cache
+C:\Users\jando\Desktop\Horario Chilo\Project\obj\Debug\HorarioMaster.exe.licenses
+C:\Users\jando\Desktop\Horario Chilo\Project\bin\Debug\HorarioMaster.exe
+C:\Users\jando\Desktop\Horario Chilo\Project\bin\Debug\HorarioMaster.pdb
+C:\Users\jando\Desktop\Horario Chilo\Project\obj\Debug\HorarioMaster.Controls.GridMasterControl.resources
