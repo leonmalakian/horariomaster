@@ -28,213 +28,216 @@ namespace HorarioMaster.UI
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.textEdit9 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
-            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit8 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit7 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.components = new System.ComponentModel.Container();
+            this.lbNombrePlantel = new DevExpress.XtraEditors.LabelControl();
+            this.txtNombrePlantel = new DevExpress.XtraEditors.TextEdit();
+            this.lbClavePlantel = new DevExpress.XtraEditors.LabelControl();
+            this.txtClavePlantel = new DevExpress.XtraEditors.TextEdit();
+            this.lblEntidadFederativa = new DevExpress.XtraEditors.LabelControl();
+            this.txtEntidadFederativa = new DevExpress.XtraEditors.TextEdit();
+            this.lblDireccionPlantel = new DevExpress.XtraEditors.LabelControl();
+            this.txtDireccionPlantel = new DevExpress.XtraEditors.TextEdit();
+            this.lblDirector = new DevExpress.XtraEditors.LabelControl();
+            this.txtDirector = new DevExpress.XtraEditors.TextEdit();
+            this.lblSubdirector = new DevExpress.XtraEditors.LabelControl();
+            this.txtSubdirector = new DevExpress.XtraEditors.TextEdit();
+            this.grpCtrlSDocentes = new DevExpress.XtraEditors.GroupControl();
+            this.txtPeriodo = new DevExpress.XtraEditors.TextEdit();
+            this.lblPeriodo = new DevExpress.XtraEditors.LabelControl();
+            this.dateFecha = new DevExpress.XtraEditors.DateEdit();
+            this.lblFecha = new DevExpress.XtraEditors.LabelControl();
+            this.txtTurnoVespertino = new DevExpress.XtraEditors.TextEdit();
+            this.txtTurnoMatutino = new DevExpress.XtraEditors.TextEdit();
+            this.lblTurnoVespertino = new DevExpress.XtraEditors.LabelControl();
+            this.lblTurnoMatutino = new DevExpress.XtraEditors.LabelControl();
             this.BtnGrabar = new DevExpress.XtraEditors.SimpleButton();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
-            this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.VistaTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).BeginInit();
+            this.ErrorProvider = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.txtNombrePlantel.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtClavePlantel.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEntidadFederativa.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDireccionPlantel.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDirector.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSubdirector.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpCtrlSDocentes)).BeginInit();
+            this.grpCtrlSDocentes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPeriodo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateFecha.Properties.VistaTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateFecha.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTurnoVespertino.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTurnoMatutino.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
-            // labelControl1
+            // lbNombrePlantel
             // 
-            this.labelControl1.Location = new System.Drawing.Point(29, 61);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(93, 13);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "Nombre del Plantel:";
+            this.lbNombrePlantel.Location = new System.Drawing.Point(29, 61);
+            this.lbNombrePlantel.Name = "lbNombrePlantel";
+            this.lbNombrePlantel.Size = new System.Drawing.Size(93, 13);
+            this.lbNombrePlantel.TabIndex = 0;
+            this.lbNombrePlantel.Text = "Nombre del Plantel:";
             // 
-            // textEdit1
+            // txtNombrePlantel
             // 
-            this.textEdit1.Location = new System.Drawing.Point(128, 58);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(326, 20);
-            this.textEdit1.TabIndex = 1;
+            this.txtNombrePlantel.Location = new System.Drawing.Point(128, 58);
+            this.txtNombrePlantel.Name = "txtNombrePlantel";
+            this.txtNombrePlantel.Size = new System.Drawing.Size(326, 20);
+            this.txtNombrePlantel.TabIndex = 1;
             // 
-            // labelControl2
+            // lbClavePlantel
             // 
-            this.labelControl2.Location = new System.Drawing.Point(489, 61);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(83, 13);
-            this.labelControl2.TabIndex = 2;
-            this.labelControl2.Text = "Clave del Plantel:";
+            this.lbClavePlantel.Location = new System.Drawing.Point(489, 61);
+            this.lbClavePlantel.Name = "lbClavePlantel";
+            this.lbClavePlantel.Size = new System.Drawing.Size(83, 13);
+            this.lbClavePlantel.TabIndex = 2;
+            this.lbClavePlantel.Text = "Clave del Plantel:";
             // 
-            // textEdit2
+            // txtClavePlantel
             // 
-            this.textEdit2.Location = new System.Drawing.Point(578, 58);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(176, 20);
-            this.textEdit2.TabIndex = 3;
+            this.txtClavePlantel.Location = new System.Drawing.Point(578, 58);
+            this.txtClavePlantel.Name = "txtClavePlantel";
+            this.txtClavePlantel.Size = new System.Drawing.Size(176, 20);
+            this.txtClavePlantel.TabIndex = 3;
             // 
-            // labelControl3
+            // lblEntidadFederativa
             // 
-            this.labelControl3.Location = new System.Drawing.Point(25, 114);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(95, 13);
-            this.labelControl3.TabIndex = 4;
-            this.labelControl3.Text = "Entidad Federativa:";
+            this.lblEntidadFederativa.Location = new System.Drawing.Point(25, 114);
+            this.lblEntidadFederativa.Name = "lblEntidadFederativa";
+            this.lblEntidadFederativa.Size = new System.Drawing.Size(95, 13);
+            this.lblEntidadFederativa.TabIndex = 4;
+            this.lblEntidadFederativa.Text = "Entidad Federativa:";
             // 
-            // textEdit3
+            // txtEntidadFederativa
             // 
-            this.textEdit3.Location = new System.Drawing.Point(128, 111);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(490, 20);
-            this.textEdit3.TabIndex = 5;
+            this.txtEntidadFederativa.Location = new System.Drawing.Point(128, 111);
+            this.txtEntidadFederativa.Name = "txtEntidadFederativa";
+            this.txtEntidadFederativa.Size = new System.Drawing.Size(490, 20);
+            this.txtEntidadFederativa.TabIndex = 5;
             // 
-            // labelControl4
+            // lblDireccionPlantel
             // 
-            this.labelControl4.Location = new System.Drawing.Point(21, 175);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(99, 13);
-            this.labelControl4.TabIndex = 6;
-            this.labelControl4.Text = "Direccion del Plantel:";
+            this.lblDireccionPlantel.Location = new System.Drawing.Point(21, 175);
+            this.lblDireccionPlantel.Name = "lblDireccionPlantel";
+            this.lblDireccionPlantel.Size = new System.Drawing.Size(99, 13);
+            this.lblDireccionPlantel.TabIndex = 6;
+            this.lblDireccionPlantel.Text = "Direccion del Plantel:";
             // 
-            // textEdit4
+            // txtDireccionPlantel
             // 
-            this.textEdit4.Location = new System.Drawing.Point(128, 172);
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Size = new System.Drawing.Size(490, 20);
-            this.textEdit4.TabIndex = 7;
+            this.txtDireccionPlantel.Location = new System.Drawing.Point(128, 172);
+            this.txtDireccionPlantel.Name = "txtDireccionPlantel";
+            this.txtDireccionPlantel.Size = new System.Drawing.Size(490, 20);
+            this.txtDireccionPlantel.TabIndex = 7;
             // 
-            // labelControl5
+            // lblDirector
             // 
-            this.labelControl5.Location = new System.Drawing.Point(78, 236);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(42, 13);
-            this.labelControl5.TabIndex = 8;
-            this.labelControl5.Text = "Director:";
+            this.lblDirector.Location = new System.Drawing.Point(78, 236);
+            this.lblDirector.Name = "lblDirector";
+            this.lblDirector.Size = new System.Drawing.Size(42, 13);
+            this.lblDirector.TabIndex = 8;
+            this.lblDirector.Text = "Director:";
             // 
-            // textEdit5
+            // txtDirector
             // 
-            this.textEdit5.Location = new System.Drawing.Point(128, 233);
-            this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Size = new System.Drawing.Size(490, 20);
-            this.textEdit5.TabIndex = 9;
+            this.txtDirector.Location = new System.Drawing.Point(128, 233);
+            this.txtDirector.Name = "txtDirector";
+            this.txtDirector.Size = new System.Drawing.Size(490, 20);
+            this.txtDirector.TabIndex = 9;
             // 
-            // labelControl6
+            // lblSubdirector
             // 
-            this.labelControl6.Location = new System.Drawing.Point(61, 298);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(59, 13);
-            this.labelControl6.TabIndex = 10;
-            this.labelControl6.Text = "Subdirector:";
+            this.lblSubdirector.Location = new System.Drawing.Point(61, 298);
+            this.lblSubdirector.Name = "lblSubdirector";
+            this.lblSubdirector.Size = new System.Drawing.Size(59, 13);
+            this.lblSubdirector.TabIndex = 10;
+            this.lblSubdirector.Text = "Subdirector:";
             // 
-            // textEdit6
+            // txtSubdirector
             // 
-            this.textEdit6.Location = new System.Drawing.Point(128, 295);
-            this.textEdit6.Name = "textEdit6";
-            this.textEdit6.Size = new System.Drawing.Size(490, 20);
-            this.textEdit6.TabIndex = 11;
+            this.txtSubdirector.Location = new System.Drawing.Point(128, 295);
+            this.txtSubdirector.Name = "txtSubdirector";
+            this.txtSubdirector.Size = new System.Drawing.Size(490, 20);
+            this.txtSubdirector.TabIndex = 11;
             // 
-            // groupControl1
+            // grpCtrlSDocentes
             // 
-            this.groupControl1.Controls.Add(this.textEdit9);
-            this.groupControl1.Controls.Add(this.labelControl10);
-            this.groupControl1.Controls.Add(this.dateEdit1);
-            this.groupControl1.Controls.Add(this.labelControl9);
-            this.groupControl1.Controls.Add(this.textEdit8);
-            this.groupControl1.Controls.Add(this.textEdit7);
-            this.groupControl1.Controls.Add(this.labelControl8);
-            this.groupControl1.Controls.Add(this.labelControl7);
-            this.groupControl1.Location = new System.Drawing.Point(80, 389);
-            this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(540, 227);
-            this.groupControl1.TabIndex = 12;
-            this.groupControl1.Text = "Servicios Docentes";
+            this.grpCtrlSDocentes.Controls.Add(this.txtPeriodo);
+            this.grpCtrlSDocentes.Controls.Add(this.lblPeriodo);
+            this.grpCtrlSDocentes.Controls.Add(this.dateFecha);
+            this.grpCtrlSDocentes.Controls.Add(this.lblFecha);
+            this.grpCtrlSDocentes.Controls.Add(this.txtTurnoVespertino);
+            this.grpCtrlSDocentes.Controls.Add(this.txtTurnoMatutino);
+            this.grpCtrlSDocentes.Controls.Add(this.lblTurnoVespertino);
+            this.grpCtrlSDocentes.Controls.Add(this.lblTurnoMatutino);
+            this.grpCtrlSDocentes.Location = new System.Drawing.Point(80, 389);
+            this.grpCtrlSDocentes.Name = "grpCtrlSDocentes";
+            this.grpCtrlSDocentes.Size = new System.Drawing.Size(540, 227);
+            this.grpCtrlSDocentes.TabIndex = 12;
+            this.grpCtrlSDocentes.Text = "Servicios Docentes";
             // 
-            // textEdit9
+            // txtPeriodo
             // 
-            this.textEdit9.Location = new System.Drawing.Point(69, 165);
-            this.textEdit9.Name = "textEdit9";
-            this.textEdit9.Size = new System.Drawing.Size(277, 20);
-            this.textEdit9.TabIndex = 7;
+            this.txtPeriodo.Location = new System.Drawing.Point(69, 165);
+            this.txtPeriodo.Name = "txtPeriodo";
+            this.txtPeriodo.Size = new System.Drawing.Size(277, 20);
+            this.txtPeriodo.TabIndex = 7;
             // 
-            // labelControl10
+            // lblPeriodo
             // 
-            this.labelControl10.Location = new System.Drawing.Point(15, 168);
-            this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(40, 13);
-            this.labelControl10.TabIndex = 6;
-            this.labelControl10.Text = "Periodo:";
+            this.lblPeriodo.Location = new System.Drawing.Point(15, 168);
+            this.lblPeriodo.Name = "lblPeriodo";
+            this.lblPeriodo.Size = new System.Drawing.Size(40, 13);
+            this.lblPeriodo.TabIndex = 6;
+            this.lblPeriodo.Text = "Periodo:";
             // 
-            // dateEdit1
+            // dateFecha
             // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(69, 126);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateFecha.EditValue = null;
+            this.dateFecha.Location = new System.Drawing.Point(69, 126);
+            this.dateFecha.Name = "dateFecha";
+            this.dateFecha.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateFecha.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.dateEdit1.Size = new System.Drawing.Size(100, 20);
-            this.dateEdit1.TabIndex = 5;
+            this.dateFecha.Size = new System.Drawing.Size(100, 20);
+            this.dateFecha.TabIndex = 5;
             // 
-            // labelControl9
+            // lblFecha
             // 
-            this.labelControl9.Location = new System.Drawing.Point(14, 129);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(33, 13);
-            this.labelControl9.TabIndex = 4;
-            this.labelControl9.Text = "Fecha:";
+            this.lblFecha.Location = new System.Drawing.Point(14, 129);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(33, 13);
+            this.lblFecha.TabIndex = 4;
+            this.lblFecha.Text = "Fecha:";
             // 
-            // textEdit8
+            // txtTurnoVespertino
             // 
-            this.textEdit8.Location = new System.Drawing.Point(121, 84);
-            this.textEdit8.Name = "textEdit8";
-            this.textEdit8.Size = new System.Drawing.Size(277, 20);
-            this.textEdit8.TabIndex = 3;
+            this.txtTurnoVespertino.Location = new System.Drawing.Point(121, 84);
+            this.txtTurnoVespertino.Name = "txtTurnoVespertino";
+            this.txtTurnoVespertino.Size = new System.Drawing.Size(277, 20);
+            this.txtTurnoVespertino.TabIndex = 3;
             // 
-            // textEdit7
+            // txtTurnoMatutino
             // 
-            this.textEdit7.Location = new System.Drawing.Point(121, 50);
-            this.textEdit7.Name = "textEdit7";
-            this.textEdit7.Size = new System.Drawing.Size(277, 20);
-            this.textEdit7.TabIndex = 2;
+            this.txtTurnoMatutino.Location = new System.Drawing.Point(121, 50);
+            this.txtTurnoMatutino.Name = "txtTurnoMatutino";
+            this.txtTurnoMatutino.Size = new System.Drawing.Size(277, 20);
+            this.txtTurnoMatutino.TabIndex = 2;
             // 
-            // labelControl8
+            // lblTurnoVespertino
             // 
-            this.labelControl8.Location = new System.Drawing.Point(14, 87);
-            this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(86, 13);
-            this.labelControl8.TabIndex = 1;
-            this.labelControl8.Text = "Turno Vespertino:";
+            this.lblTurnoVespertino.Location = new System.Drawing.Point(14, 87);
+            this.lblTurnoVespertino.Name = "lblTurnoVespertino";
+            this.lblTurnoVespertino.Size = new System.Drawing.Size(86, 13);
+            this.lblTurnoVespertino.TabIndex = 1;
+            this.lblTurnoVespertino.Text = "Turno Vespertino:";
             // 
-            // labelControl7
+            // lblTurnoMatutino
             // 
-            this.labelControl7.Location = new System.Drawing.Point(15, 53);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(77, 13);
-            this.labelControl7.TabIndex = 0;
-            this.labelControl7.Text = "Turno Matutino:";
+            this.lblTurnoMatutino.Location = new System.Drawing.Point(15, 53);
+            this.lblTurnoMatutino.Name = "lblTurnoMatutino";
+            this.lblTurnoMatutino.Size = new System.Drawing.Size(77, 13);
+            this.lblTurnoMatutino.TabIndex = 0;
+            this.lblTurnoMatutino.Text = "Turno Matutino:";
             // 
             // BtnGrabar
             // 
@@ -245,44 +248,50 @@ namespace HorarioMaster.UI
             this.BtnGrabar.Text = "Grabar";
             this.BtnGrabar.Click += new System.EventHandler(this.BtnGrabar_Click);
             // 
+            // ErrorProvider
+            // 
+            this.ErrorProvider.ContainerControl = this;
+            // 
             // frmDatosPlantel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(786, 654);
             this.Controls.Add(this.BtnGrabar);
-            this.Controls.Add(this.groupControl1);
-            this.Controls.Add(this.textEdit6);
-            this.Controls.Add(this.labelControl6);
-            this.Controls.Add(this.textEdit5);
-            this.Controls.Add(this.labelControl5);
-            this.Controls.Add(this.textEdit4);
-            this.Controls.Add(this.labelControl4);
-            this.Controls.Add(this.textEdit3);
-            this.Controls.Add(this.labelControl3);
-            this.Controls.Add(this.textEdit2);
-            this.Controls.Add(this.labelControl2);
-            this.Controls.Add(this.textEdit1);
-            this.Controls.Add(this.labelControl1);
+            this.Controls.Add(this.grpCtrlSDocentes);
+            this.Controls.Add(this.txtSubdirector);
+            this.Controls.Add(this.lblSubdirector);
+            this.Controls.Add(this.txtDirector);
+            this.Controls.Add(this.lblDirector);
+            this.Controls.Add(this.txtDireccionPlantel);
+            this.Controls.Add(this.lblDireccionPlantel);
+            this.Controls.Add(this.txtEntidadFederativa);
+            this.Controls.Add(this.lblEntidadFederativa);
+            this.Controls.Add(this.txtClavePlantel);
+            this.Controls.Add(this.lbClavePlantel);
+            this.Controls.Add(this.txtNombrePlantel);
+            this.Controls.Add(this.lbNombrePlantel);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmDatosPlantel";
             this.ShowInTaskbar = false;
             this.Text = "Datos Plantel";
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
-            this.groupControl1.ResumeLayout(false);
-            this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.VistaTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).EndInit();
+            this.Load += new System.EventHandler(this.frmDatosPlantel_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.txtNombrePlantel.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtClavePlantel.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEntidadFederativa.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDireccionPlantel.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDirector.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSubdirector.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpCtrlSDocentes)).EndInit();
+            this.grpCtrlSDocentes.ResumeLayout(false);
+            this.grpCtrlSDocentes.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPeriodo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateFecha.Properties.VistaTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateFecha.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTurnoVespertino.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTurnoMatutino.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,28 +299,30 @@ namespace HorarioMaster.UI
 
         #endregion
 
-        private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
-        private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
-        private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
-        private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
-        private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.TextEdit textEdit5;
-        private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraEditors.TextEdit textEdit6;
-        private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraEditors.DateEdit dateEdit1;
-        private DevExpress.XtraEditors.LabelControl labelControl9;
-        private DevExpress.XtraEditors.TextEdit textEdit8;
-        private DevExpress.XtraEditors.TextEdit textEdit7;
-        private DevExpress.XtraEditors.LabelControl labelControl8;
-        private DevExpress.XtraEditors.LabelControl labelControl7;
-        private DevExpress.XtraEditors.TextEdit textEdit9;
-        private DevExpress.XtraEditors.LabelControl labelControl10;
+        private DevExpress.XtraEditors.LabelControl lbNombrePlantel;
+        private DevExpress.XtraEditors.TextEdit txtNombrePlantel;
+        private DevExpress.XtraEditors.LabelControl lbClavePlantel;
+        private DevExpress.XtraEditors.TextEdit txtClavePlantel;
+        private DevExpress.XtraEditors.LabelControl lblEntidadFederativa;
+        private DevExpress.XtraEditors.TextEdit txtEntidadFederativa;
+        private DevExpress.XtraEditors.LabelControl lblDireccionPlantel;
+        private DevExpress.XtraEditors.TextEdit txtDireccionPlantel;
+        private DevExpress.XtraEditors.LabelControl lblDirector;
+        private DevExpress.XtraEditors.TextEdit txtDirector;
+        private DevExpress.XtraEditors.LabelControl lblSubdirector;
+        private DevExpress.XtraEditors.TextEdit txtSubdirector;
+        private DevExpress.XtraEditors.GroupControl grpCtrlSDocentes;
+        private DevExpress.XtraEditors.DateEdit dateFecha;
+        private DevExpress.XtraEditors.LabelControl lblFecha;
+        private DevExpress.XtraEditors.TextEdit txtTurnoVespertino;
+        private DevExpress.XtraEditors.TextEdit txtTurnoMatutino;
+        private DevExpress.XtraEditors.LabelControl lblTurnoVespertino;
+        private DevExpress.XtraEditors.LabelControl lblTurnoMatutino;
+        private DevExpress.XtraEditors.TextEdit txtPeriodo;
+        private DevExpress.XtraEditors.LabelControl lblPeriodo;
         private DevExpress.XtraEditors.SimpleButton BtnGrabar;
-
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
+        private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider ErrorProvider;
+        
     }
 }

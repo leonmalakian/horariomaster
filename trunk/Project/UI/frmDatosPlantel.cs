@@ -25,30 +25,42 @@ namespace HorarioMaster.UI
         {
             InitializeComponent();
         }
-
+        #region Global's
         static public string PathDataBase = Path.GetDirectoryName(Application.ExecutablePath) + @"\Global.mdb";
+        #endregion
 
+        #region Validation
         private void BtnGrabar_Click(object sender, EventArgs e)
         {
-            if (textEdit1.Text != "" && textEdit2.Text !="" && textEdit3.Text != "" && textEdit4.Text !="" && textEdit5.Text != "" && textEdit6.Text != "" && textEdit7.Text != "" && textEdit8.Text != "" && textEdit9.Text != "")
-            {
-                DataBaseUtilities.OpenConnection(PathDataBase);
-                //INSERT INTO Plantel()
-            }
+            ErrorProvider.ClearErrors();
+            GetControls(this);
 
-            if(textEdit1.Text == ""||textEdit2.Text == ""||textEdit3.Text == ""||textEdit4.Text == ""||textEdit5.Text == ""||textEdit6.Text == ""||textEdit7.Text == ""||textEdit8.Text == ""||textEdit9.Text == "")
-            {
-                List<object> Err = new List<object>();
-                //Err.Add(object);
-                textEdit1.ErrorText = "El campo no debe de estar vacio";
-                Data_Error();
-            }
 
         }
 
-        private void Data_Error()
-        {
-            MessageBox.Show("El campo no debe de estar vacio");
+        private void frmDatosPlantel_Load(object sender, EventArgs e)
+        {          
+           
         }
+
+        public void GetControls(Control cControl)
+        {            
+            for (int nControl = 0; nControl < cControl.Controls.Count; nControl++)
+            {
+                if (cControl.Controls[nControl].Controls.Count > 0)
+                {
+                    GetControls(cControl.Controls[nControl]);
+                }
+
+                if (cControl.Controls[nControl].GetType().Name == "TextEdit" || cControl.Controls[nControl].GetType().Name == "DateEdit")
+                {
+                    if (cControl.Controls[nControl].Text == "")
+                    {
+                        ErrorProvider.SetError(cControl.Controls[nControl], "Este Campo no debe estar en blanco");
+                    }
+                }
+            }
+        }
+        #endregion
     }
 }
