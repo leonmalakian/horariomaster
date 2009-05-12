@@ -40,6 +40,7 @@ namespace HorarioMaster.Controls
             this.Name = "frmDGVMaster";
             this.Text = "Plazas";
             this.Load += new System.EventHandler(this.frmDGVMaster_Load);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmDGVMaster_FormClosed);
             this.ResumeLayout(false);
 
         }

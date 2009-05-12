@@ -37,6 +37,7 @@ namespace HorarioMaster.UI
             this.barButtonItem21 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem22 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem23 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem27 = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
             this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
@@ -83,13 +84,14 @@ namespace HorarioMaster.UI
             this.repositoryItemPictureEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
-            this.navBarInicio = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarItem11 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarAltas = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem8 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem9 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem10 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem12 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarInicio = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarItem11 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarHorarios = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem3 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem4 = new DevExpress.XtraNavBar.NavBarItem();
@@ -100,8 +102,6 @@ namespace HorarioMaster.UI
             this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.bar1 = new DevExpress.XtraBars.Bar();
-            this.navBarItem12 = new DevExpress.XtraNavBar.NavBarItem();
-            this.barButtonItem27 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).BeginInit();
@@ -230,6 +230,13 @@ namespace HorarioMaster.UI
             this.barButtonItem23.Id = 59;
             this.barButtonItem23.Name = "barButtonItem23";
             this.barButtonItem23.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem23_ItemClick);
+            // 
+            // barButtonItem27
+            // 
+            this.barButtonItem27.Caption = "Asig&nar Materias";
+            this.barButtonItem27.Id = 63;
+            this.barButtonItem27.Name = "barButtonItem27";
+            this.barButtonItem27.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem27_ItemClick);
             // 
             // barSubItem1
             // 
@@ -530,7 +537,7 @@ namespace HorarioMaster.UI
             // 
             // navBarControl1
             // 
-            this.navBarControl1.ActiveGroup = this.navBarAltas;
+            this.navBarControl1.ActiveGroup = this.navBarInicio;
             this.navBarControl1.ContentButtonHint = null;
             this.navBarControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.navBarControl1.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
@@ -560,23 +567,9 @@ namespace HorarioMaster.UI
             this.navBarControl1.View = new DevExpress.XtraNavBar.ViewInfo.NavigationPaneViewInfoRegistrator();
             this.navBarControl1.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarControl1_LinkClicked);
             // 
-            // navBarInicio
-            // 
-            this.navBarInicio.Caption = "Inicio";
-            this.navBarInicio.Expanded = true;
-            this.navBarInicio.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem11)});
-            this.navBarInicio.Name = "navBarInicio";
-            // 
-            // navBarItem11
-            // 
-            this.navBarItem11.Caption = "Inicio";
-            this.navBarItem11.Name = "navBarItem11";
-            // 
             // navBarAltas
             // 
             this.navBarAltas.Caption = "Altas y Modificaciones";
-            this.navBarAltas.Expanded = true;
             this.navBarAltas.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem2),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem8),
@@ -605,6 +598,24 @@ namespace HorarioMaster.UI
             this.navBarItem10.CanDrag = false;
             this.navBarItem10.Caption = "Personal";
             this.navBarItem10.Name = "navBarItem10";
+            // 
+            // navBarItem12
+            // 
+            this.navBarItem12.Caption = "Asignar Materias";
+            this.navBarItem12.Name = "navBarItem12";
+            // 
+            // navBarInicio
+            // 
+            this.navBarInicio.Caption = "Inicio";
+            this.navBarInicio.Expanded = true;
+            this.navBarInicio.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem11)});
+            this.navBarInicio.Name = "navBarInicio";
+            // 
+            // navBarItem11
+            // 
+            this.navBarItem11.Caption = "Inicio";
+            this.navBarItem11.Name = "navBarItem11";
             // 
             // navBarHorarios
             // 
@@ -669,18 +680,6 @@ namespace HorarioMaster.UI
             this.bar1.DockRow = 1;
             this.bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar1.Text = "Tools";
-            // 
-            // navBarItem12
-            // 
-            this.navBarItem12.Caption = "Asignar Materias";
-            this.navBarItem12.Name = "navBarItem12";
-            // 
-            // barButtonItem27
-            // 
-            this.barButtonItem27.Caption = "Asig&nar Materias";
-            this.barButtonItem27.Id = 63;
-            this.barButtonItem27.Name = "barButtonItem27";
-            this.barButtonItem27.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem27_ItemClick);
             // 
             // frmPrincipal
             // 

@@ -50,3 +50,37 @@ C:\Users\jando\Desktop\Horario Chilo\Project\obj\Debug\HorarioMaster.exe.license
 C:\Users\jando\Desktop\Horario Chilo\Project\bin\Debug\HorarioMaster.exe
 C:\Users\jando\Desktop\Horario Chilo\Project\bin\Debug\HorarioMaster.pdb
 C:\Users\jando\Desktop\Horario Chilo\Project\obj\Debug\HorarioMaster.Controls.GridMasterControl.resources
+C:\HorarioMaster\obj\Debug\HorarioMaster.exe
+C:\HorarioMaster\bin\Debug\HorarioMaster.exe
+C:\HorarioMaster\bin\Debug\HorarioMaster.pdb
+C:\HorarioMaster\obj\Debug\ResolveAssemblyReference.cache
+C:\HorarioMaster\obj\Debug\HorarioMaster.Controls.frmDGVMaster.resources
+C:\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridMasterControl.resources
+C:\HorarioMaster\obj\Debug\HorarioMaster.UI.AComplementarias.resources
+C:\HorarioMaster\obj\Debug\HorarioMaster.UI.frmCaptura.resources
+C:\HorarioMaster\obj\Debug\HorarioMaster.UI.frmHorario.resources
+C:\HorarioMaster\obj\Debug\HorarioMaster.Properties.Resources.resources
+C:\HorarioMaster\obj\Debug\HorarioMaster.UI.frmDatosPlantel.resources
+C:\HorarioMaster\obj\Debug\HorarioMaster.UI.frmParametersGroups.resources
+C:\HorarioMaster\obj\Debug\HorarioMaster.UI.frmPrincipal.resources
+C:\HorarioMaster\obj\Debug\HorarioMaster.UI.frmReportGroups.resources
+C:\HorarioMaster\obj\Debug\HorarioMaster.csproj.GenerateResource.Cache
+C:\HorarioMaster\obj\Debug\HorarioMaster.exe.licenses
+C:\HorarioMaster\obj\Debug\HorarioMaster.pdb
+\\pc-ivan\temporal\HorarioMaster\obj\Debug\HorarioMaster.exe
+\\pc-ivan\temporal\HorarioMaster\obj\Debug\HorarioMaster.pdb
+\\pc-ivan\temporal\HorarioMaster\obj\Debug\ResolveAssemblyReference.cache
+\\pc-ivan\temporal\HorarioMaster\obj\Debug\HorarioMaster.Controls.frmDGVMaster.resources
+\\pc-ivan\temporal\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridMasterControl.resources
+\\pc-ivan\temporal\HorarioMaster\obj\Debug\HorarioMaster.UI.AComplementarias.resources
+\\pc-ivan\temporal\HorarioMaster\obj\Debug\HorarioMaster.UI.frmCaptura.resources
+\\pc-ivan\temporal\HorarioMaster\obj\Debug\HorarioMaster.UI.frmHorario.resources
+\\pc-ivan\temporal\HorarioMaster\obj\Debug\HorarioMaster.Properties.Resources.resources
+\\pc-ivan\temporal\HorarioMaster\obj\Debug\HorarioMaster.UI.frmDatosPlantel.resources
+\\pc-ivan\temporal\HorarioMaster\obj\Debug\HorarioMaster.UI.frmParametersGroups.resources
+\\pc-ivan\temporal\HorarioMaster\obj\Debug\HorarioMaster.UI.frmPrincipal.resources
+\\pc-ivan\temporal\HorarioMaster\obj\Debug\HorarioMaster.UI.frmReportGroups.resources
+\\pc-ivan\temporal\HorarioMaster\obj\Debug\HorarioMaster.csproj.GenerateResource.Cache
+\\pc-ivan\temporal\HorarioMaster\obj\Debug\HorarioMaster.exe.licenses
+\\pc-ivan\temporal\HorarioMaster\bin\Debug\HorarioMaster.exe
+\\pc-ivan\temporal\HorarioMaster\bin\Debug\HorarioMaster.pdb

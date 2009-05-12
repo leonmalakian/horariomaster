@@ -28,7 +28,7 @@ namespace HorarioMaster.UI
         {
             AC.Parent = this.groupControl1;
             AC.Dock = DockStyle.Fill;
-            AC.FillGridMaster("Select Numero,Nombre From ActComp","ACTIVIDADES COMPLEMENTARIAS",true);
+            AC.FillGridMaster("Select Numero,Nombre From ActComp", "ACTIVIDADES COMPLEMENTARIAS","");
             AC.Show();
         }
         

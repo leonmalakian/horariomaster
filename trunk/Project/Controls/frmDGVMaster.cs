@@ -15,8 +15,13 @@ namespace HorarioMaster.Controls
 {
     public partial class frmDGVMaster : DevExpress.XtraEditors.XtraForm
     {
-        public frmDGVMaster()
+
+       
+        GridMasterControl ParentGrid = new GridMasterControl();
+
+        public frmDGVMaster(GridMasterControl Parent)
         {
+            ParentGrid = Parent;
             InitializeComponent();
         }
         string sSql="";
@@ -25,7 +30,7 @@ namespace HorarioMaster.Controls
 
         private void frmDGVMaster_Load(object sender, EventArgs e)
         {
-            Grid1.FillGridMaster(sSql, sField, true);
+            Grid1.FillGridMaster(sSql, sField,"");
             Grid1.Dock = DockStyle.Fill;
             Grid1.Parent = this;
         }
@@ -33,6 +38,10 @@ namespace HorarioMaster.Controls
         {
             sSql = sql;
             sField = field;
+        }
+        private void frmDGVMaster_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ParentGrid.CerrarVentana();
         }
     }
 }
