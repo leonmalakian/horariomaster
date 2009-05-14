@@ -320,8 +320,7 @@ namespace HorarioMaster.UI
         private DevExpress.XtraEditors.LabelControl lblTurnoMatutino;
         private DevExpress.XtraEditors.TextEdit txtPeriodo;
         private DevExpress.XtraEditors.LabelControl lblPeriodo;
-        private DevExpress.XtraEditors.SimpleButton BtnGrabar;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
+        private DevExpress.XtraEditors.SimpleButton BtnGrabar;      
         private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider ErrorProvider;
         
     }

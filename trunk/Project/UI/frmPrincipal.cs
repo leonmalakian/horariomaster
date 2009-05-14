@@ -55,8 +55,9 @@ namespace HorarioMaster.UI
                 case "navBarReportes":
                     switch (e.Link.Caption)
                     {
-                        case "Grupos":
-                            XtraMessageBox.Show(e.Link.Caption);
+                        case "Grupos":                            
+                            frmParametersGroups Parameters = new frmParametersGroups();
+                            Parameters.ShowDialog();
                             break;
                         case "Maestros":
                             XtraMessageBox.Show(e.Link.Caption);
@@ -242,6 +243,12 @@ namespace HorarioMaster.UI
             Captura.ControlBox = false;
             Captura.TabPageToFront();
             Captura.Show();
+        }
+
+        private void barButtonItem13_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmParametersGroups Parameters = new frmParametersGroups();
+            Parameters.ShowDialog();
         }
     }
 }

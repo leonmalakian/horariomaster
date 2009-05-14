@@ -35,6 +35,7 @@ namespace HorarioMaster.UI
             // 
             this.crystalReportViewerGroups.ActiveViewIndex = -1;
             this.crystalReportViewerGroups.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewerGroups.DisplayGroupTree = false;
             this.crystalReportViewerGroups.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewerGroups.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewerGroups.Name = "crystalReportViewerGroups";

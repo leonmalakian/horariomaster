@@ -89,9 +89,13 @@ namespace HorarioMaster.UI
             this.navBarItem8 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem9 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem10 = new DevExpress.XtraNavBar.NavBarItem();
+<<<<<<< .mine
+            this.navBarItem12 = new DevExpress.XtraNavBar.NavBarItem();
+=======
             this.navBarItem12 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarInicio = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem11 = new DevExpress.XtraNavBar.NavBarItem();
+>>>>>>> .r32
             this.navBarHorarios = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem3 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem4 = new DevExpress.XtraNavBar.NavBarItem();
@@ -281,6 +285,7 @@ namespace HorarioMaster.UI
             this.barButtonItem13.Caption = "Gru&pos";
             this.barButtonItem13.Id = 22;
             this.barButtonItem13.Name = "barButtonItem13";
+            this.barButtonItem13.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem13_ItemClick);
             // 
             // barButtonItem14
             // 
@@ -530,7 +535,7 @@ namespace HorarioMaster.UI
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.xtraTabControl1);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(784, 377);
+            this.splitContainerControl1.Size = new System.Drawing.Size(784, 379);
             this.splitContainerControl1.SplitterPosition = 200;
             this.splitContainerControl1.TabIndex = 4;
             this.splitContainerControl1.Text = "splitContainerControl1";
@@ -561,7 +566,7 @@ namespace HorarioMaster.UI
             this.navBarControl1.Location = new System.Drawing.Point(0, 0);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 147;
-            this.navBarControl1.Size = new System.Drawing.Size(200, 377);
+            this.navBarControl1.Size = new System.Drawing.Size(200, 379);
             this.navBarControl1.TabIndex = 0;
             this.navBarControl1.Text = "navBarControl1";
             this.navBarControl1.View = new DevExpress.XtraNavBar.ViewInfo.NavigationPaneViewInfoRegistrator();
@@ -599,6 +604,13 @@ namespace HorarioMaster.UI
             this.navBarItem10.Caption = "Personal";
             this.navBarItem10.Name = "navBarItem10";
             // 
+<<<<<<< .mine
+            // navBarItem12
+            // 
+            this.navBarItem12.Caption = "Asignar Materias";
+            this.navBarItem12.Name = "navBarItem12";
+            // 
+=======
             // navBarItem12
             // 
             this.navBarItem12.Caption = "Asignar Materias";
@@ -617,6 +629,7 @@ namespace HorarioMaster.UI
             this.navBarItem11.Caption = "Inicio";
             this.navBarItem11.Name = "navBarItem11";
             // 
+>>>>>>> .r32
             // navBarHorarios
             // 
             this.navBarHorarios.Caption = "Horarios";
@@ -669,7 +682,7 @@ namespace HorarioMaster.UI
             this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
             this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.Size = new System.Drawing.Size(578, 377);
+            this.xtraTabControl1.Size = new System.Drawing.Size(578, 379);
             this.xtraTabControl1.TabIndex = 0;
             this.xtraTabControl1.Visible = false;
             // 
