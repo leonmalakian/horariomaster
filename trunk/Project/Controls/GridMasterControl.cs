@@ -139,6 +139,7 @@ namespace HorarioMaster.Controls
             temp.EditValueChanged += new EventHandler(temp_EditValueChanged);
         }
 
+
         public void AddPopupColumn(string sSql, string sColumnNameCreate, string sHeader)
         {
             RepositoryItemPopupContainerEdit temp = new RepositoryItemPopupContainerEdit();
@@ -153,6 +154,7 @@ namespace HorarioMaster.Controls
             Sql = sSql;
             Field = sColumnNameCreate;
             sName1 = sHeader;
+            gridView1.BestFitColumns();
             temp.Closed += new ClosedEventHandler(temp_Closed);
             temp.Click += new EventHandler(temp_Click);
           }
@@ -177,9 +179,8 @@ namespace HorarioMaster.Controls
         void temp_Closed(object sender, ClosedEventArgs e)
         {
             MessageBox.Show("Closed");
-        }
+        }      
 
-        
         public void AddDateColumn(string sColumnNameReplace)
         {
             RepositoryItemDateEdit temp = new RepositoryItemDateEdit();

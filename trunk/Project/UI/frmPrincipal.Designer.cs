@@ -89,13 +89,10 @@ namespace HorarioMaster.UI
             this.navBarItem8 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem9 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem10 = new DevExpress.XtraNavBar.NavBarItem();
-<<<<<<< .mine
             this.navBarItem12 = new DevExpress.XtraNavBar.NavBarItem();
-=======
             this.navBarItem12 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarInicio = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem11 = new DevExpress.XtraNavBar.NavBarItem();
->>>>>>> .r32
             this.navBarHorarios = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem3 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem4 = new DevExpress.XtraNavBar.NavBarItem();
@@ -604,13 +601,11 @@ namespace HorarioMaster.UI
             this.navBarItem10.Caption = "Personal";
             this.navBarItem10.Name = "navBarItem10";
             // 
-<<<<<<< .mine
             // navBarItem12
             // 
             this.navBarItem12.Caption = "Asignar Materias";
             this.navBarItem12.Name = "navBarItem12";
             // 
-=======
             // navBarItem12
             // 
             this.navBarItem12.Caption = "Asignar Materias";
@@ -629,7 +624,6 @@ namespace HorarioMaster.UI
             this.navBarItem11.Caption = "Inicio";
             this.navBarItem11.Name = "navBarItem11";
             // 
->>>>>>> .r32
             // navBarHorarios
             // 
             this.navBarHorarios.Caption = "Horarios";
