@@ -97,7 +97,7 @@ namespace HorarioMaster.Controls
         public void AddComboBoxColumn(string sSql, string sItem, string sColumnNameReplace, string sFieldChargeComboBox)
         {
             RepositoryItemComboBox Temp = new RepositoryItemComboBox();
-            
+            Temp.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             if (sSql != "" )
             {
                 DataBaseUtilities.OpenConnection(PathDataBase);
