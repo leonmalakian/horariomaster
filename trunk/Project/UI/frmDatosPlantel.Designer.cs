@@ -276,7 +276,6 @@ namespace HorarioMaster.UI
             this.Name = "frmDatosPlantel";
             this.ShowInTaskbar = false;
             this.Text = "Datos Plantel";
-            this.Load += new System.EventHandler(this.frmDatosPlantel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtNombrePlantel.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtClavePlantel.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEntidadFederativa.Properties)).EndInit();

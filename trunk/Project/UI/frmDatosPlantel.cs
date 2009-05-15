@@ -29,18 +29,22 @@ namespace HorarioMaster.UI
         static public string PathDataBase = Path.GetDirectoryName(Application.ExecutablePath) + @"\Global.mdb";
         #endregion
 
+        #region SaveParams
+        private void Save_Params()
+        {
+            DataBaseUtilities.OpenConnection(PathDataBase);
+            string str = "INSERT INTO Plantel (Nombre,Clave,Municipio,Direccion,Director,Subdirector,Matutino,Vespertino,Fecha,Periodo)VALUES('" + txtNombrePlantel.Text + "','" + txtClavePlantel.Text + "','" + txtEntidadFederativa.Text + "','" + txtDireccionPlantel.Text + "','" + txtDirector.Text + "','" + txtSubdirector.Text + "','" + txtTurnoMatutino.Text + "','" + txtTurnoVespertino.Text + "','" + dateFecha.Text + "','" + txtPeriodo.Text + "')";
+            DataBaseUtilities.ExecuteNonSql(str);
+            DataBaseUtilities.CloseConnection();
+        }
+        #endregion
+
         #region Validation
         private void BtnGrabar_Click(object sender, EventArgs e)
         {
             ErrorProvider.ClearErrors();
             GetControls(this);
-
-
-        }
-
-        private void frmDatosPlantel_Load(object sender, EventArgs e)
-        {          
-           
+            Save_Params();
         }
 
         public void GetControls(Control cControl)
