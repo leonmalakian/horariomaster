@@ -64,30 +64,6 @@ namespace HorarioMaster
             cmd.ExecuteNonQuery();            
         }
 
-        //public static void UpdateDB(string SqlString)
-        //{
-            
-        //    OleDbCommand SentenciaSql = new OleDbCommand(SqlString, cnn);
-        //    OleDbDataReader dr = SentenciaSql.ExecuteReader();
-            
-        //}
-
-        //public static ComboBox FillComboBox(string SqlString,string Campo,ComboBox CB)
-        //{
-             
-        //    OleDbCommand SentenciaSql = new OleDbCommand(SqlString, cnn);
-        //    OleDbDataReader dr = SentenciaSql.ExecuteReader();
-        //    while (dr.Read())
-        //    {
-        //        if(CB.FindString(dr[Campo].ToString()) == -1 )
-        //        {
-        //            CB.Items.Add(dr[Campo]);
-        //        }                
-        //    }
-        //    dr.Close();            
-        //    return CB;
-        //}
-
         public static ComboBoxEdit FillComboBoxEdit(string SqlString, string Campo, ComboBoxEdit CB)
         {
 
@@ -186,11 +162,6 @@ namespace HorarioMaster
             }
             dr.Close();
             return "";   
-        }
-
-        internal static DevExpress.XtraEditors.Repository.RepositoryItemComboBox FillComboBoxEdit(string p, string p_2, DevExpress.XtraEditors.Repository.RepositoryItemComboBox Combobox)
-        {
-            throw new NotImplementedException();
         }
     }
 }
