@@ -84,3 +84,226 @@ C:\HorarioMaster\obj\Debug\HorarioMaster.pdb
 \\pc-ivan\temporal\HorarioMaster\obj\Debug\HorarioMaster.exe.licenses
 \\pc-ivan\temporal\HorarioMaster\bin\Debug\HorarioMaster.exe
 \\pc-ivan\temporal\HorarioMaster\bin\Debug\HorarioMaster.pdb
+C:\HorarioMaster\obj\Debug\HorarioMaster.UI.frmReportGeneral.resources
+C:\Users\jando\Desktop\15-mayo\HorarioMaster\obj\Debug\HorarioMaster.exe
+C:\Users\jando\Desktop\15-mayo\HorarioMaster\obj\Debug\HorarioMaster.pdb
+C:\Users\jando\Desktop\15-mayo\HorarioMaster\bin\Debug\HorarioMaster.exe
+C:\Users\jando\Desktop\15-mayo\HorarioMaster\bin\Debug\HorarioMaster.pdb
+C:\Users\jando\Desktop\15-mayo\HorarioMaster\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\jando\Desktop\15-mayo\HorarioMaster\obj\Debug\HorarioMaster.Controls.frmDGVMaster.resources
+C:\Users\jando\Desktop\15-mayo\HorarioMaster\obj\Debug\HorarioMaster.UI.AComplementarias.resources
+C:\Users\jando\Desktop\15-mayo\HorarioMaster\obj\Debug\HorarioMaster.UI.frmCaptura.resources
+C:\Users\jando\Desktop\15-mayo\HorarioMaster\obj\Debug\HorarioMaster.UI.frmHorario.resources
+C:\Users\jando\Desktop\15-mayo\HorarioMaster\obj\Debug\HorarioMaster.Properties.Resources.resources
+C:\Users\jando\Desktop\15-mayo\HorarioMaster\obj\Debug\HorarioMaster.UI.frmDatosPlantel.resources
+C:\Users\jando\Desktop\15-mayo\HorarioMaster\obj\Debug\HorarioMaster.UI.frmParametersGroups.resources
+C:\Users\jando\Desktop\15-mayo\HorarioMaster\obj\Debug\HorarioMaster.UI.frmPrincipal.resources
+C:\Users\jando\Desktop\15-mayo\HorarioMaster\obj\Debug\HorarioMaster.UI.frmReportGeneral.resources
+C:\Users\jando\Desktop\15-mayo\HorarioMaster\obj\Debug\HorarioMaster.UI.frmReportGroups.resources
+C:\Users\jando\Desktop\15-mayo\HorarioMaster\obj\Debug\HorarioMaster.csproj.GenerateResource.Cache
+C:\Users\jando\Desktop\15-mayo\HorarioMaster\obj\Debug\HorarioMaster.exe.licenses
+C:\Users\jando\Desktop\15-mayo\HorarioMaster\obj\Debug\HorarioMaster.Controls.frmGridPlaza.resources
+C:\Users\jando\Desktop\15-mayo\HorarioMaster\obj\Debug\HorarioMaster.UI.frmPortada.resources
+C:\Users\jando\Desktop\15-mayo\HorarioMaster\obj\Debug\HorarioMaster.UI.MaestroMateria.resources
+C:\Documents and Settings\aruelas\Desktop\15-mayo\HorarioMaster\obj\Debug\HorarioMaster.exe
+C:\Documents and Settings\aruelas\Desktop\15-mayo\HorarioMaster\obj\Debug\HorarioMaster.pdb
+C:\Documents and Settings\aruelas\Desktop\15-mayo\HorarioMaster\bin\Debug\HorarioMaster.exe
+C:\Documents and Settings\aruelas\Desktop\15-mayo\HorarioMaster\bin\Debug\HorarioMaster.pdb
+C:\Documents and Settings\aruelas\Desktop\15-mayo\HorarioMaster\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\aruelas\Desktop\15-mayo\HorarioMaster\obj\Debug\HorarioMaster.Controls.frmDGVMaster.resources
+C:\Documents and Settings\aruelas\Desktop\15-mayo\HorarioMaster\obj\Debug\HorarioMaster.Controls.frmGridPlaza.resources
+C:\Documents and Settings\aruelas\Desktop\15-mayo\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridMasterControl.resources
+C:\Documents and Settings\aruelas\Desktop\15-mayo\HorarioMaster\obj\Debug\HorarioMaster.UI.AComplementarias.resources
+C:\Documents and Settings\aruelas\Desktop\15-mayo\HorarioMaster\obj\Debug\HorarioMaster.UI.frmCaptura.resources
+C:\Documents and Settings\aruelas\Desktop\15-mayo\HorarioMaster\obj\Debug\HorarioMaster.UI.frmHorario.resources
+C:\Documents and Settings\aruelas\Desktop\15-mayo\HorarioMaster\obj\Debug\HorarioMaster.Properties.Resources.resources
+C:\Documents and Settings\aruelas\Desktop\15-mayo\HorarioMaster\obj\Debug\HorarioMaster.UI.frmDatosPlantel.resources
+C:\Documents and Settings\aruelas\Desktop\15-mayo\HorarioMaster\obj\Debug\HorarioMaster.UI.frmParametersGroups.resources
+C:\Documents and Settings\aruelas\Desktop\15-mayo\HorarioMaster\obj\Debug\HorarioMaster.UI.frmPortada.resources
+C:\Documents and Settings\aruelas\Desktop\15-mayo\HorarioMaster\obj\Debug\HorarioMaster.UI.frmPrincipal.resources
+C:\Documents and Settings\aruelas\Desktop\15-mayo\HorarioMaster\obj\Debug\HorarioMaster.UI.frmReportGeneral.resources
+C:\Documents and Settings\aruelas\Desktop\15-mayo\HorarioMaster\obj\Debug\HorarioMaster.UI.frmReportGroups.resources
+C:\Documents and Settings\aruelas\Desktop\15-mayo\HorarioMaster\obj\Debug\HorarioMaster.UI.MaestroMateria.resources
+C:\Documents and Settings\aruelas\Desktop\15-mayo\HorarioMaster\obj\Debug\HorarioMaster.csproj.GenerateResource.Cache
+C:\Documents and Settings\aruelas\Desktop\15-mayo\HorarioMaster\obj\Debug\HorarioMaster.exe.licenses
+C:\Users\jando\Desktop\15-mayo\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlEspecialidad.resources
+C:\Users\jando\Desktop\15-mayo\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlGrupos.resources
+C:\Users\jando\Desktop\15-mayo\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlMateria.resources
+C:\Users\jando\Desktop\15-mayo\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlPersonal.resources
+C:\Users\jando\Desktop\15-mayo\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlPlaza.resources
+C:\Users\jando\Desktop\15-mayo\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlAComplementarias.resources
+C:\Users\jando\Desktop\24-mayo\HorarioMaster\obj\Debug\HorarioMaster.exe
+C:\Users\jando\Desktop\24-mayo\HorarioMaster\obj\Debug\HorarioMaster.pdb
+C:\Users\jando\Desktop\24-mayo\HorarioMaster\bin\Debug\HorarioMaster.exe
+C:\Users\jando\Desktop\24-mayo\HorarioMaster\bin\Debug\HorarioMaster.pdb
+C:\Users\jando\Desktop\24-mayo\HorarioMaster\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\jando\Desktop\24-mayo\HorarioMaster\obj\Debug\HorarioMaster.Controls.frmDGVMaster.resources
+C:\Users\jando\Desktop\24-mayo\HorarioMaster\obj\Debug\HorarioMaster.Controls.frmGridPlaza.resources
+C:\Users\jando\Desktop\24-mayo\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlEspecialidad.resources
+C:\Users\jando\Desktop\24-mayo\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlGrupos.resources
+C:\Users\jando\Desktop\24-mayo\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlMateria.resources
+C:\Users\jando\Desktop\24-mayo\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlPersonal.resources
+C:\Users\jando\Desktop\24-mayo\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlPlaza.resources
+C:\Users\jando\Desktop\24-mayo\HorarioMaster\obj\Debug\HorarioMaster.UI.AComplementarias.resources
+C:\Users\jando\Desktop\24-mayo\HorarioMaster\obj\Debug\HorarioMaster.UI.frmCaptura.resources
+C:\Users\jando\Desktop\24-mayo\HorarioMaster\obj\Debug\HorarioMaster.UI.frmHorario.resources
+C:\Users\jando\Desktop\24-mayo\HorarioMaster\obj\Debug\HorarioMaster.Properties.Resources.resources
+C:\Users\jando\Desktop\24-mayo\HorarioMaster\obj\Debug\HorarioMaster.UI.frmDatosPlantel.resources
+C:\Users\jando\Desktop\24-mayo\HorarioMaster\obj\Debug\HorarioMaster.UI.frmParametersGroups.resources
+C:\Users\jando\Desktop\24-mayo\HorarioMaster\obj\Debug\HorarioMaster.UI.frmPortada.resources
+C:\Users\jando\Desktop\24-mayo\HorarioMaster\obj\Debug\HorarioMaster.UI.frmPrincipal.resources
+C:\Users\jando\Desktop\24-mayo\HorarioMaster\obj\Debug\HorarioMaster.UI.frmReportGeneral.resources
+C:\Users\jando\Desktop\24-mayo\HorarioMaster\obj\Debug\HorarioMaster.UI.frmReportGroups.resources
+C:\Users\jando\Desktop\24-mayo\HorarioMaster\obj\Debug\HorarioMaster.UI.MaestroMateria.resources
+C:\Users\jando\Desktop\24-mayo\HorarioMaster\obj\Debug\HorarioMaster.csproj.GenerateResource.Cache
+C:\Users\jando\Desktop\24-mayo\HorarioMaster\obj\Debug\HorarioMaster.exe.licenses
+C:\Users\jando\Desktop\24-mayo\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlAComplementarias.resources
+C:\Users\jando\Desktop\24-mayo\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlMaestroMateria.resources
+C:\Users\jando\Desktop\24-mayo\HorarioMaster\obj\Debug\HorarioMaster.Controls.frmGridMateria.resources
+C:\Users\jando\Desktop\24-mayo\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlAsignaMateria.resources
+F:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.exe
+F:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.pdb
+I:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.exe
+I:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.pdb
+G:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.exe
+G:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.pdb
+G:\Build Francisco\HorarioMaster\bin\Debug\HorarioMaster.exe
+G:\Build Francisco\HorarioMaster\bin\Debug\HorarioMaster.pdb
+G:\Build Francisco\HorarioMaster\obj\Debug\ResolveAssemblyReference.cache
+G:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.frmDGVMaster.resources
+G:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.frmGridMateria.resources
+G:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.frmGridPlaza.resources
+G:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlAComplementarias.resources
+G:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlAsignaMateria.resources
+G:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlEspecialidad.resources
+G:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlGrupos.resources
+G:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlMaestroMateria.resources
+G:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlMateria.resources
+G:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlPersonal.resources
+G:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlPlaza.resources
+G:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.UI.AComplementarias.resources
+G:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.UI.frmCaptura.resources
+G:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.UI.frmHorario.resources
+G:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Properties.Resources.resources
+G:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.UI.frmDatosPlantel.resources
+G:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.UI.frmParametersGroups.resources
+G:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.UI.frmPortada.resources
+G:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.UI.frmPrincipal.resources
+G:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.UI.frmReportGeneral.resources
+G:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.UI.frmReportGroups.resources
+G:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.UI.MaestroMateria.resources
+G:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.csproj.GenerateResource.Cache
+G:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.exe.licenses
+C:\Documents and Settings\aruelas\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.exe
+C:\Documents and Settings\aruelas\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.pdb
+C:\Documents and Settings\aruelas\Desktop\Build Francisco\HorarioMaster\bin\Debug\HorarioMaster.exe
+C:\Documents and Settings\aruelas\Desktop\Build Francisco\HorarioMaster\bin\Debug\HorarioMaster.pdb
+C:\Documents and Settings\aruelas\Desktop\Build Francisco\HorarioMaster\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\aruelas\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.frmDGVMaster.resources
+C:\Documents and Settings\aruelas\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.frmGridMateria.resources
+C:\Documents and Settings\aruelas\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.frmGridPlaza.resources
+C:\Documents and Settings\aruelas\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlAComplementarias.resources
+C:\Documents and Settings\aruelas\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlAsignaMateria.resources
+C:\Documents and Settings\aruelas\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlEspecialidad.resources
+C:\Documents and Settings\aruelas\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlGrupos.resources
+C:\Documents and Settings\aruelas\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlMaestroMateria.resources
+C:\Documents and Settings\aruelas\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlMateria.resources
+C:\Documents and Settings\aruelas\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlPersonal.resources
+C:\Documents and Settings\aruelas\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlPlaza.resources
+C:\Documents and Settings\aruelas\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.UI.AComplementarias.resources
+C:\Documents and Settings\aruelas\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.UI.frmCaptura.resources
+C:\Documents and Settings\aruelas\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.UI.frmHorario.resources
+C:\Documents and Settings\aruelas\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Properties.Resources.resources
+C:\Documents and Settings\aruelas\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.UI.frmDatosPlantel.resources
+C:\Documents and Settings\aruelas\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.UI.frmParametersGroups.resources
+C:\Documents and Settings\aruelas\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.UI.frmPortada.resources
+C:\Documents and Settings\aruelas\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.UI.frmPrincipal.resources
+C:\Documents and Settings\aruelas\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.UI.frmReportGeneral.resources
+C:\Documents and Settings\aruelas\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.UI.frmReportGroups.resources
+C:\Documents and Settings\aruelas\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.UI.MaestroMateria.resources
+C:\Documents and Settings\aruelas\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.csproj.GenerateResource.Cache
+C:\Documents and Settings\aruelas\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.exe.licenses
+I:\Build Francisco\HorarioMaster\bin\Debug\HorarioMaster.exe
+I:\Build Francisco\HorarioMaster\bin\Debug\HorarioMaster.pdb
+I:\Build Francisco\HorarioMaster\obj\Debug\ResolveAssemblyReference.cache
+I:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.frmDGVMaster.resources
+I:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.frmGridMateria.resources
+I:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.frmGridPlaza.resources
+I:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlAComplementarias.resources
+I:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlAsignaMateria.resources
+I:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlEspecialidad.resources
+I:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlGrupos.resources
+I:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlMaestroMateria.resources
+I:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlMateria.resources
+I:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlPersonal.resources
+I:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlPlaza.resources
+I:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.UI.AComplementarias.resources
+I:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.UI.frmCaptura.resources
+I:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.UI.frmHorario.resources
+I:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Properties.Resources.resources
+I:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.UI.frmDatosPlantel.resources
+I:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.UI.frmParametersGroups.resources
+I:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.UI.frmPortada.resources
+I:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.UI.frmPrincipal.resources
+I:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.UI.frmReportGeneral.resources
+I:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.UI.frmReportGroups.resources
+I:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.UI.MaestroMateria.resources
+I:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.csproj.GenerateResource.Cache
+I:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.exe.licenses
+I:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlEspecialidad1.resources
+I:\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.frmGridEspecialidad.resources
+C:\Documents and Settings\Ivan\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.exe
+C:\Documents and Settings\Ivan\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.pdb
+C:\Documents and Settings\Ivan\Desktop\Build Francisco\HorarioMaster\bin\Debug\HorarioMaster.exe
+C:\Documents and Settings\Ivan\Desktop\Build Francisco\HorarioMaster\bin\Debug\HorarioMaster.pdb
+C:\Documents and Settings\Ivan\Desktop\Build Francisco\HorarioMaster\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Ivan\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.frmDGVMaster.resources
+C:\Documents and Settings\Ivan\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.frmGridMateria.resources
+C:\Documents and Settings\Ivan\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.frmGridPlaza.resources
+C:\Documents and Settings\Ivan\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlAComplementarias.resources
+C:\Documents and Settings\Ivan\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlAsignaMateria.resources
+C:\Documents and Settings\Ivan\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlEspecialidad.resources
+C:\Documents and Settings\Ivan\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlGrupos.resources
+C:\Documents and Settings\Ivan\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlMaestroMateria.resources
+C:\Documents and Settings\Ivan\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlMateria.resources
+C:\Documents and Settings\Ivan\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlPersonal.resources
+C:\Documents and Settings\Ivan\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlPlaza.resources
+C:\Documents and Settings\Ivan\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.UI.AComplementarias.resources
+C:\Documents and Settings\Ivan\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.UI.frmCaptura.resources
+C:\Documents and Settings\Ivan\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.UI.frmHorario.resources
+C:\Documents and Settings\Ivan\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.Properties.Resources.resources
+C:\Documents and Settings\Ivan\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.UI.frmDatosPlantel.resources
+C:\Documents and Settings\Ivan\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.UI.frmParametersGroups.resources
+C:\Documents and Settings\Ivan\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.UI.frmPortada.resources
+C:\Documents and Settings\Ivan\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.UI.frmPrincipal.resources
+C:\Documents and Settings\Ivan\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.UI.frmReportGeneral.resources
+C:\Documents and Settings\Ivan\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.UI.frmReportGroups.resources
+C:\Documents and Settings\Ivan\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.csproj.GenerateResource.Cache
+C:\Documents and Settings\Ivan\Desktop\Build Francisco\HorarioMaster\obj\Debug\HorarioMaster.exe.licenses
+C:\HorarioMaster\Project\obj\Debug\HorarioMaster.exe
+C:\HorarioMaster\Project\obj\Debug\HorarioMaster.pdb
+C:\HorarioMaster\Project\obj\Debug\ResolveAssemblyReference.cache
+C:\HorarioMaster\Project\obj\Debug\HorarioMaster.Controls.frmGridMateria.resources
+C:\HorarioMaster\Project\obj\Debug\HorarioMaster.Controls.frmGridPlaza.resources
+C:\HorarioMaster\Project\obj\Debug\HorarioMaster.Controls.GridControlAComplementarias.resources
+C:\HorarioMaster\Project\obj\Debug\HorarioMaster.Controls.GridControlAsignaMateria.resources
+C:\HorarioMaster\Project\obj\Debug\HorarioMaster.Controls.GridControlEspecialidad.resources
+C:\HorarioMaster\Project\obj\Debug\HorarioMaster.Controls.GridControlGrupos.resources
+C:\HorarioMaster\Project\obj\Debug\HorarioMaster.Controls.GridControlMaestroMateria.resources
+C:\HorarioMaster\Project\obj\Debug\HorarioMaster.Controls.GridControlMateria.resources
+C:\HorarioMaster\Project\obj\Debug\HorarioMaster.Controls.GridControlPersonal.resources
+C:\HorarioMaster\Project\obj\Debug\HorarioMaster.Controls.GridControlPlaza.resources
+C:\HorarioMaster\Project\obj\Debug\HorarioMaster.UI.AComplementarias.resources
+C:\HorarioMaster\Project\obj\Debug\HorarioMaster.UI.frmCaptura.resources
+C:\HorarioMaster\Project\obj\Debug\HorarioMaster.UI.frmHorario.resources
+C:\HorarioMaster\Project\obj\Debug\HorarioMaster.Properties.Resources.resources
+C:\HorarioMaster\Project\obj\Debug\HorarioMaster.UI.frmDatosPlantel.resources
+C:\HorarioMaster\Project\obj\Debug\HorarioMaster.UI.frmParametersGroups.resources
+C:\HorarioMaster\Project\obj\Debug\HorarioMaster.UI.frmPortada.resources
+C:\HorarioMaster\Project\obj\Debug\HorarioMaster.UI.frmPrincipal.resources
+C:\HorarioMaster\Project\obj\Debug\HorarioMaster.UI.frmReportGeneral.resources
+C:\HorarioMaster\Project\obj\Debug\HorarioMaster.UI.frmReportGroups.resources
+C:\HorarioMaster\Project\obj\Debug\HorarioMaster.csproj.GenerateResource.Cache
+C:\HorarioMaster\Project\obj\Debug\HorarioMaster.exe.licenses
+C:\HorarioMaster\Project\bin\Debug\HorarioMaster.exe
+C:\HorarioMaster\Project\bin\Debug\HorarioMaster.pdb
