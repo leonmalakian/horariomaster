@@ -310,6 +310,8 @@ namespace HorarioMaster.DataSets {
             
             private global::System.Data.DataColumn columnMateria;
             
+            private global::System.Data.DataColumn columnMaestro;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public DTScheduleGroupsDataTable() {
                 this.TableName = "DTScheduleGroups";
@@ -397,6 +399,13 @@ namespace HorarioMaster.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn MaestroColumn {
+                get {
+                    return this.columnMaestro;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -425,7 +434,7 @@ namespace HorarioMaster.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public DTScheduleGroupsRow AddDTScheduleGroupsRow(string Semestre, string Grupo, string SG, string Turno, string Especialidad, string Dia, string Hora, string Materia) {
+            public DTScheduleGroupsRow AddDTScheduleGroupsRow(string Semestre, string Grupo, string SG, string Turno, string Especialidad, string Dia, string Hora, string Materia, string Maestro) {
                 DTScheduleGroupsRow rowDTScheduleGroupsRow = ((DTScheduleGroupsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Semestre,
@@ -435,7 +444,8 @@ namespace HorarioMaster.DataSets {
                         Especialidad,
                         Dia,
                         Hora,
-                        Materia};
+                        Materia,
+                        Maestro};
                 rowDTScheduleGroupsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDTScheduleGroupsRow);
                 return rowDTScheduleGroupsRow;
@@ -463,6 +473,7 @@ namespace HorarioMaster.DataSets {
                 this.columnDia = base.Columns["Dia"];
                 this.columnHora = base.Columns["Hora"];
                 this.columnMateria = base.Columns["Materia"];
+                this.columnMaestro = base.Columns["Maestro"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -483,6 +494,8 @@ namespace HorarioMaster.DataSets {
                 base.Columns.Add(this.columnHora);
                 this.columnMateria = new global::System.Data.DataColumn("Materia", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMateria);
+                this.columnMaestro = new global::System.Data.DataColumn("Maestro", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMaestro);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -984,6 +997,21 @@ namespace HorarioMaster.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string Maestro {
+                get {
+                    try {
+                        return ((string)(this[this.tableDTScheduleGroups.MaestroColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Maestro\' in table \'DTScheduleGroups\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDTScheduleGroups.MaestroColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public bool IsSemestreNull() {
                 return this.IsNull(this.tableDTScheduleGroups.SemestreColumn);
             }
@@ -1061,6 +1089,16 @@ namespace HorarioMaster.DataSets {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public void SetMateriaNull() {
                 this[this.tableDTScheduleGroups.MateriaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsMaestroNull() {
+                return this.IsNull(this.tableDTScheduleGroups.MaestroColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetMaestroNull() {
+                this[this.tableDTScheduleGroups.MaestroColumn] = global::System.Convert.DBNull;
             }
         }
         
