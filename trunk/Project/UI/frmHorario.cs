@@ -1421,45 +1421,7 @@ namespace HorarioMaster.UI
 
         #endregion
 
-        # region Controls events
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            MaestroMateria mm = new MaestroMateria();
-            mm.Show();
-        }
-
-        private void frmHorario_Load_1(object sender, EventArgs e)
-        {
-            //this.LookAndFeel.SetSkinStyle("Black");            
-            VisualSchedule = new SimpleButton[][]
-            {
-                new SimpleButton[]{HA1,HA2,HA3,HA4,HA5},
-                new SimpleButton[]{HA6,HA7,HA8,HA9,HA10},
-                new SimpleButton[]{HA11,HA12,HA13,HA14,HA15},
-                new SimpleButton[]{HA16,HA17,HA18,HA19,HA20},
-                new SimpleButton[]{HA21,HA22,HA23,HA24,HA25},
-                new SimpleButton[]{HA26,HA27,HA28,HA29,HA30},
-                new SimpleButton[]{HA31,HA32,HA33,HA34,HA35}
-            };            
-            cmbGroups.Properties.Properties.Items.Clear();
-            DataBaseUtilities.OpenConnection(PathDataBase);
-            cmbGroups = DataBaseUtilities.FillComboBoxEdit("Select Grupo From MaestroMateria", "Grupo", cmbGroups);
-            DataBaseUtilities.CloseConnection();
-            if (cmbGroups.Properties.Items.Count == 0)
-            {
-                MessageBox.Show("En este momento no existen grupos!!");
-                //this.Close();
-            }
-            else
-            {
-                cmbGroups.Text = cmbGroups.Properties.Items[0].ToString();
-                InicilazeDatachedule();
-                FilllbSchedule();
-                FillSchedules();
-                AssignColor();
-            }
-        }
+        # region Controls events        
 
         private void cmbGroups_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1503,7 +1465,6 @@ namespace HorarioMaster.UI
                 cmbGroups = DataBaseUtilities.FillComboBoxEdit("Select Grupo From MaestroMateria", "Grupo", cmbGroups);
                 DataBaseUtilities.CloseConnection();
                 cmbGroups.Text = cmbGroups.Properties.Items[0].ToString();
-                //SqlString = "Select Especialidad,Semestre,Grupo From Grupos Where SG ='" + cmbGroups.Text + "'";
                 HEspecialidad.Text = "ESPECIALIDAD:";
                 HTurno.Text = "TURNO:";
                 DataBaseUtilities.OpenConnection(PathDataBase);
@@ -1515,8 +1476,7 @@ namespace HorarioMaster.UI
                 LimpiarHorario.Visible = true;
                 lTurno.Visible = true;
                 lbComplementaryActivities.Visible = false;
-                button1.Visible = true;
-                button2.Visible = true;
+                button1.Visible = true;               
                 LimpiarHorario.Visible = true;
                 FilllbSchedule();
                 AssignColor();
@@ -1529,22 +1489,28 @@ namespace HorarioMaster.UI
                 DataBaseUtilities.OpenConnection(PathDataBase);
                 cmbGroups = DataBaseUtilities.FillComboBoxEdit("Select Nombre From Personal WHERE Puesto='DOCENTE'", "Nombre", cmbGroups);
                 DataBaseUtilities.CloseConnection();
-                cmbGroups.Text = cmbGroups.Properties.Items[0].ToString();
-                HEspecialidad.Text = "NUMERO DE TARJETA:";
-                DataBaseUtilities.OpenConnection(PathDataBase);
-                lEspecialidad.Text = DataBaseUtilities.ReturnRecord("Select NumeroTarjeta From Personal Where Nombre ='" + cmbGroups.Text + "'", "NumeroTarjeta").ToString();
-                DataBaseUtilities.CloseConnection();
-                HTurno.Text = "PERFIL:";
-                DataBaseUtilities.OpenConnection(PathDataBase);
-                lTurno.Text = DataBaseUtilities.ReturnRecord("Select Perfil From Personal Where Nombre ='" + cmbGroups.Text + "'", "Perfil").ToString();
-                DataBaseUtilities.CloseConnection();
-                button1.Visible = false;
-                button2.Visible = false;
-                LimpiarHorario.Visible = false;
-                lbComplementaryActivities.Visible = true;
-                FillComplementaryActivities();
-                FilllbSchedule();
-                //AssignColor();
+                if (cmbGroups.Properties.Items.Count == 0)
+                {
+                    MessageBox.Show("En este momento no existen Horarios!!");                    
+                }
+                else
+                {
+                    cmbGroups.Text = cmbGroups.Properties.Items[0].ToString();
+                    HEspecialidad.Text = "NUMERO DE TARJETA:";
+                    DataBaseUtilities.OpenConnection(PathDataBase);
+                    lEspecialidad.Text = DataBaseUtilities.ReturnRecord("Select NumeroTarjeta From Personal Where Nombre ='" + cmbGroups.Text + "'", "NumeroTarjeta").ToString();
+                    DataBaseUtilities.CloseConnection();
+                    HTurno.Text = "PERFIL:";
+                    DataBaseUtilities.OpenConnection(PathDataBase);
+                    lTurno.Text = DataBaseUtilities.ReturnRecord("Select Perfil From Personal Where Nombre ='" + cmbGroups.Text + "'", "Perfil").ToString();
+                    DataBaseUtilities.CloseConnection();
+                    button1.Visible = false;                    
+                    LimpiarHorario.Visible = false;
+                    lbComplementaryActivities.Visible = true;
+                    FillComplementaryActivities();
+                    FilllbSchedule();
+                    //AssignColor();
+                }
             }
         }
 
@@ -1565,9 +1531,6 @@ namespace HorarioMaster.UI
             List<DataField> DataFieldTempList = new List<DataField>();
             DataField DataFieldtemp = new DataField();
             DataBaseUtilities.OpenConnection(PathDataBase);
-            //            SqlString = @"SELECT DISTINCT MaestroMateria.Maestro, MaestroMateria.Grupo, Materias.Nombre, Materias.HC
-            //                          FROM MaestroMateria INNER JOIN Materias ON (MaestroMateria.Materia = Materias.Nombre) AND (MaestroMateria.Grupo = Materias.SG)
-            //                          WHERE (((MaestroMateria.Grupo)='" + cmbGroups.Text + "'));";
             SqlString = @"SELECT MaestroMateria.Maestro, MaestroMateria.Grupo, MaestroMateria.Materia, Materias.HC
                           FROM Materias INNER JOIN MaestroMateria ON Materias.Clave = MaestroMateria.Clave
                           WHERE (((MaestroMateria.Grupo)='" + cmbGroups.Text + "'));";
@@ -1794,9 +1757,6 @@ namespace HorarioMaster.UI
             else
             {
                 DataBaseUtilities.OpenConnection(PathDataBase);
-                //                SqlString = @"SELECT HorarioMaterias.Materia, HorarioMaterias.PosicionColumna,HorarioMaterias.PosicionFila,HorarioMaterias.Grupo, HorarioMaterias.ClaveHM, MaestroMateria.Maestro
-                //                              FROM MaestroMateria INNER JOIN HorarioMaterias ON MaestroMateria.Materia = HorarioMaterias.Materia
-                //                              WHERE (((HorarioMaterias.Maestro)='" + cmbGroups.Text + "' AND (HorarioMaterias.Turno)='" + cmbShift.Text + "'))";
                 SqlString = @"SELECT ClaveHM, Materia, PosicionColumna, PosicionFila,Grupo,Maestro
                             FROM HorarioMaterias
                             WHERE (((HorarioMaterias.Maestro)='" + cmbGroups.Text + "') AND ((HorarioMaterias.Turno)='" + cmbShift.Text + "'))";
@@ -1820,7 +1780,6 @@ namespace HorarioMaster.UI
             {
                 for (int Columna = 0; Columna < 5; Columna++)
                 {
-                    // VisualSchedule[Fila][Columna].BackColor = Color.White;
                     VisualSchedule[Fila][Columna].Text = "";
                     DataSchedule[Fila][Columna].Key = -1;
                     DataSchedule[Fila][Columna].Subject = "";
@@ -1867,7 +1826,6 @@ namespace HorarioMaster.UI
                     DataBaseUtilities.OpenConnection(PathDataBase);
                     if (ban == 0 && !DataBaseUtilities.RecordExist("Select Materia From HorarioMaterias Where PosicionFila=" + nRow + " AND PosicionColumna=" + nColumn + " AND Grupo='" + Temporal.Group + "'"))
                     {
-                        //MessageBox.Show("Esta Hora esta disponible Para el maestro "+ Temporal.Teacher + " " + nRow.ToString() + " " + nColumn.ToString());
                         Temporal.Column = nColumn;
                         Temporal.Row = nRow;
                         return Temporal;
@@ -2055,11 +2013,7 @@ namespace HorarioMaster.UI
             }
             else
             {
-                //                SqlString = @"SELECT First(HorarioMaterias.Materia) AS MateriaCampo, Count(HorarioMaterias.Materia) AS NúmeroDeDuplicados, Grupos.Turno
-                //                              FROM (MaestroMateria INNER JOIN HorarioMaterias ON MaestroMateria.Materia = HorarioMaterias.Materia) INNER JOIN Grupos ON HorarioMaterias.Grupo = Grupos.SG
-                //                              GROUP BY HorarioMaterias.Materia, MaestroMateria.Maestro, Grupos.Turno
-                //                              HAVING (((Count(HorarioMaterias.Materia))>=1) AND ((MaestroMateria.Maestro)='" + cmbGroups.Text + "') AND ((Grupos.Turno)='" + cmbShift.Text + "'))";
-                SqlString = @"SELECT First(HorarioMaterias.Materia) AS MateriaCampo, Count(HorarioMaterias.Materia) AS NúmeroDeDuplicados, HorarioMaterias.Turno, HorarioMaterias.Maestro
+               SqlString = @"SELECT First(HorarioMaterias.Materia) AS MateriaCampo, Count(HorarioMaterias.Materia) AS NúmeroDeDuplicados, HorarioMaterias.Turno, HorarioMaterias.Maestro
                             FROM HorarioMaterias
                             GROUP BY HorarioMaterias.Materia, HorarioMaterias.Turno, HorarioMaterias.Maestro
                             HAVING (((Count(HorarioMaterias.Materia))>=1) AND ((HorarioMaterias.Turno)='" + cmbShift.Text + "') AND ((HorarioMaterias.Maestro)='" + cmbGroups.Text + "'))";
@@ -2089,36 +2043,9 @@ namespace HorarioMaster.UI
                     if (VisualSchedule[nRow][nColumn].Text != "")
                     {
                         nSubject = UsedSubject.BinarySearch(VisualSchedule[nRow][nColumn].Text);
-                        //VisualSchedule[nRow][nColumn].BackColor = color[UsedColor[nSubject]];
                     }
                 }
             }
-
-            //            while (dr.Read())
-            //            {
-            //                nColor = ColorRandom.Next(115);
-            //                while (ColorExist)
-            //                {
-            //                    System.Threading.Thread.Sleep(300);
-            //                    if (UsedColor.BinarySearch(nColor) < 0)
-            //                    {
-            //                        UsedColor.Add(nColor);
-            //                        for (int nRow = 0; nRow < 7; nRow++)
-            //                        {
-            //                            for (int nColumn = 0; nColumn < 5; nColumn++)
-            //                            {
-            //                                if (VisualSchedule[nRow][nColumn].Text == dr["MateriaCampo"].ToString())
-            //                                {
-            //                                    VisualSchedule[nRow][nColumn].BackColor = color[nColor];
-            //                                }
-            //                            }
-            //                        }
-            //                        ColorExist = false;
-            //                    }
-            //                }
-            //                ColorExist = true;
-            //            }
-            //            DataBaseUtilities.CloseConnection();
         }
 
         private void FillComplementaryActivities()
@@ -2205,6 +2132,62 @@ namespace HorarioMaster.UI
                 Count++;
             }
             return sNewString;
+        }
+
+        public bool InicializeSchedule(string sScheduleType)
+        {
+            VisualSchedule = new SimpleButton[][]
+            {
+                new SimpleButton[]{HA1,HA2,HA3,HA4,HA5},
+                new SimpleButton[]{HA6,HA7,HA8,HA9,HA10},
+                new SimpleButton[]{HA11,HA12,HA13,HA14,HA15},
+                new SimpleButton[]{HA16,HA17,HA18,HA19,HA20},
+                new SimpleButton[]{HA21,HA22,HA23,HA24,HA25},
+                new SimpleButton[]{HA26,HA27,HA28,HA29,HA30},
+                new SimpleButton[]{HA31,HA32,HA33,HA34,HA35}
+            }; 
+            if (sScheduleType == "Grupo")
+            {
+                cmbGroups.Properties.Properties.Items.Clear();
+                DataBaseUtilities.OpenConnection(PathDataBase);
+                cmbGroups = DataBaseUtilities.FillComboBoxEdit("Select Grupo From MaestroMateria", "Grupo", cmbGroups);
+                DataBaseUtilities.CloseConnection();
+                if (cmbGroups.Properties.Items.Count == 0)
+                {
+                    MessageBox.Show("En este momento no existen grupos!!");
+                    return false;
+                }
+                else
+                {
+                    cmbGroups.Text = cmbGroups.Properties.Items[0].ToString();
+                    InicilazeDatachedule();
+                    FilllbSchedule();
+                    FillSchedules();
+                    AssignColor();
+                    return true;
+                }
+            }
+            else
+            {
+                groupBoxDatos.Text = "Informacion de Maestro";
+                cmbShift.Visible = true;
+                cmbGroups.Width = 268;
+                DataBaseUtilities.OpenConnection(PathDataBase);
+                cmbGroups = DataBaseUtilities.FillComboBoxEdit("Select Nombre From Personal WHERE Puesto='DOCENTE'", "Nombre", cmbGroups);
+                DataBaseUtilities.CloseConnection();
+                if (cmbGroups.Properties.Items.Count == 0)
+                {
+                    MessageBox.Show("En este momento no existen Horarios!!");
+                    return false;
+                }
+                else
+                {
+                    cmbGroups.Properties.Properties.Items.Clear();
+                    cmbScheduleType.Text = "Maestro";
+                    return true;                
+                }
+
+            }
         }
 
         # endregion

@@ -33,31 +33,32 @@ namespace HorarioMaster.UI
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.barSubItem5 = new DevExpress.XtraBars.BarSubItem();
-            this.barButtonItem20 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem21 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem22 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem23 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem27 = new DevExpress.XtraBars.BarButtonItem();
+            this.bBtnEspecialidad = new DevExpress.XtraBars.BarButtonItem();
+            this.bBtnGrupos = new DevExpress.XtraBars.BarButtonItem();
+            this.bBtnMaterias = new DevExpress.XtraBars.BarButtonItem();
+            this.bBtnPersonal = new DevExpress.XtraBars.BarButtonItem();
+            this.bBtnAsignarMaterias = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
-            this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
+            this.bBtnHGrupos = new DevExpress.XtraBars.BarButtonItem();
+            this.bBtnHMaestros = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem2 = new DevExpress.XtraBars.BarSubItem();
-            this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem13 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem14 = new DevExpress.XtraBars.BarButtonItem();
+            this.bBtnRGeneral = new DevExpress.XtraBars.BarButtonItem();
+            this.bBtnRGrupos = new DevExpress.XtraBars.BarButtonItem();
+            this.bBtnRMaestros = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem3 = new DevExpress.XtraBars.BarSubItem();
-            this.barButtonItem15 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem16 = new DevExpress.XtraBars.BarButtonItem();
+            this.bBtnDPlantel = new DevExpress.XtraBars.BarButtonItem();
+            this.bBtnAComplementarias = new DevExpress.XtraBars.BarButtonItem();
+            this.bBtnALogotipo = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem4 = new DevExpress.XtraBars.BarSubItem();
-            this.barButtonItem24 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem25 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem26 = new DevExpress.XtraBars.BarButtonItem();
+            this.bBtnIndice = new DevExpress.XtraBars.BarButtonItem();
+            this.bBtnContenido = new DevExpress.XtraBars.BarButtonItem();
+            this.bBtnQSomos = new DevExpress.XtraBars.BarButtonItem();
             this.bar3 = new DevExpress.XtraBars.Bar();
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
             this.bar4 = new DevExpress.XtraBars.Bar();
-            this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem17 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem18 = new DevExpress.XtraBars.BarButtonItem();
+            this.barBtnHide = new DevExpress.XtraBars.BarButtonItem();
+            this.barBtnHorario = new DevExpress.XtraBars.BarButtonItem();
+            this.barBtnCaptura = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem19 = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -84,15 +85,14 @@ namespace HorarioMaster.UI
             this.repositoryItemPictureEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
+            this.navBarInicio = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarItem11 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarAltas = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem8 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem9 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem10 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem12 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem12 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarInicio = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarItem11 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarHorarios = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem3 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem4 = new DevExpress.XtraNavBar.NavBarItem();
@@ -138,15 +138,15 @@ namespace HorarioMaster.UI
             this.barButtonItem8,
             this.barStaticItem1,
             this.barSubItem1,
-            this.barButtonItem10,
-            this.barButtonItem11,
+            this.bBtnHGrupos,
+            this.bBtnHMaestros,
             this.barSubItem2,
-            this.barButtonItem12,
-            this.barButtonItem13,
-            this.barButtonItem14,
+            this.bBtnRGeneral,
+            this.bBtnRGrupos,
+            this.bBtnRMaestros,
             this.barSubItem3,
-            this.barButtonItem15,
-            this.barButtonItem16,
+            this.bBtnDPlantel,
+            this.bBtnAComplementarias,
             this.barSubItem4,
             this.barSubItem5,
             this.barStaticItem2,
@@ -155,20 +155,21 @@ namespace HorarioMaster.UI
             this.barStaticItem10,
             this.barEditItem1,
             this.barEditItem2,
-            this.barButtonItem9,
-            this.barButtonItem17,
-            this.barButtonItem18,
+            this.barBtnHide,
+            this.barBtnHorario,
+            this.barBtnCaptura,
             this.barButtonItem19,
-            this.barButtonItem20,
-            this.barButtonItem21,
-            this.barButtonItem22,
-            this.barButtonItem23,
-            this.barButtonItem24,
-            this.barButtonItem25,
-            this.barButtonItem26,
-            this.barButtonItem27});
+            this.bBtnEspecialidad,
+            this.bBtnGrupos,
+            this.bBtnMaterias,
+            this.bBtnPersonal,
+            this.bBtnIndice,
+            this.bBtnContenido,
+            this.bBtnQSomos,
+            this.bBtnAsignarMaterias,
+            this.bBtnALogotipo});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 64;
+            this.barManager1.MaxItemId = 65;
             this.barManager1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit1,
             this.repositoryItemPictureEdit1,
@@ -197,149 +198,163 @@ namespace HorarioMaster.UI
             this.barSubItem5.Caption = "&Altas y Modificaciones";
             this.barSubItem5.Id = 32;
             this.barSubItem5.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem20),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem21),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem22),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem23),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem27)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.bBtnEspecialidad),
+            new DevExpress.XtraBars.LinkPersistInfo(this.bBtnGrupos),
+            new DevExpress.XtraBars.LinkPersistInfo(this.bBtnMaterias),
+            new DevExpress.XtraBars.LinkPersistInfo(this.bBtnPersonal),
+            new DevExpress.XtraBars.LinkPersistInfo(this.bBtnAsignarMaterias)});
             this.barSubItem5.Name = "barSubItem5";
             // 
-            // barButtonItem20
+            // bBtnEspecialidad
             // 
-            this.barButtonItem20.Caption = "&Especialidad";
-            this.barButtonItem20.Id = 56;
-            this.barButtonItem20.Name = "barButtonItem20";
-            this.barButtonItem20.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem20_ItemClick);
+            this.bBtnEspecialidad.Caption = "&Especialidad";
+            this.bBtnEspecialidad.Id = 56;
+            this.bBtnEspecialidad.Name = "bBtnEspecialidad";
+            this.bBtnEspecialidad.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bBtnEspecialidad_ItemClick_1);
             // 
-            // barButtonItem21
+            // bBtnGrupos
             // 
-            this.barButtonItem21.Caption = "&Grupos";
-            this.barButtonItem21.Id = 57;
-            this.barButtonItem21.Name = "barButtonItem21";
-            this.barButtonItem21.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem21_ItemClick);
+            this.bBtnGrupos.Caption = "&Grupos";
+            this.bBtnGrupos.Id = 57;
+            this.bBtnGrupos.Name = "bBtnGrupos";
+            this.bBtnGrupos.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bBtnGrupos_ItemClick);
             // 
-            // barButtonItem22
+            // bBtnMaterias
             // 
-            this.barButtonItem22.Caption = "&Materias";
-            this.barButtonItem22.Id = 58;
-            this.barButtonItem22.Name = "barButtonItem22";
-            this.barButtonItem22.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem22_ItemClick);
+            this.bBtnMaterias.Caption = "&Materias";
+            this.bBtnMaterias.Id = 58;
+            this.bBtnMaterias.Name = "bBtnMaterias";
+            this.bBtnMaterias.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bBtnMaterias_ItemClick);
             // 
-            // barButtonItem23
+            // bBtnPersonal
             // 
-            this.barButtonItem23.Caption = "&Personal";
-            this.barButtonItem23.Id = 59;
-            this.barButtonItem23.Name = "barButtonItem23";
-            this.barButtonItem23.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem23_ItemClick);
+            this.bBtnPersonal.Caption = "&Personal";
+            this.bBtnPersonal.Id = 59;
+            this.bBtnPersonal.Name = "bBtnPersonal";
+            this.bBtnPersonal.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bBtnPersonal_ItemClick);
             // 
-            // barButtonItem27
+            // bBtnAsignarMaterias
             // 
-            this.barButtonItem27.Caption = "Asig&nar Materias";
-            this.barButtonItem27.Id = 63;
-            this.barButtonItem27.Name = "barButtonItem27";
-            this.barButtonItem27.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem27_ItemClick);
+            this.bBtnAsignarMaterias.Caption = "Asig&nar Materias";
+            this.bBtnAsignarMaterias.Id = 63;
+            this.bBtnAsignarMaterias.Name = "bBtnAsignarMaterias";
+            this.bBtnAsignarMaterias.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bBtnAsignarMaterias_ItemClick);
             // 
             // barSubItem1
             // 
             this.barSubItem1.Caption = "&Horarios";
             this.barSubItem1.Id = 17;
             this.barSubItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem10),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem11)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.bBtnHGrupos),
+            new DevExpress.XtraBars.LinkPersistInfo(this.bBtnHMaestros)});
             this.barSubItem1.Name = "barSubItem1";
             // 
-            // barButtonItem10
+            // bBtnHGrupos
             // 
-            this.barButtonItem10.Caption = "Gr&upos";
-            this.barButtonItem10.Id = 18;
-            this.barButtonItem10.Name = "barButtonItem10";
-            this.barButtonItem10.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem10_ItemClick);
+            this.bBtnHGrupos.Caption = "Gr&upos";
+            this.bBtnHGrupos.Id = 18;
+            this.bBtnHGrupos.Name = "bBtnHGrupos";
+            this.bBtnHGrupos.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bBtnHGrupos_ItemClick);
             // 
-            // barButtonItem11
+            // bBtnHMaestros
             // 
-            this.barButtonItem11.Caption = "Ma&estros";
-            this.barButtonItem11.Id = 19;
-            this.barButtonItem11.Name = "barButtonItem11";
+            this.bBtnHMaestros.Caption = "Ma&estros";
+            this.bBtnHMaestros.Id = 19;
+            this.bBtnHMaestros.Name = "bBtnHMaestros";
+            this.bBtnHMaestros.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bBtnHMaestros_ItemClick);
             // 
             // barSubItem2
             // 
             this.barSubItem2.Caption = "&Reportes";
             this.barSubItem2.Id = 20;
             this.barSubItem2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem12),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem13),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem14)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.bBtnRGeneral),
+            new DevExpress.XtraBars.LinkPersistInfo(this.bBtnRGrupos),
+            new DevExpress.XtraBars.LinkPersistInfo(this.bBtnRMaestros)});
             this.barSubItem2.Name = "barSubItem2";
             // 
-            // barButtonItem12
+            // bBtnRGeneral
             // 
-            this.barButtonItem12.Caption = "&General";
-            this.barButtonItem12.Id = 21;
-            this.barButtonItem12.Name = "barButtonItem12";
+            this.bBtnRGeneral.Caption = "&General";
+            this.bBtnRGeneral.Id = 21;
+            this.bBtnRGeneral.Name = "bBtnRGeneral";
+            this.bBtnRGeneral.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bBtnRGeneral_ItemClick);
             // 
-            // barButtonItem13
+            // bBtnRGrupos
             // 
-            this.barButtonItem13.Caption = "Gru&pos";
-            this.barButtonItem13.Id = 22;
-            this.barButtonItem13.Name = "barButtonItem13";
-            this.barButtonItem13.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem13_ItemClick);
+            this.bBtnRGrupos.Caption = "Gru&pos";
+            this.bBtnRGrupos.Id = 22;
+            this.bBtnRGrupos.Name = "bBtnRGrupos";
+            this.bBtnRGrupos.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bBtnRGrupos_ItemClick);
             // 
-            // barButtonItem14
+            // bBtnRMaestros
             // 
-            this.barButtonItem14.Caption = "Mae&stros";
-            this.barButtonItem14.Id = 23;
-            this.barButtonItem14.Name = "barButtonItem14";
+            this.bBtnRMaestros.Caption = "Mae&stros";
+            this.bBtnRMaestros.Id = 23;
+            this.bBtnRMaestros.Name = "bBtnRMaestros";
+            this.bBtnRMaestros.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bBtnRMaestros_ItemClick);
             // 
             // barSubItem3
             // 
             this.barSubItem3.Caption = "&Configuracion";
             this.barSubItem3.Id = 24;
             this.barSubItem3.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem15),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem16)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.bBtnDPlantel),
+            new DevExpress.XtraBars.LinkPersistInfo(this.bBtnAComplementarias),
+            new DevExpress.XtraBars.LinkPersistInfo(this.bBtnALogotipo)});
             this.barSubItem3.Name = "barSubItem3";
             // 
-            // barButtonItem15
+            // bBtnDPlantel
             // 
-            this.barButtonItem15.Caption = "&Datos del Plantel...";
-            this.barButtonItem15.Id = 25;
-            this.barButtonItem15.Name = "barButtonItem15";
-            this.barButtonItem15.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem15_ItemClick);
+            this.bBtnDPlantel.Caption = "&Datos del Plantel...";
+            this.bBtnDPlantel.Id = 25;
+            this.bBtnDPlantel.Name = "bBtnDPlantel";
+            this.bBtnDPlantel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bBtnDPlantel_ItemClick);
             // 
-            // barButtonItem16
+            // bBtnAComplementarias
             // 
-            this.barButtonItem16.Caption = "&Actividades Complementarias...";
-            this.barButtonItem16.Id = 26;
-            this.barButtonItem16.Name = "barButtonItem16";
-            this.barButtonItem16.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem16_ItemClick);
+            this.bBtnAComplementarias.Caption = "&Actividades Complementarias...";
+            this.bBtnAComplementarias.Id = 26;
+            this.bBtnAComplementarias.Name = "bBtnAComplementarias";
+            this.bBtnAComplementarias.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bBtnAComplementarias_ItemClick);
+            // 
+            // bBtnALogotipo
+            // 
+            this.bBtnALogotipo.Caption = "Agregar Logotipo del Plantel";
+            this.bBtnALogotipo.Id = 64;
+            this.bBtnALogotipo.Name = "bBtnALogotipo";
+            this.bBtnALogotipo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bBtnALogotipo_ItemClick);
             // 
             // barSubItem4
             // 
             this.barSubItem4.Caption = "A&yuda";
             this.barSubItem4.Id = 27;
             this.barSubItem4.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem24),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem25),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem26)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.bBtnIndice),
+            new DevExpress.XtraBars.LinkPersistInfo(this.bBtnContenido),
+            new DevExpress.XtraBars.LinkPersistInfo(this.bBtnQSomos)});
             this.barSubItem4.Name = "barSubItem4";
             // 
-            // barButtonItem24
+            // bBtnIndice
             // 
-            this.barButtonItem24.Caption = "&Indice";
-            this.barButtonItem24.Id = 60;
-            this.barButtonItem24.Name = "barButtonItem24";
+            this.bBtnIndice.Caption = "&Indice";
+            this.bBtnIndice.Id = 60;
+            this.bBtnIndice.Name = "bBtnIndice";
+            this.bBtnIndice.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bBtnIndice_ItemClick);
             // 
-            // barButtonItem25
+            // bBtnContenido
             // 
-            this.barButtonItem25.Caption = "Co&ntenido";
-            this.barButtonItem25.Id = 61;
-            this.barButtonItem25.Name = "barButtonItem25";
+            this.bBtnContenido.Caption = "Co&ntenido";
+            this.bBtnContenido.Id = 61;
+            this.bBtnContenido.Name = "bBtnContenido";
+            this.bBtnContenido.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bBtnContenido_ItemClick);
             // 
-            // barButtonItem26
+            // bBtnQSomos
             // 
-            this.barButtonItem26.Caption = "&Quienes somos....";
-            this.barButtonItem26.Id = 62;
-            this.barButtonItem26.Name = "barButtonItem26";
+            this.bBtnQSomos.Caption = "&Quienes somos....";
+            this.bBtnQSomos.Id = 62;
+            this.bBtnQSomos.Name = "bBtnQSomos";
+            this.bBtnQSomos.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bBtnQSomos_ItemClick);
             // 
             // bar3
             // 
@@ -368,34 +383,37 @@ namespace HorarioMaster.UI
             this.bar4.DockCol = 0;
             this.bar4.DockRow = 1;
             this.bar4.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.bar4.FloatLocation = new System.Drawing.Point(127, 186);
             this.bar4.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem9),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem17),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem18),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barBtnHide),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barBtnHorario),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barBtnCaptura),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem19)});
             this.bar4.Text = "Custom 4";
             // 
-            // barButtonItem9
+            // barBtnHide
             // 
-            this.barButtonItem9.Caption = "barButtonItem9";
-            this.barButtonItem9.Id = 50;
-            this.barButtonItem9.ImageIndex = 37;
-            this.barButtonItem9.Name = "barButtonItem9";
+            this.barBtnHide.Caption = "barBtnHide";
+            this.barBtnHide.Id = 50;
+            this.barBtnHide.ImageIndex = 37;
+            this.barBtnHide.Name = "barBtnHide";
+            this.barBtnHide.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnHide_ItemClick);
             // 
-            // barButtonItem17
+            // barBtnHorario
             // 
-            this.barButtonItem17.Caption = "barButtonItem17";
-            this.barButtonItem17.Id = 51;
-            this.barButtonItem17.ImageIndex = 39;
-            this.barButtonItem17.Name = "barButtonItem17";
-            this.barButtonItem17.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem17_ItemClick);
+            this.barBtnHorario.Caption = "barBtnHorario";
+            this.barBtnHorario.Id = 51;
+            this.barBtnHorario.ImageIndex = 39;
+            this.barBtnHorario.Name = "barBtnHorario";
+            this.barBtnHorario.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnHorario_ItemClick);
             // 
-            // barButtonItem18
+            // barBtnCaptura
             // 
-            this.barButtonItem18.Caption = "barButtonItem18";
-            this.barButtonItem18.Id = 52;
-            this.barButtonItem18.ImageIndex = 38;
-            this.barButtonItem18.Name = "barButtonItem18";
+            this.barBtnCaptura.Caption = "barBtnCaptura";
+            this.barBtnCaptura.Id = 52;
+            this.barBtnCaptura.ImageIndex = 38;
+            this.barBtnCaptura.Name = "barBtnCaptura";
+            this.barBtnCaptura.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnCaptura_ItemClick);
             // 
             // barButtonItem19
             // 
@@ -532,7 +550,7 @@ namespace HorarioMaster.UI
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.xtraTabControl1);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(784, 379);
+            this.splitContainerControl1.Size = new System.Drawing.Size(1028, 471);
             this.splitContainerControl1.SplitterPosition = 200;
             this.splitContainerControl1.TabIndex = 4;
             this.splitContainerControl1.Text = "splitContainerControl1";
@@ -563,11 +581,24 @@ namespace HorarioMaster.UI
             this.navBarControl1.Location = new System.Drawing.Point(0, 0);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 147;
-            this.navBarControl1.Size = new System.Drawing.Size(200, 379);
+            this.navBarControl1.Size = new System.Drawing.Size(200, 471);
             this.navBarControl1.TabIndex = 0;
             this.navBarControl1.Text = "navBarControl1";
             this.navBarControl1.View = new DevExpress.XtraNavBar.ViewInfo.NavigationPaneViewInfoRegistrator();
             this.navBarControl1.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarControl1_LinkClicked);
+            // 
+            // navBarInicio
+            // 
+            this.navBarInicio.Caption = "Inicio";
+            this.navBarInicio.Expanded = true;
+            this.navBarInicio.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem11)});
+            this.navBarInicio.Name = "navBarInicio";
+            // 
+            // navBarItem11
+            // 
+            this.navBarItem11.Caption = "Inicio";
+            this.navBarItem11.Name = "navBarItem11";
             // 
             // navBarAltas
             // 
@@ -605,24 +636,6 @@ namespace HorarioMaster.UI
             // 
             this.navBarItem12.Caption = "Asignar Materias";
             this.navBarItem12.Name = "navBarItem12";
-            // 
-            // navBarItem12
-            // 
-            this.navBarItem12.Caption = "Asignar Materias";
-            this.navBarItem12.Name = "navBarItem12";
-            // 
-            // navBarInicio
-            // 
-            this.navBarInicio.Caption = "Inicio";
-            this.navBarInicio.Expanded = true;
-            this.navBarInicio.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem11)});
-            this.navBarInicio.Name = "navBarInicio";
-            // 
-            // navBarItem11
-            // 
-            this.navBarItem11.Caption = "Inicio";
-            this.navBarItem11.Name = "navBarItem11";
             // 
             // navBarHorarios
             // 
@@ -676,7 +689,7 @@ namespace HorarioMaster.UI
             this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
             this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.Size = new System.Drawing.Size(578, 379);
+            this.xtraTabControl1.Size = new System.Drawing.Size(822, 471);
             this.xtraTabControl1.TabIndex = 0;
             this.xtraTabControl1.Visible = false;
             // 
@@ -692,7 +705,7 @@ namespace HorarioMaster.UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 453);
+            this.ClientSize = new System.Drawing.Size(1028, 545);
             this.Controls.Add(this.splitContainerControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
@@ -738,15 +751,15 @@ namespace HorarioMaster.UI
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
         private DevExpress.XtraBars.BarStaticItem barStaticItem1;
         private DevExpress.XtraBars.BarSubItem barSubItem1;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem10;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem11;
+        private DevExpress.XtraBars.BarButtonItem bBtnHGrupos;
+        private DevExpress.XtraBars.BarButtonItem bBtnHMaestros;
         private DevExpress.XtraBars.BarSubItem barSubItem2;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem12;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem13;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem14;
+        private DevExpress.XtraBars.BarButtonItem bBtnRGeneral;
+        private DevExpress.XtraBars.BarButtonItem bBtnRGrupos;
+        private DevExpress.XtraBars.BarButtonItem bBtnRMaestros;
         private DevExpress.XtraBars.BarSubItem barSubItem3;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem15;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem16;
+        private DevExpress.XtraBars.BarButtonItem bBtnDPlantel;
+        private DevExpress.XtraBars.BarButtonItem bBtnAComplementarias;
         private DevExpress.XtraBars.BarSubItem barSubItem4;
         private DevExpress.XtraNavBar.NavBarControl navBarControl1;
         private DevExpress.XtraNavBar.NavBarGroup navBarAltas;
@@ -773,9 +786,9 @@ namespace HorarioMaster.UI
         private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit repositoryItemPictureEdit1;
         private DevExpress.Utils.ImageCollection imageCollection1;
         private DevExpress.XtraBars.BarStaticItem barStaticItem7;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem9;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem17;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem18;
+        private DevExpress.XtraBars.BarButtonItem barBtnHide;
+        private DevExpress.XtraBars.BarButtonItem barBtnHorario;
+        private DevExpress.XtraBars.BarButtonItem barBtnCaptura;
         private DevExpress.XtraBars.BarButtonItem barButtonItem19;
         private DevExpress.XtraBars.BarStaticItem barStaticItem10;
         private DevExpress.XtraBars.BarEditItem barEditItem1;
@@ -784,15 +797,16 @@ namespace HorarioMaster.UI
         private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit repositoryItemPictureEdit2;
         private DevExpress.XtraNavBar.NavBarItem navBarItem11;
         #endregion
-        private DevExpress.XtraBars.BarButtonItem barButtonItem20;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem21;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem22;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem23;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem24;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem25;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem26;
+        private DevExpress.XtraBars.BarButtonItem bBtnEspecialidad;
+        private DevExpress.XtraBars.BarButtonItem bBtnGrupos;
+        private DevExpress.XtraBars.BarButtonItem bBtnMaterias;
+        private DevExpress.XtraBars.BarButtonItem bBtnPersonal;
+        private DevExpress.XtraBars.BarButtonItem bBtnIndice;
+        private DevExpress.XtraBars.BarButtonItem bBtnContenido;
+        private DevExpress.XtraBars.BarButtonItem bBtnQSomos;
         private DevExpress.XtraNavBar.NavBarItem navBarItem12;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem27;
+        private DevExpress.XtraBars.BarButtonItem bBtnAsignarMaterias;
+        private DevExpress.XtraBars.BarButtonItem bBtnALogotipo;
     }
         
 }

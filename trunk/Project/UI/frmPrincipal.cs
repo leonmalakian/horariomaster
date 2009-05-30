@@ -20,9 +20,11 @@ namespace HorarioMaster.UI
         }
 
         #region Global's
-        private GridMasterControl Grid1 = new GridMasterControl();
-        private GridMasterControl Grid2 = new GridMasterControl();
-        private GridMasterControl Grid3 = new GridMasterControl();
+        //private GridMasterControl Grid1 = new GridMasterControl();
+        //private GridMasterControl Grid2 = new GridMasterControl();
+        //private GridMasterControl Grid3 = new GridMasterControl();
+        static public string PathDataBase = Path.GetDirectoryName(Application.ExecutablePath) + @"\Global.mdb";
+        private int x = 0;
         #endregion
 
         #region NavBar
@@ -60,28 +62,57 @@ namespace HorarioMaster.UI
                             Parameters.ShowDialog();
                             break;
                         case "Maestros":
-                            XtraMessageBox.Show(e.Link.Caption);
+                            //frmReportGeneral ReportGeneral = new frmReportGeneral();
+                            //ReportGeneral.ShowDialog();
                             break;
                         case "General":
-                            XtraMessageBox.Show(e.Link.Caption);
+                            frmReportGeneral ReportGeneral = new frmReportGeneral();
+                            ReportGeneral.ShowDialog();
                             break;
                     }
                     break;
 
                 case "navBarHorarios":
+                    frmHorario Horario = new frmHorario();
                     switch (e.Link.Caption)
                     {
                         case "Grupos":
                             CloseForms();
-                            frmHorario Horario = new frmHorario();
                             Horario.TopLevel = false;
                             Horario.Parent = this.splitContainerControl1.Panel2;
                             Horario.Dock = DockStyle.Fill;
                             Horario.ControlBox = false;
-                            Horario.Show();
+                            if (Horario.InicializeSchedule("Grupo"))
+                            { Horario.Show(); }
+                            else
+                            {
+                                frmPortada Portada1 = new frmPortada();
+                                Portada1.TopLevel = false;
+                                Portada1.Parent = this.splitContainerControl1.Panel2;
+                                Portada1.Dock = DockStyle.Fill;
+                                Portada1.Enabled = false;
+                                Portada1.ControlBox = false;
+                                Portada1.Show();
+                            }                
                             break;
                         case "Maestros":
-                            XtraMessageBox.Show(e.Link.Caption);
+                            CloseForms();
+                            Horario.TopLevel = false;
+                            Horario.Parent = this.splitContainerControl1.Panel2;
+                            Horario.Dock = DockStyle.Fill;
+                            Horario.ControlBox = false;
+                            if (Horario.InicializeSchedule("Maestro"))
+                            { Horario.Show(); }
+                            else
+                            {
+                                frmPortada Portada2 = new frmPortada();
+                                Portada2.TopLevel = false;
+                                Portada2.Parent = this.splitContainerControl1.Panel2;
+                                Portada2.Dock = DockStyle.Fill;
+                                Portada2.Enabled = false;
+                                Portada2.ControlBox = false;
+                                Portada2.Show();
+                            }    
                             break;                    
                     }
                     break;
@@ -136,7 +167,7 @@ namespace HorarioMaster.UI
         #endregion
 
         #region Eventos_Menu
-        private void barButtonItem15_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void bBtnDPlantel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Form DPlantel = new frmDatosPlantel();
             DPlantel.StartPosition = FormStartPosition.CenterScreen;
@@ -158,58 +189,81 @@ namespace HorarioMaster.UI
             }
         }
 
-        private void barButtonItem16_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void bBtnAComplementarias_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             AComplementarias AC = new AComplementarias();
             AC.StartPosition = FormStartPosition.CenterScreen;
             AC.ShowDialog();
         }
 
-        private void barButtonItem17_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void bBtnEspecialidad_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            frmCaptura Captura = new frmCaptura();
             CloseForms();
+            Captura.TopLevel = false;
+            Captura.Parent = this.splitContainerControl1.Panel2;
+            Captura.Dock = DockStyle.Fill;
+            Captura.ControlBox = false;
+            Captura.Show();
+        }
+
+        private void bBtnGrupos_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmCaptura Captura = new frmCaptura();
+            CloseForms();
+            Captura.TopLevel = false;
+            Captura.Parent = this.splitContainerControl1.Panel2;
+            Captura.Dock = DockStyle.Fill;
+            Captura.ControlBox = false;
+            Captura.Show();
+        }
+
+        private void bBtnMaterias_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmCaptura Captura = new frmCaptura();
+            CloseForms();
+            Captura.TopLevel = false;
+            Captura.Parent = this.splitContainerControl1.Panel2;
+            Captura.Dock = DockStyle.Fill;
+            Captura.ControlBox = false;
+            Captura.Show();
+        }
+
+        private void bBtnPersonal_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmCaptura Captura = new frmCaptura();
+            CloseForms();
+            Captura.TopLevel = false;
+            Captura.Parent = this.splitContainerControl1.Panel2;
+            Captura.Dock = DockStyle.Fill;
+            Captura.ControlBox = false;
+            Captura.TabPageToFront();
+            Captura.Show();
+        }
+
+        private void bBtnHGrupos_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
             frmHorario Horario = new frmHorario();
+            CloseForms();
             Horario.TopLevel = false;
             Horario.Parent = this.splitContainerControl1.Panel2;
             Horario.Dock = DockStyle.Fill;
             Horario.ControlBox = false;
-            Horario.Show();
+            if (Horario.InicializeSchedule("Grupo"))
+            { Horario.Show(); }
+            else
+            {
+                frmPortada Portada = new frmPortada();
+                Portada.TopLevel = false;
+                Portada.Parent = this.splitContainerControl1.Panel2;
+                Portada.Dock = DockStyle.Fill;
+                Portada.Enabled = false;
+                Portada.ControlBox = false;
+                Portada.Show();
+            }                
         }
 
-        private void barButtonItem20_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            CloseForms();
-            frmCaptura Captura = new frmCaptura();
-            Captura.TopLevel = false;
-            Captura.Parent = this.splitContainerControl1.Panel2;
-            Captura.Dock = DockStyle.Fill;
-            Captura.ControlBox = false;
-            Captura.Show();
-        }
-
-        private void barButtonItem21_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            CloseForms();
-            frmCaptura Captura = new frmCaptura();
-            Captura.TopLevel = false;
-            Captura.Parent = this.splitContainerControl1.Panel2;
-            Captura.Dock = DockStyle.Fill;
-            Captura.ControlBox = false;
-            Captura.Show();
-        }
-
-        private void barButtonItem22_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            CloseForms();
-            frmCaptura Captura = new frmCaptura();
-            Captura.TopLevel = false;
-            Captura.Parent = this.splitContainerControl1.Panel2;
-            Captura.Dock = DockStyle.Fill;
-            Captura.ControlBox = false;
-            Captura.Show();
-        }
-
-        private void barButtonItem23_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void bBtnAsignarMaterias_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             CloseForms();
             frmCaptura Captura = new frmCaptura();
@@ -220,35 +274,122 @@ namespace HorarioMaster.UI
             Captura.TabPageToFront();
             Captura.Show();
         }
-        #endregion
 
-        private void barButtonItem10_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            CloseForms();
-            frmHorario Horario = new frmHorario();
-            Horario.TopLevel = false;
-            Horario.Parent = this.splitContainerControl1.Panel2;
-            Horario.Dock = DockStyle.Fill;
-            Horario.ControlBox = false;
-            Horario.Show();
-        }
-
-        private void barButtonItem27_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            CloseForms();
-            frmCaptura Captura = new frmCaptura();
-            Captura.TopLevel = false;
-            Captura.Parent = this.splitContainerControl1.Panel2;
-            Captura.Dock = DockStyle.Fill;
-            Captura.ControlBox = false;
-            Captura.TabPageToFront();
-            Captura.Show();
-        }
-
-        private void barButtonItem13_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void bBtnRGrupos_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             frmParametersGroups Parameters = new frmParametersGroups();
             Parameters.ShowDialog();
         }
+
+        private void bBtnRGeneral_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmReportGeneral ReportGeneral = new frmReportGeneral();
+            ReportGeneral.ShowDialog();
+        }
+
+        private void bBtnHMaestros_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmHorario Horario = new frmHorario();
+            CloseForms();
+            Horario.TopLevel = false;
+            Horario.Parent = this.splitContainerControl1.Panel2;
+            Horario.Dock = DockStyle.Fill;
+            Horario.ControlBox = false;
+            if (Horario.InicializeSchedule("Maestro"))
+            { Horario.Show(); }
+            else
+            {
+                frmPortada Portada = new frmPortada();
+                Portada.TopLevel = false;
+                Portada.Parent = this.splitContainerControl1.Panel2;
+                Portada.Dock = DockStyle.Fill;
+                Portada.Enabled = false;
+                Portada.ControlBox = false;
+                Portada.Show();
+            }    
+        }
+
+        private void bBtnRMaestros_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void bBtnIndice_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void bBtnContenido_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void bBtnQSomos_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void bBtnALogotipo_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.InitialDirectory = "c:\\";
+            openFileDialog1.Filter = "Mapas de bits (*.jpg)|*.jpg";
+            openFileDialog1.FilterIndex = 2;
+            openFileDialog1.RestoreDirectory = true;
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                DataBaseUtilities.OpenConnection(PathDataBase);
+                DataBaseUtilities.ExecuteNonSql("Update Plantel Set Imagen = '" + openFileDialog1.FileName + "'");
+                DataBaseUtilities.CloseConnection();
+                CloseForms();
+                frmPortada Portada = new frmPortada();
+                Portada.TopLevel = false;
+                Portada.Parent = this.splitContainerControl1.Panel2;
+                Portada.Enabled = false;
+                Portada.ControlBox = false;
+                Portada.Show();
+            }
+        }
+
+        private void barBtnHide_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            
+            if (splitContainerControl1.Panel1.Visible && x==0)
+            {
+                splitContainerControl1.PanelVisibility = SplitPanelVisibility.Panel2;
+                x = 1;
+            }
+            else
+            {
+                splitContainerControl1.PanelVisibility = SplitPanelVisibility.Both;
+                x = 0;
+            }
+
+        }
+
+        private void barBtnHorario_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmHorario Horario = new frmHorario();
+            CloseForms();
+            Horario.TopLevel = false;
+            Horario.Parent = this.splitContainerControl1.Panel2;
+            Horario.Dock = DockStyle.Fill;
+            Horario.InicializeSchedule("Grupo");
+            Horario.ControlBox = false;
+            Horario.Show();
+        }
+
+        private void barBtnCaptura_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmCaptura Captura = new frmCaptura();
+            CloseForms();
+            Captura.TopLevel = false;
+            Captura.Parent = this.splitContainerControl1.Panel2;
+            Captura.Dock = DockStyle.Fill;
+            Captura.ControlBox = false;
+            Captura.Show();
+        }
+        #endregion
     }
 }

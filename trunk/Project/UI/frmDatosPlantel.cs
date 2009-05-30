@@ -25,8 +25,10 @@ namespace HorarioMaster.UI
         {
             InitializeComponent();
         }
+
         #region Global's
         static public string PathDataBase = Path.GetDirectoryName(Application.ExecutablePath) + @"\Global.mdb";
+        bool bExist;
         #endregion
 
         #region SaveParams
@@ -39,16 +41,63 @@ namespace HorarioMaster.UI
         }
         #endregion
 
-        #region Validation
+        #region LoadParams
+        private void Load_Params()
+        {
+            DataBaseUtilities.OpenConnection(PathDataBase);
+            OleDbDataReader dr = DataBaseUtilities.ExecuteSql("Select * From Plantel");
+            while (dr.Read())
+            {
+                txtNombrePlantel.Text = dr["Nombre"].ToString();
+                txtClavePlantel.Text = dr["Clave"].ToString();
+                txtEntidadFederativa.Text = dr["Municipio"].ToString();
+                txtDireccionPlantel.Text = dr["Direccion"].ToString();
+                txtDirector.Text = dr["Director"].ToString();
+                txtSubdirector.Text = dr["Subdirector"].ToString();
+                txtTurnoMatutino.Text = dr["Matutino"].ToString();
+                txtTurnoVespertino.Text = dr["Vespertino"].ToString();
+                dateFecha.Text = dr["Fecha"].ToString();
+                txtPeriodo.Text = dr["Periodo"].ToString();
+            }
+            DataBaseUtilities.CloseConnection();
+        }
+        #endregion
+
+        #region UpdateParams
+        private void Update_Params()
+        {
+            DataBaseUtilities.OpenConnection(PathDataBase);
+            string str = "update Plantel set Nombre='" + txtNombrePlantel.Text + "', Clave='" + txtClavePlantel.Text +
+                          "',Municipio='" + txtEntidadFederativa.Text + "',Direccion='" + txtDireccionPlantel.Text +
+                          "',Director='" + txtDirector.Text + "',Subdirector='" + txtSubdirector.Text +
+                          "',Matutino='" + txtTurnoMatutino.Text + "',Vespertino='" + txtTurnoVespertino.Text +
+                          "',Fecha='" + dateFecha.Text + "',Periodo='" + txtPeriodo.Text + "'";
+            DataBaseUtilities.ExecuteNonSql(str);
+            DataBaseUtilities.CloseConnection();
+        }
+        #endregion
+
+        #region Events
         private void BtnGrabar_Click(object sender, EventArgs e)
         {
+            DataBaseUtilities.OpenConnection(PathDataBase);
             ErrorProvider.ClearErrors();
             GetControls(this);
-            Save_Params();
+            if (bExist == false)
+            {
+                Save_Params();
+            }
+            else
+            {
+                Update_Params();
+            }
+            DataBaseUtilities.CloseConnection();
         }
+        #endregion
 
+        #region Validation
         public void GetControls(Control cControl)
-        {            
+        {
             for (int nControl = 0; nControl < cControl.Controls.Count; nControl++)
             {
                 if (cControl.Controls[nControl].Controls.Count > 0)
@@ -64,6 +113,24 @@ namespace HorarioMaster.UI
                     }
                 }
             }
+        }
+        #endregion
+
+        #region Load_Form
+        private void frmDatosPlantel_Load(object sender, EventArgs e)
+        {
+            DataBaseUtilities.OpenConnection(PathDataBase);
+            bExist = DataBaseUtilities.RecordExist("Select * From Plantel");
+            if (bExist == true)
+            {
+                Load_Params();
+                BtnGrabar.Text = "Actualizar";
+            }
+            else
+            {
+                Save_Params();
+            }
+            DataBaseUtilities.CloseConnection();
         }
         #endregion
     }

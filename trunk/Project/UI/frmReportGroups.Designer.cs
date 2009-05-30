@@ -51,7 +51,7 @@ namespace HorarioMaster.UI
             this.ClientSize = new System.Drawing.Size(562, 369);
             this.Controls.Add(this.crystalReportViewerGroups);
             this.Name = "frmReportGroups";
-            this.Text = "frmReportGroups";
+            this.Text = "Reporte de Grupos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmReportGroups_Load);
             this.ResumeLayout(false);

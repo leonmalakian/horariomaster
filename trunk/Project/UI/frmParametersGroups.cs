@@ -67,7 +67,7 @@ namespace HorarioMaster.UI
         {
             if (cmbGroups.Enabled && cmbSemester.Enabled && cmbShift.Enabled && cmbEspecial.Enabled)
             {
-                sSql = @"SELECT Grupos.Semestre, Grupos.Grupo, Grupos.SG, Grupos.Turno, Grupos.Especialidad, HorarioMaterias.Dia, HorarioMaterias.Hora, HorarioMaterias.Materia
+               sSql  = @"SELECT Grupos.Semestre, Grupos.Grupo, Grupos.SG, Grupos.Turno, Grupos.Especialidad, HorarioMaterias.Dia, HorarioMaterias.Hora, HorarioMaterias.Materia
                          FROM Grupos INNER JOIN (MaestroMateria INNER JOIN HorarioMaterias ON MaestroMateria.Materia = HorarioMaterias.Materia) ON Grupos.SG = MaestroMateria.Grupo";
                 HG.FillScheduleGroups(sSql);
                 HG.ShowDialog();

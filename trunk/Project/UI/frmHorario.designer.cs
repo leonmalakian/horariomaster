@@ -78,7 +78,6 @@ namespace HorarioMaster.UI
             this.lEspecialidad = new System.Windows.Forms.Label();
             this.lTurno = new System.Windows.Forms.Label();
             this.button1 = new DevExpress.XtraEditors.SimpleButton();
-            this.button2 = new DevExpress.XtraEditors.SimpleButton();
             this.LimpiarHorario = new DevExpress.XtraEditors.SimpleButton();
             this.lbComplementaryActivities = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.cmbScheduleType.Properties)).BeginInit();
@@ -648,24 +647,16 @@ namespace HorarioMaster.UI
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(184, 541);
+            this.button1.Location = new System.Drawing.Point(273, 552);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(126, 23);
             this.button1.TabIndex = 52;
             this.button1.Text = "Generar Horario";
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(347, 541);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(119, 23);
-            this.button2.TabIndex = 53;
-            this.button2.Text = "Maestro - Materia";
-            // 
             // LimpiarHorario
             // 
-            this.LimpiarHorario.Location = new System.Drawing.Point(524, 541);
+            this.LimpiarHorario.Location = new System.Drawing.Point(456, 552);
             this.LimpiarHorario.Name = "LimpiarHorario";
             this.LimpiarHorario.Size = new System.Drawing.Size(84, 23);
             this.LimpiarHorario.TabIndex = 54;
@@ -691,10 +682,9 @@ namespace HorarioMaster.UI
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(925, 589);
+            this.ClientSize = new System.Drawing.Size(1028, 607);
             this.Controls.Add(this.lbComplementaryActivities);
             this.Controls.Add(this.LimpiarHorario);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBoxDatos);
             this.Controls.Add(this.cmbShift);
@@ -744,7 +734,6 @@ namespace HorarioMaster.UI
             this.LookAndFeel.SkinName = "The Asphalt World";
             this.Name = "frmHorario";
             this.Text = "Horario";
-            this.Load += new System.EventHandler(this.frmHorario_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.cmbScheduleType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbGroups.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbShift.Properties)).EndInit();
@@ -808,7 +797,6 @@ namespace HorarioMaster.UI
         private System.Windows.Forms.Label lEspecialidad;
         private System.Windows.Forms.Label lTurno;
         private DevExpress.XtraEditors.SimpleButton button1;
-        private DevExpress.XtraEditors.SimpleButton button2;
         private DevExpress.XtraEditors.SimpleButton LimpiarHorario;
         private System.Windows.Forms.ListBox lbComplementaryActivities;
 

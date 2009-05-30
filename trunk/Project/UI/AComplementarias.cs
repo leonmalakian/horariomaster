@@ -20,17 +20,17 @@ namespace HorarioMaster.UI
             InitializeComponent();
         }
         #region Global's
-        GridMasterControl AC = new GridMasterControl();
+        GridControlAComplementarias AC = new GridControlAComplementarias();
         #endregion
 
-       
         private void AComplementarias_Load(object sender, EventArgs e)
         {
-            AC.Parent = this.groupControl1;
+            
+            AC.Parent = groupControl1;
             AC.Dock = DockStyle.Fill;
-            AC.FillGridMaster("Select Numero,Nombre From ActComp", "ACTIVIDADES COMPLEMENTARIAS","");
-            AC.Show();
+
         }
-        
+
+
     }
 }

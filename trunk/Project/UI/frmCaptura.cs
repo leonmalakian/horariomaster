@@ -22,58 +22,76 @@ namespace HorarioMaster.UI
             InitializeComponent();
         }
         #region Global's
-        private GridMasterControl GridEspecialidad = new GridMasterControl();
-        private GridMasterControl GridGrupos = new GridMasterControl();
-        private GridMasterControl GridMaterias = new GridMasterControl();
-        private GridMasterControl GridPersonal = new GridMasterControl();
-        private GridMasterControl GridMaestroMaterias = new GridMasterControl();
-
+        private GridControlEspecialidad GridEspecialidad = new GridControlEspecialidad();
+        private GridControlMateria GridMaterias = new GridControlMateria();
+        private GridControlPersonal GridPersonal = new GridControlPersonal();
+        private GridControlMaestroMateria GridMaestroMaterias = new GridControlMaestroMateria();
+        private GridControlGrupos GridGrupos = new GridControlGrupos();                
+                
         #endregion
 
         #region Fill_Grid's
         private void frmCaptura1_Load(object sender, EventArgs e)
         {
-            //Grid Especialidad
-            GridEspecialidad.Parent = splitContainerControl1.Panel1;
-            GridEspecialidad.Dock = DockStyle.Fill;
-            GridEspecialidad.FillGridMaster("Select Nombre,Plan,Materia,Periodos,Modalidad,Area From Especialidad", "ESPECIALIDAD","Especialidad,Plan de Estudios,No. Materia,Periodos,Modalidad,Area");
-            GridEspecialidad.AddComboBoxColumn("Bachillerato Tecnologico", "Modalidad");
-            GridEspecialidad.AddComboBoxColumn("Fisico-matematico,Economico-Administrativas,Quimico-Biologica","Area");
-            //Grid Grupos
-            GridGrupos.Parent = splitContainerControl2.Panel1;
-            GridGrupos.Dock = DockStyle.Fill;
-            GridGrupos.FillGridMaster("Select Especialidad,Semestre,Grupo,SG,Turno From Grupos", "GRUPOS","");
-            GridGrupos.AddComboBoxColumn("Select Nombre From Especialidad", "Especialidad", "Nombre");
-            GridGrupos.AddComboBoxColumn("MATUTINO,VESPERTINO", "Turno");
-            //Grid Materias
-            GridMaterias.Parent = splitContainerControl2.Panel2;
-            GridMaterias.Dock = DockStyle.Fill;
-            GridMaterias.FillGridMaster("Select Nombre,Clave,HT,HP,HC From Materias", "MATERIAS","");
-            //Grid Personal
-            GridPersonal.Parent = splitContainerControl3.Panel1;
-            GridPersonal.Dock = DockStyle.Fill;
-            GridPersonal.FillGridMaster("Select ClaveMaestro,Numero,NumeroTarjeta,Nombre,RFC,CURP,Sexo,Direccion,Colonia,CP,Localidad,Telefono,Celular,Email,Un,Sub,Catego,HS,MOV,Puesto,Perfil,INGGF,INGSEP,INGDGETI,Nombramiento,Actividad,Nivel,Descarga,NivelMaxEstudios,Observaciones From Personal", "PERSONAL", "");
-            GridPersonal.AddlookUpColumn("Select Plaza,Maestro From Plaza", "Plaza", "Plaza");
-            GridPersonal.AddComboBoxColumn("Masculino,Femenino", "Sexo");
-            GridPersonal.AddComboBoxColumn("0,1,2,3,4,5,6,7,8,9,10", "Descarga");
-            GridPersonal.AddComboBoxColumn("Sin Estudios,Primaria,Carrera Comercial,Carrera Tecnica,Secundaria,Bachillerato,Normal,Normal Superior,Licenciatura,Maestria,Doctorado,Tecnico Superior,Licenciatura Tecnica", "NivelMaxEstudios");
-            GridPersonal.AddComboBoxColumn("Docente,Administrativo", "Actividad");
-            GridPersonal.AddComboBoxColumn("Pasante,Titulado,Otro", "Nivel");
-            GridPersonal.AddDateColumn("INGGF");
-            GridPersonal.AddDateColumn("INGSEP");
-            GridPersonal.AddDateColumn("INGDGETI");
-            // Grid Asignar Materia
-            GridMaestroMaterias.Parent = splitContainerControl3.Panel2;
-            GridMaestroMaterias.Dock = DockStyle.Fill;
-            GridMaestroMaterias.FillGridMaster("Select Nombre From Personal Where Puesto='DOCENTE'", "Asignar Materia", NewItemRowPosition.None,"");
-            //GridMaestroMaterias.AddlookUpColumn("Materias","Maestro");
-            GridMaestroMaterias.AddPopupColumn("", "Materias", "Maestro");
+            
+            FillgrdEspecialidad();
+            FillgrdGrupos();
+            FillgrdMaterias();
+            FillgrdPersonal();
+            FillgrdMaestroMateria();
         }
 
         public void TabPageToFront()
         {
             xtraTabControl1.SelectedTabPage = xtraTabPage2;
         }
-        #endregion
+
+        private void FillgrdEspecialidad()
+        {
+            GridEspecialidad.Parent = splitContainerControl1.Panel1;
+            GridEspecialidad.Dock = DockStyle.Fill;
+        }
+     
+        private void FillgrdGrupos()
+        {
+            GridGrupos.Parent = splitContainerControl2.Panel1;
+            GridGrupos.Dock = DockStyle.Fill;
+      
+        }
+
+        private void FillgrdMaterias()
+        {
+            GridMaterias.Parent = splitContainerControl2.Panel2;
+            GridMaterias.Dock = DockStyle.Fill;
+        }
+
+        private void FillgrdPersonal()
+        {
+            GridPersonal.Parent = splitContainerControl3.Panel1;
+            GridPersonal.Dock = DockStyle.Fill;
+            //GridPersonal.FillGridMaster("Select Numero,NumeroTarjeta,Nombre,Sexo,RFC,CURP,Direccion,Colonia,CP,Localidad,Telefono,Celular,Email,INGGF,INGSEP,INGDGETI,Perfil,Puesto,Nombramiento,Descarga,NivelMaxEstudios,Actividad,Nivel,Sub,Catego,MOV,Un,HS From Personal", "PERSONAL");
+            //GridPersonal.AddPopupColumn("Select Maestro,Plaza From Plaza", "Plaza", "Plaza", "Numero,Numero de Tarjeta,Nombre,Sexo,RFC,CURP,Direccion,Colonia,CP,Localidad,Telefono de Casa,Telefono Celular,Correo Electronico,INGGF,INGSEP,INGDGETI,Perfil,Puesto,Nombramiento,Descarga,Nivel Maximo de Estudios,Actividad,Nivel,Subcategoria,Clave,Movimiento,Unidad,Horas,Plaza", "Maestro");
+            //GridPersonal.AddComboBoxColumn("Masculino,Femenino", "Sexo");
+            //GridPersonal.AddComboBoxColumn("0,1,2,3,4,5,6,7,8,9,10", "Descarga");
+            //GridPersonal.AddComboBoxColumn("Sin Estudios,Primaria,Carrera Comercial,Carrera Tecnica,Secundaria,Bachillerato,Normal,Normal Superior,Licenciatura,Maestria,Doctorado,Tecnico Superior,Licenciatura Tecnica", "NivelMaxEstudios");
+            //GridPersonal.AddComboBoxColumn("Docente,Administrativo", "Actividad");
+            //GridPersonal.AddComboBoxColumn("Pasante,Titulado,Otro", "Nivel");
+            //GridPersonal.AddComboBoxColumn("03,27", "Sub");
+            //GridPersonal.AddComboBoxColumn("Select Clave From Clave", "Catego", "Clave");
+            //GridPersonal.AddComboBoxColumn("10,25,95", "MOV");
+            //GridPersonal.AddDateColumn("INGGF");
+            //GridPersonal.AddDateColumn("INGSEP");
+            //GridPersonal.AddDateColumn("INGDGETI");
+            //GridPersonal.Leave += new EventHandler(GridPersonal_Leave);
+        }      
+
+        private void FillgrdMaestroMateria()
+        {
+            GridMaestroMaterias.Parent = splitContainerControl3.Panel2;
+            GridMaestroMaterias.Dock = DockStyle.Fill;
+            //GridMaestroMaterias.FillGridMaster("Select Nombre From Personal Where Puesto='DOCENTE'", "Asignar Materia", NewItemRowPosition.None, "");
+            //GridMaestroMaterias.AddPopupColumn("", "Materias", "Maestro", "", "Clave,Grupo");
+        }
+        #endregion   
     }
 }
