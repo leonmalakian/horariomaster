@@ -69,22 +69,76 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\frmDGVMaster.cs">
+    <Compile Include="Controls\frmGridMateria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controls\frmDGVMaster.Designer.cs">
-      <DependentUpon>frmDGVMaster.cs</DependentUpon>
+    <Compile Include="Controls\frmGridMateria.Designer.cs">
+      <DependentUpon>frmGridMateria.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\GridMasterControl.cs">
+    <Compile Include="Controls\frmGridPlaza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\frmGridPlaza.Designer.cs">
+      <DependentUpon>frmGridPlaza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\GridControlAComplementarias.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\GridMasterControl.Designer.cs">
-      <DependentUpon>GridMasterControl.cs</DependentUpon>
+    <Compile Include="Controls\GridControlAComplementarias.Designer.cs">
+      <DependentUpon>GridControlAComplementarias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\GridControlAsignaMateria.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\GridControlAsignaMateria.Designer.cs">
+      <DependentUpon>GridControlAsignaMateria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\GridControlEspecialidad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\GridControlEspecialidad.Designer.cs">
+      <DependentUpon>GridControlEspecialidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\GridControlGrupos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\GridControlGrupos.Designer.cs">
+      <DependentUpon>GridControlGrupos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\GridControlMaestroMateria.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\GridControlMaestroMateria.Designer.cs">
+      <DependentUpon>GridControlMaestroMateria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\GridControlMateria.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\GridControlMateria.Designer.cs">
+      <DependentUpon>GridControlMateria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\GridControlPersonal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\GridControlPersonal.Designer.cs">
+      <DependentUpon>GridControlPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\GridControlPlaza.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\GridControlPlaza.Designer.cs">
+      <DependentUpon>GridControlPlaza.cs</DependentUpon>
     </Compile>
     <Compile Include="DataSets\DataSetReports.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetReports.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ScheduleGeneral.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ScheduleGeneral.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\ScheduleGroups.cs">
       <AutoGen>True</AutoGen>
@@ -122,17 +176,17 @@
     <Compile Include="UI\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\frmReportGeneral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmReportGeneral.Designer.cs">
+      <DependentUpon>frmReportGeneral.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\frmReportGroups.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\frmReportGroups.Designer.cs">
       <DependentUpon>frmReportGroups.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\MaestroMateria.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\MaestroMateria.Designer.cs">
-      <DependentUpon>MaestroMateria.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\frmPortada.cs">
       <SubType>Form</SubType>
@@ -149,13 +203,49 @@
     <Compile Include="Utilities\DataBaseUtilities.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Controls\frmDGVMaster.resx">
-      <DependentUpon>frmDGVMaster.cs</DependentUpon>
+    <EmbeddedResource Include="Controls\frmGridMateria.resx">
+      <DependentUpon>frmGridMateria.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\GridMasterControl.resx">
-      <DependentUpon>GridMasterControl.cs</DependentUpon>
+    <EmbeddedResource Include="Controls\frmGridPlaza.resx">
+      <DependentUpon>frmGridPlaza.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\GridControlAComplementarias.resx">
+      <DependentUpon>GridControlAComplementarias.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\GridControlAsignaMateria.resx">
+      <DependentUpon>GridControlAsignaMateria.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\GridControlEspecialidad.resx">
+      <DependentUpon>GridControlEspecialidad.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\GridControlGrupos.resx">
+      <DependentUpon>GridControlGrupos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\GridControlMaestroMateria.resx">
+      <DependentUpon>GridControlMaestroMateria.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\GridControlMateria.resx">
+      <DependentUpon>GridControlMateria.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\GridControlPersonal.resx">
+      <DependentUpon>GridControlPersonal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\GridControlPlaza.resx">
+      <DependentUpon>GridControlPlaza.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ScheduleGeneral.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ScheduleGeneral.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\ScheduleGroups.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -187,8 +277,16 @@
       <DependentUpon>frmParametersGroups.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmPortada.resx">
+      <DependentUpon>frmPortada.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmReportGeneral.resx">
+      <DependentUpon>frmReportGeneral.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmReportGroups.resx">
