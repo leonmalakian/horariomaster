@@ -18,23 +18,15 @@ using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.Utils;
 
-
 namespace HorarioMaster.Controls
 {
-    public partial class GridControlPlaza : DevExpress.XtraEditors.XtraUserControl
+    public partial class GridControlClave : DevExpress.XtraEditors.XtraUserControl
     {
-        public GridControlPlaza(string sNamePersonal,int IndexClave)
+        public GridControlClave(string Name)
         {
-            sName = sNamePersonal;
-            nIndexClave = IndexClave;
+            sName = Name;
             InitializeComponent();
-            GridControlPersonal.UpdateGrid2 += new GridControlPersonal.GridUpdate2(GridControlPersonal_UpdateGrid);
         }
-
-        void GridControlPersonal_UpdateGrid()
-        {         
-            FillGridView();
-        }        
 
         #region Global's
         static public string PathDataBase = Path.GetDirectoryName(Application.ExecutablePath) + @"\Global.mdb";
@@ -42,54 +34,60 @@ namespace HorarioMaster.Controls
         private BindingSource Binding1 = new BindingSource();
         private DataTable tabla = new DataTable();
         static string sName = "";
-        static int nIndexClave = -1;
-        #endregion
+        static int nClave = -1;
+        #endregion     
 
-        private void grdPlaza_Load(object sender, EventArgs e)
+        private void grdClave_Load(object sender, EventArgs e)
         {
             FillGridView();
         }
 
-        private void FillGridView()
+        public void FillGridView()
         {
             DataBaseUtilities.OpenConnection(PathDataBase);
-            da = DataBaseUtilities.FillDataAdapter("Select * From Plaza WHERE Maestro = '" + sName + "' AND IndexClave="+nIndexClave+"");
+            da = DataBaseUtilities.FillDataAdapter("Select * From ClaveTabla WHERE Nombre = '" + sName + "'");
             OleDbCommandBuilder cmd = new OleDbCommandBuilder(da);
             this.da.Fill(tabla);
             Binding1.DataSource = tabla;
-            grdPlaza.DataSource = Binding1;
+            grdClave.DataSource = Binding1;
             DataBaseUtilities.CloseConnection();
-            gridView1.Columns["Maestro"].OptionsColumn.ReadOnly = true;
-            AddComboBoxColumn("", "03,27", "Subcategoria", "");
-            AddComboBoxColumn("", "10,25,95", "Mov", "");
-            AddComboBoxColumn("", "27,99", "Unidad", "");
-            AddComboBoxColumn("", "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40", "Horas", "");
-            HeadersColumnsNames("Clave Plaza,Maestro,Subcategoria,Unidad,Plaza,Movimiento,Horas,Index");
-            gridView1.Columns["ClavePlaza"].Visible = false;
-            gridView1.Columns["Maestro"].Visible = false;
-            gridView1.Columns["IndexClave"].Visible = false;
+            AddPopupColumn("Plaza", "Asignar Plaza..."); 
+            AddComboBoxColumn("Select Clave From Clave", "", "Clave", "Clave");
+            HeadersColumnsNames("Index,Nombre,Clave");            
+            gridView1.Columns["Nombre"].Visible = false;
+            gridView1.Columns["Index"].Visible = false;
             gridView1.BestFitColumns();
         }
 
-        public void AddComboBoxColumn(string sSql, string sItem, string sColumnNameReplace, string sFieldChargeComboBox)
+         public void AddComboBoxColumn(string sSql, string sItem, string sColumnNameReplace, string sFieldChargeComboBox)
         {
             RepositoryItemComboBox Temp = new RepositoryItemComboBox();
             Temp.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            if (sSql != "")
-            {
-                DataBaseUtilities.OpenConnection(PathDataBase);
-                Temp = DataBaseUtilities.FillRepositoryItemComboBox(sSql, sFieldChargeComboBox, Temp);
-                (grdPlaza.MainView as GridView).Columns.ColumnByFieldName(sColumnNameReplace).ColumnEdit = Temp;
-            }
-            else
-            {
-                string[] ArrayItems = sItem.Split(',');
-                for (int nIndex = 0; nIndex < ArrayItems.Length; nIndex++)
-                {
-                    Temp.Items.Add(ArrayItems[nIndex]);
-                }
-                (grdPlaza.MainView as GridView).Columns.ColumnByFieldName(sColumnNameReplace).ColumnEdit = Temp;
-            }
+             DataBaseUtilities.OpenConnection(PathDataBase);
+             Temp = DataBaseUtilities.FillRepositoryItemComboBox(sSql, sFieldChargeComboBox, Temp);
+             (grdClave.MainView as GridView).Columns.ColumnByFieldName(sColumnNameReplace).ColumnEdit = Temp;                       
+        }
+
+         public void AddPopupColumn(string sColumnNameCreate, string sText)
+        {
+            RepositoryItemPopupContainerEdit temp = new RepositoryItemPopupContainerEdit();
+            grdClave.RepositoryItems.Add(temp);
+            tabla.Columns.Add(sColumnNameCreate);
+            gridView1.Columns.Add();
+            grdClave.MainView.BeginDataUpdate();
+            gridView1.PopulateColumns();
+            grdClave.MainView.EndDataUpdate();
+            temp.NullText = sText;
+            (grdClave.MainView as GridView).Columns.ColumnByFieldName(sColumnNameCreate).ColumnEdit = temp;
+            gridView1.BestFitColumns();
+            temp.Click += new EventHandler(temp_Click);
+        }
+
+        void temp_Click(object sender, EventArgs e)
+        {           
+            frmGridPlaza frmPlaza = new frmGridPlaza(sName,nClave);
+            frmPlaza.StartPosition = FormStartPosition.CenterScreen;
+            frmPlaza.ShowDialog();      
         }
 
         private void gridView1_ValidateRow(object sender, ValidateRowEventArgs e)
@@ -98,7 +96,7 @@ namespace HorarioMaster.Controls
             DataRowView CurrentRow = (DataRowView)e.Row;
             for (int nColumn = 0; nColumn < CurrentRow.Row.ItemArray.Length; nColumn++)
             {
-                if (CurrentRow.Row[nColumn].ToString() == "" && nColumn != 0)
+                if (CurrentRow.Row[nColumn].ToString() == "" && nColumn != 0 && nColumn != 3)
                 {
                     e.Valid = false;
                     XtraMessageBox.Show(gridView1.Columns[nColumn].ToString() + " no debe estar vacio", "Error de Captura", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -131,7 +129,7 @@ namespace HorarioMaster.Controls
             if (hitInfo.InRow)
             {
                 view.FocusedRowHandle = hitInfo.RowHandle;
-                cmnuPlazas.Show(view.GridControl, e.Point);
+                cmnuClave.Show(view.GridControl, e.Point);
             }
         }
 
@@ -149,14 +147,14 @@ namespace HorarioMaster.Controls
         {
             this.da.Update((DataTable)Binding1.DataSource);
             Binding1.DataSource = tabla;
-            grdPlaza.DataSource = Binding1;
+            grdClave.DataSource = Binding1;
             tabla.Clear();
             DataBaseUtilities.OpenConnection(PathDataBase);
-            da = DataBaseUtilities.FillDataAdapter("Select * From Plaza WHERE Maestro = '" + sName + "' AND IndexClave=" + nIndexClave + "");
+            da = DataBaseUtilities.FillDataAdapter("Select * From ClaveTabla WHERE Nombre = '" + sName + "'");
             OleDbCommandBuilder cmd = new OleDbCommandBuilder(da);
             this.da.Fill(tabla);
             Binding1.DataSource = tabla;
-            grdPlaza.DataSource = Binding1;
+            grdClave.DataSource = Binding1;
             DataBaseUtilities.CloseConnection();
             gridView1.SelectRow(gridView1.SelectedRowsCount - 1);
             gridView1.BestFitColumns();
@@ -164,21 +162,23 @@ namespace HorarioMaster.Controls
 
         private void gridView1_CustomColumnDisplayText(object sender, CustomColumnDisplayTextEventArgs e)
         {
-            if (e.Column.Name == "colMaestro")
+            if (e.Column.Name == "colNombre")
             {
                 e.DisplayText = sName;
             }
-            if (e.Column.Name == "colIndexClave")
-            {
-                e.DisplayText = nIndexClave.ToString();
-            }
-
         }
 
         private void gridView1_InitNewRow(object sender, InitNewRowEventArgs e)
         {
-            gridView1.SetRowCellValue(e.RowHandle, "Maestro", sName);
-            gridView1.SetRowCellValue(e.RowHandle, "IndexClave", nIndexClave);
+            gridView1.SetRowCellValue(e.RowHandle, "Nombre", sName);
+        }
+
+        private void gridView1_FocusedRowChanged(object sender, FocusedRowChangedEventArgs e)
+        {
+            if (e.FocusedRowHandle >= 0)
+            {
+                nClave = Convert.ToInt32(tabla.Rows[e.FocusedRowHandle].ItemArray[0]);
+            }
         } 
     }
 }

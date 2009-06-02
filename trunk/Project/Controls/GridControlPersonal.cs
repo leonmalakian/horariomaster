@@ -33,34 +33,32 @@ namespace HorarioMaster.Controls
         private BindingSource Binding1 = new BindingSource();
         private DataTable tabla = new DataTable();
         static string sName = "";
-        public delegate void GridUpdate();
-        public static event GridUpdate UpdateGrid;   
+        public delegate void GridUpdate2();
+        public static event GridUpdate2 UpdateGrid2;
         #endregion
 
         private void grdPersonal_Load(object sender, EventArgs e)
         {
             DataBaseUtilities.OpenConnection(PathDataBase);
-            da = DataBaseUtilities.FillDataAdapter("Select Numero,NumeroTarjeta,Nombre,Sexo,RFC,CURP,Direccion,Colonia,CP,Localidad,Telefono,Celular,Email,INGGF,INGSEP,INGDGETI,Perfil,Puesto,Nombramiento,Descarga,NivelMaxEstudios,Actividad,Nivel,Sub,Catego,MOV,Un,HS From Personal");
+            da = DataBaseUtilities.FillDataAdapter("Select Numero,NumeroTarjeta,Nombre,Sexo,RFC,CURP,Direccion,Colonia,CP,Localidad,Telefono,Celular,Email,INGGF,INGSEP,INGDGETI,Perfil,Puesto,Nombramiento,Descarga,NivelMaxEstudios,Actividad,Nivel From Personal");
             OleDbCommandBuilder cmd = new OleDbCommandBuilder(da);
             this.da.Fill(tabla);
             Binding1.DataSource = tabla;
             grdPersonal.DataSource = Binding1;
             DataBaseUtilities.CloseConnection();
-            AddPopupColumn("Plaza", "Asignar Plaza...");
+            //AddPopupColumn("Plaza", "Asignar Plaza...");
+            AddPopupColumn("Clave", "Asignar Clave...");            
             AddComboBoxColumn("","Masculino,Femenino", "Sexo","");
             AddComboBoxColumn("","0,1,2,3,4,5,6,7,8,9,10", "Descarga","");
             AddComboBoxColumn("","Sin Estudios,Primaria,Carrera Comercial,Carrera Tecnica,Secundaria,Bachillerato,Normal,Normal Superior,Licenciatura,Maestria,Doctorado,Tecnico Superior,Licenciatura Tecnica", "NivelMaxEstudios","");
             AddComboBoxColumn("","Docente,Administrativo", "Actividad","");
-            AddComboBoxColumn("","Pasante,Titulado,Otro", "Nivel","");
-            AddComboBoxColumn("","03,27", "Sub","");
-            AddComboBoxColumn("Select Clave From Clave","", "Catego", "Clave");
-            AddComboBoxColumn("","10,25,95", "MOV","");
+            AddComboBoxColumn("","Pasante,Titulado,Otro", "Nivel","");            
             AddDateColumn("INGGF");
             AddDateColumn("INGSEP");
             AddDateColumn("INGDGETI");
             AddTextEditColumn("Telefono");
             AddTextEditColumn("Celular");
-            HeadersColumnsNames("Numero,Numero de Tarjeta,Nombre,Sexo,RFC,CURP,Direccion,Colonia,CP,Localidad,Telefono de Casa,Telefono Celular,Correo Electronico,INGGF,INGSEP,INGDGETI,Perfil,Puesto,Nombramiento,Descarga,Nivel Maximo de Estudios,Actividad,Nivel,Subcategoria,Clave,Movimiento,Unidad,Horas");
+            HeadersColumnsNames("Numero,Numero de Tarjeta,Nombre,Sexo,RFC,CURP,Direccion,Colonia,CP,Localidad,Telefono de Casa,Telefono Celular,Correo Electronico,INGGF,INGSEP,INGDGETI,Perfil,Puesto,Nombramiento,Descarga,Nivel Maximo de Estudios,Actividad,Nivel");
             gridView1.BestFitColumns();
         }
 
@@ -120,9 +118,12 @@ namespace HorarioMaster.Controls
 
         void temp_Click(object sender, EventArgs e)
         {
-           frmGridPlaza frmPlaza = new frmGridPlaza(sName);
-           frmPlaza.StartPosition = FormStartPosition.CenterScreen;
-           frmPlaza.ShowDialog();
+               //frmGridPlaza frmPlaza = new frmGridPlaza(sName);
+               // frmPlaza.StartPosition = FormStartPosition.CenterScreen;
+               // frmPlaza.ShowDialog();
+            frmGridClave frmPlaza = new frmGridClave(sName);
+            frmPlaza.StartPosition = FormStartPosition.CenterScreen;
+            frmPlaza.ShowDialog();      
         }
 
         private void gridView1_ValidateRow(object sender, ValidateRowEventArgs e)
@@ -166,7 +167,7 @@ namespace HorarioMaster.Controls
                     gridView1.SetColumnError(gridView1.Columns["CURP"], "Este Campo no debe ser mayor de 18 digitos");
                     return;
                 }
-                if (CurrentRow.Row[nColumn].ToString() == "" && nColumn!=28)
+                if (CurrentRow.Row[nColumn].ToString() == "" && nColumn!=23)
                 {
                     e.Valid = false;
                     XtraMessageBox.Show(gridView1.Columns[nColumn].ToString() + " no debe estar vacio", "Error de Captura", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -256,7 +257,7 @@ namespace HorarioMaster.Controls
                 gridView1.DeleteRow(gridView1.FocusedRowHandle);
                 this.da.Update((DataTable)Binding1.DataSource);
                 gridView1.BestFitColumns();
-                UpdateGrid();
+                UpdateGrid2();
             }
         }
 
@@ -266,7 +267,7 @@ namespace HorarioMaster.Controls
             Binding1.DataSource = tabla;
             grdPersonal.DataSource = Binding1;
             gridView1.BestFitColumns();
-            UpdateGrid();
+            UpdateGrid2();
         }
 
         private void gridView1_FocusedRowChanged(object sender, FocusedRowChangedEventArgs e)

@@ -1,6 +1,6 @@
 namespace HorarioMaster.Controls
 {
-    partial class frmGridPlaza
+    partial class frmGridClave
     {
         /// <summary>
         /// Required designer variable.
@@ -30,16 +30,14 @@ namespace HorarioMaster.Controls
         {
             this.SuspendLayout();
             // 
-            // frmGridPlaza
+            // frmGridClave
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(462, 225);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "frmGridPlaza";
-            this.Text = "Plazas";
-            this.Load += new System.EventHandler(this.frmGridPlaza_Load);
+            this.ClientSize = new System.Drawing.Size(375, 266);
+            this.Name = "frmGridClave";
+            this.Text = "Claves";
+            this.Load += new System.EventHandler(this.frmGridClave_Load);
             this.ResumeLayout(false);
 
         }
