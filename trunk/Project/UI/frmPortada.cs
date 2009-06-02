@@ -16,11 +16,22 @@ namespace HorarioMaster.UI
         public frmPortada()
         {
             InitializeComponent();
+            frmDatosPlantel.refresh_portada += new frmDatosPlantel.Refresh_form(frmDatosPlantel_refresh_portada);
+        }
+
+        void frmDatosPlantel_refresh_portada()
+        {
+            Load_DPlantel();
         }
 
         static public string PathDataBase = Path.GetDirectoryName(Application.ExecutablePath) + @"\Global.mdb";
         private Padding mPadding = new Padding(8);
         private void frmPortada_Load(object sender, EventArgs e)
+        {
+            Load_DPlantel();
+        }
+
+        private void Load_DPlantel()
         {
             DataBaseUtilities.OpenConnection(PathDataBase);
             OleDbDataReader dr = DataBaseUtilities.ExecuteSql("Select Nombre,Imagen From Plantel");
@@ -44,24 +55,9 @@ namespace HorarioMaster.UI
                         pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
                     }
                 }
-                
+
             }
             DataBaseUtilities.CloseConnection();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureEdit1_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
