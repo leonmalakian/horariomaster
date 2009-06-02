@@ -31,8 +31,7 @@ namespace HorarioMaster.Controls
         static public string PathDataBase = Path.GetDirectoryName(Application.ExecutablePath) + @"\Global.mdb";
         private OleDbDataAdapter da;
         private BindingSource Binding1 = new BindingSource();
-        private DataTable tabla = new DataTable();
-        static string sName = "";
+        private DataTable tabla = new DataTable();        
         #endregion
 
         private void grdAComplementarias_Load(object sender, EventArgs e)
