@@ -29,6 +29,8 @@ namespace HorarioMaster.UI
         #region Global's
         static public string PathDataBase = Path.GetDirectoryName(Application.ExecutablePath) + @"\Global.mdb";
         bool bExist;
+        public delegate void Refresh_form();
+        public static event Refresh_form refresh_portada;
         #endregion
 
         #region SaveParams
@@ -37,6 +39,7 @@ namespace HorarioMaster.UI
             DataBaseUtilities.OpenConnection(PathDataBase);
             string str = "INSERT INTO Plantel (Nombre,Clave,Municipio,Direccion,Director,Subdirector,Matutino,Vespertino,Fecha,Periodo)VALUES('" + txtNombrePlantel.Text + "','" + txtClavePlantel.Text + "','" + txtEntidadFederativa.Text + "','" + txtDireccionPlantel.Text + "','" + txtDirector.Text + "','" + txtSubdirector.Text + "','" + txtTurnoMatutino.Text + "','" + txtTurnoVespertino.Text + "','" + dateFecha.Text + "','" + txtPeriodo.Text + "')";
             DataBaseUtilities.ExecuteNonSql(str);
+            refresh_portada();
             DataBaseUtilities.CloseConnection();
         }
         #endregion
@@ -73,6 +76,7 @@ namespace HorarioMaster.UI
                           "',Matutino='" + txtTurnoMatutino.Text + "',Vespertino='" + txtTurnoVespertino.Text +
                           "',Fecha='" + dateFecha.Text + "',Periodo='" + txtPeriodo.Text + "'";
             DataBaseUtilities.ExecuteNonSql(str);
+            refresh_portada();
             DataBaseUtilities.CloseConnection();
         }
         #endregion
