@@ -69,6 +69,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\frmGridClave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\frmGridClave.Designer.cs">
+      <DependentUpon>frmGridClave.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\frmGridMateria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,12 @@
     </Compile>
     <Compile Include="Controls\GridControlAsignaMateria.Designer.cs">
       <DependentUpon>GridControlAsignaMateria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\GridControlClave.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\GridControlClave.Designer.cs">
+      <DependentUpon>GridControlClave.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\GridControlEspecialidad.cs">
       <SubType>UserControl</SubType>
@@ -203,6 +215,10 @@
     <Compile Include="Utilities\DataBaseUtilities.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\frmGridClave.resx">
+      <DependentUpon>frmGridClave.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\frmGridMateria.resx">
       <DependentUpon>frmGridMateria.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -217,6 +233,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\GridControlAsignaMateria.resx">
       <DependentUpon>GridControlAsignaMateria.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\GridControlClave.resx">
+      <DependentUpon>GridControlClave.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\GridControlEspecialidad.resx">
