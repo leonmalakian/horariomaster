@@ -25,11 +25,12 @@ namespace HorarioMaster.Controls
         public GridControlMaestroMateria()
         {
             InitializeComponent();
-            GridControlEspecialidad.UpdateGrid += new GridControlEspecialidad.GridUpdate(GridControlEspecialidad_UpdateGrid);
+            GridControlPersonal.UpdateGrid2 += new GridControlPersonal.GridUpdate2(GridControlEspecialidad_UpdateGrid);
         }
 
         void GridControlEspecialidad_UpdateGrid()
         {
+            tabla.Clear();
             FillGridView();
         }
 
@@ -49,22 +50,21 @@ namespace HorarioMaster.Controls
 
         public void FillGridView()
         {
-
-            if (tabla.Columns.Count>0) { tabla.Columns.Remove("Materia"); }
             DataBaseUtilities.OpenConnection(PathDataBase);
-            da = DataBaseUtilities.FillDataAdapter("Select Nombre From Personal Where Puesto='DOCENTE'");
+            da = DataBaseUtilities.FillDataAdapter("Select Nombre From Personal Where Actividad='Docente'");
             OleDbCommandBuilder cmd = new OleDbCommandBuilder(da);
             this.da.Fill(tabla);
             Binding1.DataSource = tabla;
             grdMaestroMateria.DataSource = Binding1;
             DataBaseUtilities.CloseConnection();
-            HeadersColumnsNames("Maestro");            
-            AddPopupColumn("Materia", "Asignar Materia...");            
+            AddPopupColumn("Materia", "Asignar Materia...");
+            HeadersColumnsNames("Maestro");
             gridView1.BestFitColumns();
         }
 
         public void AddPopupColumn(string sColumnNameCreate,string sText)
         {
+            if (tabla.Columns["Materia"]!= null) { tabla.Columns.Remove("Materia"); }
             RepositoryItemPopupContainerEdit temp = new RepositoryItemPopupContainerEdit();
             grdMaestroMateria.RepositoryItems.Add(temp);
             tabla.Columns.Add(sColumnNameCreate);

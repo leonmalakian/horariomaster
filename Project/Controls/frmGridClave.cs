@@ -9,22 +9,20 @@ using DevExpress.XtraEditors;
 
 namespace HorarioMaster.Controls
 {
-    public partial class frmGridPlaza : DevExpress.XtraEditors.XtraForm
+    public partial class frmGridClave : DevExpress.XtraEditors.XtraForm
     {
         static string sName = "";
-        static int nClave = -1;
-        public frmGridPlaza(string sNamePersonal,int nClav)
+        public frmGridClave(string sNamePersonal)
         {
             sName = sNamePersonal;
-            nClave = nClav;
             InitializeComponent();
         }
 
-        private void frmGridPlaza_Load(object sender, EventArgs e)
+        private void frmGridClave_Load(object sender, EventArgs e)
         {
-            GridControlPlaza grdPlaza = new GridControlPlaza(sName,nClave);
-            grdPlaza.Parent = this;
-            grdPlaza.Dock = DockStyle.Fill;
+            GridControlClave grdClave = new GridControlClave(sName);
+            grdClave.Parent = this;
+            grdClave.Dock = DockStyle.Fill;
             
         }
 
