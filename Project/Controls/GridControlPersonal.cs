@@ -275,6 +275,11 @@ namespace HorarioMaster.Controls
             if (e.FocusedRowHandle >= 0)
             {
                 sName = tabla.Rows[e.FocusedRowHandle].ItemArray[2].ToString();
+                gridView1.Columns["Clave"].OptionsColumn.AllowEdit = true;
+            }
+            else
+            {
+                gridView1.Columns["Clave"].OptionsColumn.AllowEdit = false;
             }
         }
     }

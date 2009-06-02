@@ -178,6 +178,11 @@ namespace HorarioMaster.Controls
             if (e.FocusedRowHandle >= 0)
             {
                 nClave = Convert.ToInt32(tabla.Rows[e.FocusedRowHandle].ItemArray[0]);
+                gridView1.Columns["Plaza"].OptionsColumn.AllowEdit = true;
+            }
+            else
+            {
+                gridView1.Columns["Plaza"].OptionsColumn.AllowEdit = false;
             }
         } 
     }
