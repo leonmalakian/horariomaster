@@ -160,6 +160,17 @@ namespace HorarioMaster.Controls
         {
             this.da.Update((DataTable)Binding1.DataSource);            
             gridView1.BestFitColumns();
+        }
+
+        private void gridView1_FocusedRowChanged(object sender, FocusedRowChangedEventArgs e)
+        {
+            gridView1.BestFitColumns();
+        }
+
+        private void gridView1_ValidatingEditor(object sender, BaseContainerValidateEditorEventArgs e)
+        {
+            if (e.Value is string)
+                e.Value = ((string)e.Value).TrimEnd();
         }        
     }
 }

@@ -126,5 +126,11 @@ namespace HorarioMaster.Controls
         {
             e.ExceptionMode = DevExpress.XtraEditors.Controls.ExceptionMode.NoAction;
         }
+
+        private void gridView1_ValidatingEditor(object sender, BaseContainerValidateEditorEventArgs e)
+        {
+            if (e.Value is string)
+                e.Value = ((string)e.Value).TrimEnd();
+        }
     }
 }

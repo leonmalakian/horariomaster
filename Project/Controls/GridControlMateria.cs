@@ -142,5 +142,35 @@ namespace HorarioMaster.Controls
             gridView1.BestFitColumns();
         }
 
-    }
+        private void gridView1_FocusedRowChanged(object sender, FocusedRowChangedEventArgs e)
+        {
+            gridView1.BestFitColumns();
+        }
+
+        private void gridView1_ShownEditor(object sender, EventArgs e)
+        {
+            GridView view = sender as GridView;
+            TextEdit edit = view.ActiveEditor as TextEdit;
+            if (view.FocusedColumn.Name == "colNombre")
+            {
+                if (edit != null)
+                    edit.Properties.CharacterCasing = CharacterCasing.Upper;
+            }
+            //if (edit != null)
+            //    edit.Properties.t
+        }
+
+        private void gridView1_InitNewRow(object sender, InitNewRowEventArgs e)
+        {
+            gridView1.SetRowCellValue(e.RowHandle, "HT", 0 );
+            gridView1.SetRowCellValue(e.RowHandle, "HP", 0);
+        }
+
+        private void gridView1_ValidatingEditor(object sender, BaseContainerValidateEditorEventArgs e)
+        {
+            if (e.Value is string)
+                e.Value = ((string)e.Value).TrimEnd();
+        }
+
+       }
 }
