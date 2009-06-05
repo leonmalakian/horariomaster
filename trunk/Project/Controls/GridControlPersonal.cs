@@ -281,5 +281,11 @@ namespace HorarioMaster.Controls
             gridView1.BestFitColumns();
             UpdateGrid2();
         }
+
+        private void gridView1_ValidatingEditor(object sender, BaseContainerValidateEditorEventArgs e)
+        {
+            if (e.Value is string)
+                e.Value = ((string)e.Value).TrimEnd();
+        }
     }
 }

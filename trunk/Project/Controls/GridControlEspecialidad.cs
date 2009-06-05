@@ -43,7 +43,7 @@ namespace HorarioMaster.Controls
             this.da.Fill(tabla);
             Binding1.DataSource = tabla;
             grdEspecialidad.DataSource = Binding1;
-            DataBaseUtilities.CloseConnection();
+            DataBaseUtilities.CloseConnection();           
             AddComboBoxColumn("Bachillerato Tecnologico", "Modalidad");
             AddComboBoxColumn("Fisico-matematico,Economico-Administrativas,Quimico-Biologica", "Area");
             HeadersColumnsNames();
@@ -62,7 +62,7 @@ namespace HorarioMaster.Controls
             (grdEspecialidad.MainView as GridView).Columns.ColumnByFieldName(sColumnNameReplace).ColumnEdit = Temp;
             
         }
-
+        
         private void gridView1_ValidateRow(object sender, ValidateRowEventArgs e)
         {
             gridView1.ClearColumnErrors();
@@ -168,6 +168,28 @@ namespace HorarioMaster.Controls
             gridView1.BestFitColumns();
             UpdateGrid(); 
 
+        }
+
+        private void gridView1_FocusedRowChanged(object sender, FocusedRowChangedEventArgs e)
+        {
+            gridView1.BestFitColumns();
+        }
+
+        private void gridView1_ShownEditor(object sender, EventArgs e)
+        {
+            GridView view = sender as GridView;
+            TextEdit edit = view.ActiveEditor as TextEdit;
+            if (view.FocusedColumn.Name == "colNombre")
+            {
+                if (edit != null)
+                    edit.Properties.CharacterCasing = CharacterCasing.Upper;
+            }            
+        }
+
+        private void gridView1_ValidatingEditor(object sender, BaseContainerValidateEditorEventArgs e)
+        {
+            if (e.Value is string) 
+                e.Value = ((string)e.Value).TrimEnd();
         }       
     }    
 }

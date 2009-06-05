@@ -179,6 +179,12 @@ namespace HorarioMaster.Controls
         {
             gridView1.SetRowCellValue(e.RowHandle, "Maestro", sName);
             gridView1.SetRowCellValue(e.RowHandle, "IndexClave", nIndexClave);
+        }
+
+        private void gridView1_ValidatingEditor(object sender, BaseContainerValidateEditorEventArgs e)
+        {
+            if (e.Value is string)
+                e.Value = ((string)e.Value).TrimEnd();
         } 
     }
 }

@@ -176,6 +176,12 @@ namespace HorarioMaster.Controls
                 gridView1.Columns["Clave"].OptionsColumn.AllowEdit = false;
                 gridView1.Columns["Grupo"].OptionsColumn.AllowEdit = false;    
             }          
+        }
+
+        private void gridView1_ValidatingEditor(object sender, BaseContainerValidateEditorEventArgs e)
+        {
+            if (e.Value is string)
+                e.Value = ((string)e.Value).TrimEnd();
         }      
     }
 }
