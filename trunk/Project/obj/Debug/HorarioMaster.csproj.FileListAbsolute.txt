@@ -316,3 +316,34 @@ C:\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlMateria.resources
 C:\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlPersonal.resources
 C:\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlPlaza.resources
 C:\HorarioMaster\obj\Debug\HorarioMaster.UI.frmPortada.resources
+C:\HorarioMaster\obj\Debug\HorarioMaster.Controls.frmGridClave.resources
+C:\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlClave.resources
+I:\1 junio\HorarioMaster\obj\Debug\HorarioMaster.exe
+I:\1 junio\HorarioMaster\obj\Debug\HorarioMaster.pdb
+I:\1 junio\HorarioMaster\bin\Debug\HorarioMaster.exe
+I:\1 junio\HorarioMaster\bin\Debug\HorarioMaster.pdb
+I:\1 junio\HorarioMaster\obj\Debug\ResolveAssemblyReference.cache
+I:\1 junio\HorarioMaster\obj\Debug\HorarioMaster.Controls.frmGridClave.resources
+I:\1 junio\HorarioMaster\obj\Debug\HorarioMaster.Controls.frmGridMateria.resources
+I:\1 junio\HorarioMaster\obj\Debug\HorarioMaster.Controls.frmGridPlaza.resources
+I:\1 junio\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlAComplementarias.resources
+I:\1 junio\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlAsignaMateria.resources
+I:\1 junio\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlClave.resources
+I:\1 junio\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlEspecialidad.resources
+I:\1 junio\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlGrupos.resources
+I:\1 junio\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlMaestroMateria.resources
+I:\1 junio\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlMateria.resources
+I:\1 junio\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlPersonal.resources
+I:\1 junio\HorarioMaster\obj\Debug\HorarioMaster.Controls.GridControlPlaza.resources
+I:\1 junio\HorarioMaster\obj\Debug\HorarioMaster.UI.AComplementarias.resources
+I:\1 junio\HorarioMaster\obj\Debug\HorarioMaster.UI.frmCaptura.resources
+I:\1 junio\HorarioMaster\obj\Debug\HorarioMaster.UI.frmHorario.resources
+I:\1 junio\HorarioMaster\obj\Debug\HorarioMaster.Properties.Resources.resources
+I:\1 junio\HorarioMaster\obj\Debug\HorarioMaster.UI.frmDatosPlantel.resources
+I:\1 junio\HorarioMaster\obj\Debug\HorarioMaster.UI.frmParametersGroups.resources
+I:\1 junio\HorarioMaster\obj\Debug\HorarioMaster.UI.frmPortada.resources
+I:\1 junio\HorarioMaster\obj\Debug\HorarioMaster.UI.frmPrincipal.resources
+I:\1 junio\HorarioMaster\obj\Debug\HorarioMaster.UI.frmReportGeneral.resources
+I:\1 junio\HorarioMaster\obj\Debug\HorarioMaster.UI.frmReportGroups.resources
+I:\1 junio\HorarioMaster\obj\Debug\HorarioMaster.csproj.GenerateResource.Cache
+I:\1 junio\HorarioMaster\obj\Debug\HorarioMaster.exe.licenses

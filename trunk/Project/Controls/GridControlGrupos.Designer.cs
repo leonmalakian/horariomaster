@@ -49,6 +49,7 @@ namespace HorarioMaster.Controls
             this.grdGrupos.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             this.grdGrupos.Load += new System.EventHandler(this.grdGrupos_Load);
+            this.grdGrupos.Leave += new System.EventHandler(this.grdGrupos_Leave);
             // 
             // gridView1
             // 
@@ -58,13 +59,9 @@ namespace HorarioMaster.Controls
             this.gridView1.OptionsView.ColumnAutoWidth = false;
             this.gridView1.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
             this.gridView1.OptionsView.ShowGroupPanel = false;
-            this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
-            this.gridView1.MouseEnter += new System.EventHandler(this.gridView1_MouseEnter);
-            this.gridView1.RowUpdated += new DevExpress.XtraGrid.Views.Base.RowObjectEventHandler(this.gridView1_RowUpdated);
             this.gridView1.InvalidRowException += new DevExpress.XtraGrid.Views.Base.InvalidRowExceptionEventHandler(this.gridView1_InvalidRowException);
             this.gridView1.ValidateRow += new DevExpress.XtraGrid.Views.Base.ValidateRowEventHandler(this.gridView1_ValidateRow);
             this.gridView1.ShowGridMenu += new DevExpress.XtraGrid.Views.Grid.GridMenuEventHandler(this.gridView1_ShowGridMenu);
-            this.gridView1.GotFocus += new System.EventHandler(this.gridView1_GotFocus);
             // 
             // cmnuGrupos
             // 

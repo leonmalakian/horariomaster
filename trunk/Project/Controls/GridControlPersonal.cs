@@ -255,32 +255,31 @@ namespace HorarioMaster.Controls
             if (XtraMessageBox.Show("Estas seguro que deseas borrar este registro?", "Borrar Registro", MessageBoxButtons.YesNo) != DialogResult.No)
             {
                 gridView1.DeleteRow(gridView1.FocusedRowHandle);
-                this.da.Update((DataTable)Binding1.DataSource);
                 gridView1.BestFitColumns();
-                UpdateGrid2();
             }
-        }
-
-        private void gridView1_RowUpdated(object sender, RowObjectEventArgs e)
-        {
-            this.da.Update((DataTable)Binding1.DataSource);
-            Binding1.DataSource = tabla;
-            grdPersonal.DataSource = Binding1;
-            gridView1.BestFitColumns();
-            UpdateGrid2();
-        }
+        }     
 
         private void gridView1_FocusedRowChanged(object sender, FocusedRowChangedEventArgs e)
         {
             if (e.FocusedRowHandle >= 0)
             {
                 sName = tabla.Rows[e.FocusedRowHandle].ItemArray[2].ToString();
-                gridView1.Columns["Clave"].OptionsColumn.AllowEdit = true;
+                if (gridView1.Columns["Clave"] != null)
+                {
+                    gridView1.Columns["Clave"].OptionsColumn.AllowEdit = true;
+                }
             }
             else
             {
                 gridView1.Columns["Clave"].OptionsColumn.AllowEdit = false;
             }
+        }
+
+        private void grdPersonal_Leave(object sender, EventArgs e)
+        {
+            this.da.Update((DataTable)Binding1.DataSource);
+            gridView1.BestFitColumns();
+            UpdateGrid2();
         }
     }
 }

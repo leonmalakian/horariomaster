@@ -110,16 +110,7 @@ namespace HorarioMaster.Controls
             double isItNumeric;
             isNumber = Double.TryParse(Convert.ToString(Cadena), System.Globalization.NumberStyles.Any, System.Globalization.NumberFormatInfo.InvariantInfo, out isItNumeric);
             return isNumber;
-        }  
-
-        private void gridView1_RowUpdated(object sender, RowObjectEventArgs e)
-        {
-            this.da.Update((DataTable)Binding1.DataSource);
-            Binding1.DataSource = tabla;
-            grdEspecialidad.DataSource = Binding1;
-            gridView1.BestFitColumns();
-            UpdateGrid();            
-        }
+        }        
 
         private void gridView1_ShowGridMenu(object sender, GridMenuEventArgs e)
         {
@@ -136,10 +127,7 @@ namespace HorarioMaster.Controls
         {
             if (XtraMessageBox.Show("Estas seguro que deseas borrar este registro?", "Borrar Registro", MessageBoxButtons.YesNo) != DialogResult.No)
             {
-                gridView1.DeleteRow(gridView1.FocusedRowHandle);
-                this.da.Update((DataTable)Binding1.DataSource);
-                gridView1.BestFitColumns();
-                UpdateGrid(); 
+                gridView1.DeleteRow(gridView1.FocusedRowHandle);               
             }
         }
 
@@ -172,6 +160,14 @@ namespace HorarioMaster.Controls
             }
             prevColumn = view.FocusedColumn;
             prevRow = view.FocusedRowHandle;
-        }
+        }     
+
+        private void grdEspecialidad_Leave(object sender, EventArgs e)
+        {
+            this.da.Update((DataTable)Binding1.DataSource);
+            gridView1.BestFitColumns();
+            UpdateGrid(); 
+
+        }       
     }    
 }

@@ -136,15 +136,7 @@ namespace HorarioMaster.Controls
         {
             e.ExceptionMode = DevExpress.XtraEditors.Controls.ExceptionMode.NoAction;
         }
-
-        private void gridView1_RowUpdated(object sender, RowObjectEventArgs e)
-        {
-            this.da.Update((DataTable)Binding1.DataSource);
-            Binding1.DataSource = tabla;
-            grdGrupos.DataSource = Binding1;
-            gridView1.BestFitColumns();
-        }
-
+       
         private void gridView1_ShowGridMenu(object sender, GridMenuEventArgs e)
         {
             GridView view = (GridView)sender;
@@ -160,25 +152,14 @@ namespace HorarioMaster.Controls
         {
             if (XtraMessageBox.Show("Estas seguro que deseas borrar este registro?", "Borrar Registro", MessageBoxButtons.YesNo) != DialogResult.No)
             {
-                gridView1.DeleteRow(gridView1.FocusedRowHandle);
-                this.da.Update((DataTable)Binding1.DataSource);
-                gridView1.BestFitColumns();
+                gridView1.DeleteRow(gridView1.FocusedRowHandle);                
             }
         }
 
-        private void gridView1_MouseEnter(object sender, EventArgs e)
+        private void grdGrupos_Leave(object sender, EventArgs e)
         {
-            
-        }
-
-        private void gridView1_GotFocus(object sender, EventArgs e)
-        {
-            //FillGridView();
-        }
-
-        private void gridView1_FocusedRowChanged(object sender, FocusedRowChangedEventArgs e)
-        {
-
-        }       
+            this.da.Update((DataTable)Binding1.DataSource);            
+            gridView1.BestFitColumns();
+        }        
     }
 }
