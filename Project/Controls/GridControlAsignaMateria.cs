@@ -43,7 +43,7 @@ namespace HorarioMaster.Controls
             DataBaseUtilities.OpenConnection(PathDataBase);
             da = DataBaseUtilities.FillDataAdapter("Select * From MaestroMateria Where Maestro='" + sName + "'");
             OleDbCommandBuilder cmd = new OleDbCommandBuilder(da);
-            this.da.Fill(tabla);
+            this.da.Fill(tabla);            
             Binding1.DataSource = tabla;
             grdAsignaMateria.DataSource = Binding1;
             DataBaseUtilities.CloseConnection();
@@ -109,7 +109,7 @@ namespace HorarioMaster.Controls
             DataBaseUtilities.OpenConnection(PathDataBase);
             da = DataBaseUtilities.FillDataAdapter("Select * From MaestroMateria Where Maestro='" + sName + "'");
             OleDbCommandBuilder cmd = new OleDbCommandBuilder(da);
-            this.da.Fill(tabla);
+            this.da.Fill(tabla);            
             Binding1.DataSource = tabla;
             grdAsignaMateria.DataSource = Binding1;
             DataBaseUtilities.CloseConnection();
@@ -121,8 +121,18 @@ namespace HorarioMaster.Controls
         {
             if (XtraMessageBox.Show("Estas seguro que deseas borrar este registro?", "Borrar Registro", MessageBoxButtons.YesNo) != DialogResult.No)
             {
-                gridView1.DeleteRow(gridView1.FocusedRowHandle);                
                 this.da.Update((DataTable)Binding1.DataSource);
+                Binding1.DataSource = tabla;
+                grdAsignaMateria.DataSource = Binding1;
+                tabla.Clear();
+                DataBaseUtilities.OpenConnection(PathDataBase);
+                da = DataBaseUtilities.FillDataAdapter("Select * From MaestroMateria Where Maestro='" + sName + "'");
+                OleDbCommandBuilder cmd = new OleDbCommandBuilder(da);
+                this.da.Fill(tabla);
+                Binding1.DataSource = tabla;
+                grdAsignaMateria.DataSource = Binding1;
+                DataBaseUtilities.CloseConnection();
+                gridView1.SelectRow(gridView1.SelectedRowsCount - 1);
                 gridView1.BestFitColumns();
             }
         }
@@ -181,7 +191,7 @@ namespace HorarioMaster.Controls
         private void gridView1_ValidatingEditor(object sender, BaseContainerValidateEditorEventArgs e)
         {
             if (e.Value is string)
-                e.Value = ((string)e.Value).TrimEnd();
+                e.Value = ((string)e.Value).Trim();
         }      
     }
 }

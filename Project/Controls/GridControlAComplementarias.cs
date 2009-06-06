@@ -44,7 +44,7 @@ namespace HorarioMaster.Controls
             grdAComplementarias.DataSource = Binding1;
             DataBaseUtilities.CloseConnection();
             gridView1.Columns["Index"].Visible = false;
-            HeadersColumnsNames("Numero,Nombre");
+            HeadersColumnsNames("Index,Numero,Nombre");
             gridView1.BestFitColumns();
         }
 
@@ -130,7 +130,25 @@ namespace HorarioMaster.Controls
         private void gridView1_ValidatingEditor(object sender, BaseContainerValidateEditorEventArgs e)
         {
             if (e.Value is string)
-                e.Value = ((string)e.Value).TrimEnd();
+                e.Value = ((string)e.Value).Trim();
+        }
+
+        private void gridView1_ShownEditor(object sender, EventArgs e)
+        {
+            if (gridView1.FocusedRowHandle >= 0)
+            {
+                gridView1.Columns["Numero"].OptionsColumn.AllowEdit = false;
+                gridView1.Columns["Nombre"].OptionsColumn.AllowEdit = false;
+            } 
+        }
+
+        private void gridView1_FocusedRowChanged(object sender, FocusedRowChangedEventArgs e)
+        {
+            if (e.FocusedRowHandle < 0)
+            {
+                gridView1.Columns["Numero"].OptionsColumn.AllowEdit = true;
+                gridView1.Columns["Nombre"].OptionsColumn.AllowEdit = true;
+            }
         }
     }
 }

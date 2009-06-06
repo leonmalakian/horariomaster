@@ -23,7 +23,7 @@ namespace HorarioMaster.Controls
     public partial class GridControlGrupos : DevExpress.XtraEditors.XtraUserControl
     {
         public GridControlGrupos()
-        {
+        {           
             InitializeComponent();
             GridControlEspecialidad.UpdateGrid+=new GridControlEspecialidad.GridUpdate(GridControlEspecialidad_UpdateGrid);
         }
@@ -36,24 +36,24 @@ namespace HorarioMaster.Controls
         #endregion
 
         private void grdGrupos_Load(object sender, EventArgs e)
-        {
+        {         
             FillGridView();          
         }
 
         void GridControlEspecialidad_UpdateGrid()
         {
-            FillGridView();
+           // FillGridView();
         }
 
         public void FillGridView()
         {
-            tabla.Clear();
+            tabla.Clear();            
             DataBaseUtilities.OpenConnection(PathDataBase);
             da = DataBaseUtilities.FillDataAdapter("Select Especialidad,Semestre,Grupo,SG,Turno From Grupos");
             OleDbCommandBuilder cmd = new OleDbCommandBuilder(da);
-            this.da.Fill(tabla);
-            Binding1.DataSource = tabla;
-            grdGrupos.DataSource = Binding1;
+            this.da.Fill(tabla);          
+            Binding1.DataSource = tabla;           
+            grdGrupos.DataSource = Binding1;            
             DataBaseUtilities.CloseConnection();
             AddComboBoxColumn("Select Nombre From Especialidad", "", "Especialidad", "Nombre");
             AddComboBoxColumn("", "MATUTINO,VESPERTINO", "Turno", "");
@@ -65,7 +65,7 @@ namespace HorarioMaster.Controls
         }
 
         public void AddComboBoxColumn(string sSql, string sItem, string sColumnNameReplace, string sFieldChargeComboBox)
-        {
+        {            
             RepositoryItemComboBox Temp = new RepositoryItemComboBox();
             Temp.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             if (sSql != "")
@@ -152,25 +152,27 @@ namespace HorarioMaster.Controls
         {
             if (XtraMessageBox.Show("Estas seguro que deseas borrar este registro?", "Borrar Registro", MessageBoxButtons.YesNo) != DialogResult.No)
             {
-                gridView1.DeleteRow(gridView1.FocusedRowHandle);                
+                gridView1.DeleteRow(gridView1.FocusedRowHandle);
+                this.da.Update((DataTable)Binding1.DataSource);
+                gridView1.BestFitColumns();
             }
-        }
-
-        private void grdGrupos_Leave(object sender, EventArgs e)
-        {
-            this.da.Update((DataTable)Binding1.DataSource);            
-            gridView1.BestFitColumns();
-        }
-
-        private void gridView1_FocusedRowChanged(object sender, FocusedRowChangedEventArgs e)
-        {
-            gridView1.BestFitColumns();
-        }
+        }       
 
         private void gridView1_ValidatingEditor(object sender, BaseContainerValidateEditorEventArgs e)
         {
             if (e.Value is string)
-                e.Value = ((string)e.Value).TrimEnd();
+                e.Value = ((string)e.Value).Trim();
+        }
+
+        private void gridView1_RowUpdated(object sender, RowObjectEventArgs e)
+        {
+            this.da.Update((DataTable)Binding1.DataSource);
+            gridView1.BestFitColumns();
+        }
+
+        private void grdGrupos_Enter(object sender, EventArgs e)
+        {
+            FillGridView();
         }        
     }
 }

@@ -42,11 +42,10 @@ namespace HorarioMaster.Controls
             DataBaseUtilities.OpenConnection(PathDataBase);
             da = DataBaseUtilities.FillDataAdapter("Select Numero,NumeroTarjeta,Nombre,Sexo,RFC,CURP,Direccion,Colonia,CP,Localidad,Telefono,Celular,Email,INGGF,INGSEP,INGDGETI,Perfil,Puesto,Nombramiento,Descarga,NivelMaxEstudios,Actividad,Nivel From Personal");
             OleDbCommandBuilder cmd = new OleDbCommandBuilder(da);
-            this.da.Fill(tabla);
+            this.da.Fill(tabla);            
             Binding1.DataSource = tabla;
             grdPersonal.DataSource = Binding1;
             DataBaseUtilities.CloseConnection();
-            //AddPopupColumn("Plaza", "Asignar Plaza...");
             AddPopupColumn("Clave", "Asignar Clave...");            
             AddComboBoxColumn("","Masculino,Femenino", "Sexo","");
             AddComboBoxColumn("","0,1,2,3,4,5,6,7,8,9,10", "Descarga","");
@@ -86,6 +85,9 @@ namespace HorarioMaster.Controls
         public void AddDateColumn(string sColumnNameReplace)
         {
             RepositoryItemDateEdit temp = new RepositoryItemDateEdit();
+            temp.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
+            temp.Mask.EditMask = "d";
+            temp.Mask.UseMaskAsDisplayFormat = true;
             grdPersonal.RepositoryItems.Add(temp);
             (grdPersonal.MainView as GridView).Columns.ColumnByFieldName(sColumnNameReplace).ColumnEdit = temp;
 
@@ -118,9 +120,6 @@ namespace HorarioMaster.Controls
 
         void temp_Click(object sender, EventArgs e)
         {
-               //frmGridPlaza frmPlaza = new frmGridPlaza(sName);
-               // frmPlaza.StartPosition = FormStartPosition.CenterScreen;
-               // frmPlaza.ShowDialog();
             frmGridClave frmPlaza = new frmGridClave(sName);
             frmPlaza.StartPosition = FormStartPosition.CenterScreen;
             frmPlaza.ShowDialog();      
@@ -255,6 +254,9 @@ namespace HorarioMaster.Controls
             if (XtraMessageBox.Show("Estas seguro que deseas borrar este registro?", "Borrar Registro", MessageBoxButtons.YesNo) != DialogResult.No)
             {
                 gridView1.DeleteRow(gridView1.FocusedRowHandle);
+                this.da.Update((DataTable)Binding1.DataSource);               
+                gridView1.BestFitColumns();
+                UpdateGrid2();
                 gridView1.BestFitColumns();
             }
         }     
@@ -273,19 +275,20 @@ namespace HorarioMaster.Controls
             {
                 gridView1.Columns["Clave"].OptionsColumn.AllowEdit = false;
             }
-        }
-
-        private void grdPersonal_Leave(object sender, EventArgs e)
-        {
-            this.da.Update((DataTable)Binding1.DataSource);
             gridView1.BestFitColumns();
-            UpdateGrid2();
-        }
+        }        
 
         private void gridView1_ValidatingEditor(object sender, BaseContainerValidateEditorEventArgs e)
         {
             if (e.Value is string)
-                e.Value = ((string)e.Value).TrimEnd();
+                e.Value = ((string)e.Value).Trim();
+        }
+
+        private void gridView1_RowUpdated(object sender, RowObjectEventArgs e)
+        {
+            this.da.Update((DataTable)Binding1.DataSource);            
+            gridView1.BestFitColumns();
+            UpdateGrid2();
         }
     }
 }

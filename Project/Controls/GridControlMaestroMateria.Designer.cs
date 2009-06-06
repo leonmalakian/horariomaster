@@ -45,6 +45,7 @@ namespace HorarioMaster.Controls
             this.grdMaestroMateria.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             this.grdMaestroMateria.Load += new System.EventHandler(this.grdMaestroMateria_Load);
+            this.grdMaestroMateria.Enter += new System.EventHandler(this.grdMaestroMateria_Enter);
             // 
             // gridView1
             // 

@@ -40,7 +40,7 @@ namespace HorarioMaster.Controls
             DataBaseUtilities.OpenConnection(PathDataBase);
             da = DataBaseUtilities.FillDataAdapter("Select Nombre,Clave,HT,HP,HC From Materias");
             OleDbCommandBuilder cmd = new OleDbCommandBuilder(da);
-            this.da.Fill(tabla);
+            this.da.Fill(tabla);           
             Binding1.DataSource = tabla;
             grdMateria.DataSource = Binding1;
             DataBaseUtilities.CloseConnection();
@@ -132,20 +132,10 @@ namespace HorarioMaster.Controls
             if (XtraMessageBox.Show("Estas seguro que deseas borrar este registro?", "Borrar Registro", MessageBoxButtons.YesNo) != DialogResult.No)
             {
                 gridView1.DeleteRow(gridView1.FocusedRowHandle);
-                gridView1.BestFitColumns();
+                this.da.Update((DataTable)Binding1.DataSource);
+                gridView1.BestFitColumns();             
             }
-        }
-
-        private void grdMateria_Leave(object sender, EventArgs e)
-        {
-            this.da.Update((DataTable)Binding1.DataSource);
-            gridView1.BestFitColumns();
-        }
-
-        private void gridView1_FocusedRowChanged(object sender, FocusedRowChangedEventArgs e)
-        {
-            gridView1.BestFitColumns();
-        }
+        }           
 
         private void gridView1_ShownEditor(object sender, EventArgs e)
         {
@@ -155,9 +145,7 @@ namespace HorarioMaster.Controls
             {
                 if (edit != null)
                     edit.Properties.CharacterCasing = CharacterCasing.Upper;
-            }
-            //if (edit != null)
-            //    edit.Properties.t
+            }          
         }
 
         private void gridView1_InitNewRow(object sender, InitNewRowEventArgs e)
@@ -169,7 +157,13 @@ namespace HorarioMaster.Controls
         private void gridView1_ValidatingEditor(object sender, BaseContainerValidateEditorEventArgs e)
         {
             if (e.Value is string)
-                e.Value = ((string)e.Value).TrimEnd();
+                e.Value = ((string)e.Value).Trim();
+        }
+
+        private void gridView1_RowUpdated(object sender, RowObjectEventArgs e)
+        {
+            this.da.Update((DataTable)Binding1.DataSource);
+            gridView1.BestFitColumns();
         }
 
        }
