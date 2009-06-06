@@ -17,6 +17,7 @@ using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.Utils;
+using System.Threading;
 
 namespace HorarioMaster.Controls
 {
@@ -30,8 +31,8 @@ namespace HorarioMaster.Controls
 
         void GridControlEspecialidad_UpdateGrid()
         {
-            tabla.Clear();
-            FillGridView();
+            //tabla.Clear();
+            //FillGridView();
         }
 
         #region Global's
@@ -50,21 +51,22 @@ namespace HorarioMaster.Controls
 
         public void FillGridView()
         {
+            tabla.Clear(); 
             DataBaseUtilities.OpenConnection(PathDataBase);
             da = DataBaseUtilities.FillDataAdapter("Select Nombre From Personal Where Actividad='Docente'");
             OleDbCommandBuilder cmd = new OleDbCommandBuilder(da);
-            this.da.Fill(tabla);
+            this.da.Fill(tabla);           
             Binding1.DataSource = tabla;
             grdMaestroMateria.DataSource = Binding1;
             DataBaseUtilities.CloseConnection();
             AddPopupColumn("Materia", "Asignar Materia...");
-            HeadersColumnsNames("Maestro");
+                HeadersColumnsNames("Maestro");
             gridView1.BestFitColumns();
         }
 
         public void AddPopupColumn(string sColumnNameCreate,string sText)
-        {
-            if (tabla.Columns["Materia"]!= null) { tabla.Columns.Remove("Materia"); }
+        {   
+            if (tabla.Columns["Materia"] != null) { return; }//tabla.Columns.Remove("Materia"); }
             RepositoryItemPopupContainerEdit temp = new RepositoryItemPopupContainerEdit();
             grdMaestroMateria.RepositoryItems.Add(temp);
             tabla.Columns.Add(sColumnNameCreate);
@@ -101,6 +103,11 @@ namespace HorarioMaster.Controls
         {
             if (e.FocusedRowHandle >= 0)
             { sName = tabla.Rows[e.FocusedRowHandle].ItemArray[0].ToString(); }
+        }
+
+        private void grdMaestroMateria_Enter(object sender, EventArgs e)
+        {
+            FillGridView();
         }     
     }
 }

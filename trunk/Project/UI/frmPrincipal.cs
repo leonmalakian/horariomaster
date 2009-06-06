@@ -191,7 +191,7 @@ namespace HorarioMaster.UI
 
         private void bBtnAComplementarias_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            AComplementarias AC = new AComplementarias();
+            frmAComplementarias AC = new frmAComplementarias();
             AC.StartPosition = FormStartPosition.CenterScreen;
             AC.ShowDialog();
         }

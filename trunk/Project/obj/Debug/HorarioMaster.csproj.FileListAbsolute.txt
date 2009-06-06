@@ -54,7 +54,6 @@ C:\HorarioMaster\obj\Debug\HorarioMaster.exe
 C:\HorarioMaster\bin\Debug\HorarioMaster.exe
 C:\HorarioMaster\bin\Debug\HorarioMaster.pdb
 C:\HorarioMaster\obj\Debug\ResolveAssemblyReference.cache
-C:\HorarioMaster\obj\Debug\HorarioMaster.UI.AComplementarias.resources
 C:\HorarioMaster\obj\Debug\HorarioMaster.UI.frmCaptura.resources
 C:\HorarioMaster\obj\Debug\HorarioMaster.UI.frmHorario.resources
 C:\HorarioMaster\obj\Debug\HorarioMaster.Properties.Resources.resources
@@ -347,3 +346,4 @@ I:\1 junio\HorarioMaster\obj\Debug\HorarioMaster.UI.frmReportGeneral.resources
 I:\1 junio\HorarioMaster\obj\Debug\HorarioMaster.UI.frmReportGroups.resources
 I:\1 junio\HorarioMaster\obj\Debug\HorarioMaster.csproj.GenerateResource.Cache
 I:\1 junio\HorarioMaster\obj\Debug\HorarioMaster.exe.licenses
+C:\HorarioMaster\obj\Debug\HorarioMaster.UI.frmAComplementarias.resources

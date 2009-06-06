@@ -40,7 +40,7 @@ namespace HorarioMaster.Controls
             DataBaseUtilities.OpenConnection(PathDataBase);
             da = DataBaseUtilities.FillDataAdapter("Select Nombre,Plan,Materia,Periodos,Modalidad,Area From Especialidad");
             OleDbCommandBuilder cmd = new OleDbCommandBuilder(da);
-            this.da.Fill(tabla);
+            this.da.Fill(tabla);           
             Binding1.DataSource = tabla;
             grdEspecialidad.DataSource = Binding1;
             DataBaseUtilities.CloseConnection();           
@@ -128,6 +128,9 @@ namespace HorarioMaster.Controls
             if (XtraMessageBox.Show("Estas seguro que deseas borrar este registro?", "Borrar Registro", MessageBoxButtons.YesNo) != DialogResult.No)
             {
                 gridView1.DeleteRow(gridView1.FocusedRowHandle);               
+                this.da.Update((DataTable)Binding1.DataSource);
+                gridView1.BestFitColumns();
+                UpdateGrid(); 
             }
         }
 
@@ -160,20 +163,7 @@ namespace HorarioMaster.Controls
             }
             prevColumn = view.FocusedColumn;
             prevRow = view.FocusedRowHandle;
-        }     
-
-        private void grdEspecialidad_Leave(object sender, EventArgs e)
-        {
-            this.da.Update((DataTable)Binding1.DataSource);
-            gridView1.BestFitColumns();
-            UpdateGrid(); 
-
-        }
-
-        private void gridView1_FocusedRowChanged(object sender, FocusedRowChangedEventArgs e)
-        {
-            gridView1.BestFitColumns();
-        }
+        }        
 
         private void gridView1_ShownEditor(object sender, EventArgs e)
         {
@@ -189,7 +179,14 @@ namespace HorarioMaster.Controls
         private void gridView1_ValidatingEditor(object sender, BaseContainerValidateEditorEventArgs e)
         {
             if (e.Value is string) 
-                e.Value = ((string)e.Value).TrimEnd();
+                e.Value = ((string)e.Value).Trim();
+        }
+
+        private void gridView1_RowUpdated(object sender, RowObjectEventArgs e)
+        {
+            this.da.Update((DataTable)Binding1.DataSource);
+            gridView1.BestFitColumns();
+            UpdateGrid(); 
         }       
     }    
 }
