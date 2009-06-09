@@ -347,3 +347,32 @@ I:\1 junio\HorarioMaster\obj\Debug\HorarioMaster.UI.frmReportGroups.resources
 I:\1 junio\HorarioMaster\obj\Debug\HorarioMaster.csproj.GenerateResource.Cache
 I:\1 junio\HorarioMaster\obj\Debug\HorarioMaster.exe.licenses
 C:\HorarioMaster\obj\Debug\HorarioMaster.UI.frmAComplementarias.resources
+C:\Users\jando\Desktop\06-jun-09\Project\obj\Debug\HorarioMaster.exe
+C:\Users\jando\Desktop\06-jun-09\Project\bin\Debug\HorarioMaster.exe
+C:\Users\jando\Desktop\06-jun-09\Project\bin\Debug\HorarioMaster.pdb
+C:\Users\jando\Desktop\06-jun-09\Project\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\jando\Desktop\06-jun-09\Project\obj\Debug\HorarioMaster.Controls.frmGridClave.resources
+C:\Users\jando\Desktop\06-jun-09\Project\obj\Debug\HorarioMaster.Controls.frmGridMateria.resources
+C:\Users\jando\Desktop\06-jun-09\Project\obj\Debug\HorarioMaster.Controls.frmGridPlaza.resources
+C:\Users\jando\Desktop\06-jun-09\Project\obj\Debug\HorarioMaster.Controls.GridControlAComplementarias.resources
+C:\Users\jando\Desktop\06-jun-09\Project\obj\Debug\HorarioMaster.Controls.GridControlAsignaMateria.resources
+C:\Users\jando\Desktop\06-jun-09\Project\obj\Debug\HorarioMaster.Controls.GridControlClave.resources
+C:\Users\jando\Desktop\06-jun-09\Project\obj\Debug\HorarioMaster.Controls.GridControlEspecialidad.resources
+C:\Users\jando\Desktop\06-jun-09\Project\obj\Debug\HorarioMaster.Controls.GridControlGrupos.resources
+C:\Users\jando\Desktop\06-jun-09\Project\obj\Debug\HorarioMaster.Controls.GridControlMaestroMateria.resources
+C:\Users\jando\Desktop\06-jun-09\Project\obj\Debug\HorarioMaster.Controls.GridControlMateria.resources
+C:\Users\jando\Desktop\06-jun-09\Project\obj\Debug\HorarioMaster.Controls.GridControlPersonal.resources
+C:\Users\jando\Desktop\06-jun-09\Project\obj\Debug\HorarioMaster.Controls.GridControlPlaza.resources
+C:\Users\jando\Desktop\06-jun-09\Project\obj\Debug\HorarioMaster.UI.frmAComplementarias.resources
+C:\Users\jando\Desktop\06-jun-09\Project\obj\Debug\HorarioMaster.UI.frmCaptura.resources
+C:\Users\jando\Desktop\06-jun-09\Project\obj\Debug\HorarioMaster.UI.frmHorario.resources
+C:\Users\jando\Desktop\06-jun-09\Project\obj\Debug\HorarioMaster.Properties.Resources.resources
+C:\Users\jando\Desktop\06-jun-09\Project\obj\Debug\HorarioMaster.UI.frmDatosPlantel.resources
+C:\Users\jando\Desktop\06-jun-09\Project\obj\Debug\HorarioMaster.UI.frmParametersGroups.resources
+C:\Users\jando\Desktop\06-jun-09\Project\obj\Debug\HorarioMaster.UI.frmPortada.resources
+C:\Users\jando\Desktop\06-jun-09\Project\obj\Debug\HorarioMaster.UI.frmPrincipal.resources
+C:\Users\jando\Desktop\06-jun-09\Project\obj\Debug\HorarioMaster.UI.frmReportGeneral.resources
+C:\Users\jando\Desktop\06-jun-09\Project\obj\Debug\HorarioMaster.UI.frmReportGroups.resources
+C:\Users\jando\Desktop\06-jun-09\Project\obj\Debug\HorarioMaster.csproj.GenerateResource.Cache
+C:\Users\jando\Desktop\06-jun-09\Project\obj\Debug\HorarioMaster.exe.licenses
+C:\Users\jando\Desktop\06-jun-09\Project\obj\Debug\HorarioMaster.pdb

@@ -52,7 +52,6 @@ namespace HorarioMaster.UI
             this.HA35 = new DevExpress.XtraEditors.SimpleButton();
             this.HA30 = new DevExpress.XtraEditors.SimpleButton();
             this.HA25 = new DevExpress.XtraEditors.SimpleButton();
-            this.HA20 = new DevExpress.XtraEditors.SimpleButton();
             this.HA15 = new DevExpress.XtraEditors.SimpleButton();
             this.HA10 = new DevExpress.XtraEditors.SimpleButton();
             this.HA5 = new DevExpress.XtraEditors.SimpleButton();
@@ -80,6 +79,7 @@ namespace HorarioMaster.UI
             this.button1 = new DevExpress.XtraEditors.SimpleButton();
             this.LimpiarHorario = new DevExpress.XtraEditors.SimpleButton();
             this.lbComplementaryActivities = new System.Windows.Forms.ListBox();
+            this.HA20 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.cmbScheduleType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbGroups.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbShift.Properties)).BeginInit();
@@ -351,16 +351,6 @@ namespace HorarioMaster.UI
             this.HA25.DragDrop += new System.Windows.Forms.DragEventHandler(this.HA25_DragDrop);
             this.HA25.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HA25_MouseDown);
             this.HA25.DragEnter += new System.Windows.Forms.DragEventHandler(this.HA25_DragEnter);
-            // 
-            // HA20
-            // 
-            this.HA20.Location = new System.Drawing.Point(550, 301);
-            this.HA20.Name = "HA20";
-            this.HA20.Size = new System.Drawing.Size(110, 60);
-            this.HA20.TabIndex = 31;
-            this.HA20.DragDrop += new System.Windows.Forms.DragEventHandler(this.HA20_DragDrop);
-            this.HA20.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HA20_MouseDown);
-            this.HA20.DragEnter += new System.Windows.Forms.DragEventHandler(this.HA20_DragEnter);
             // 
             // HA15
             // 
@@ -647,7 +637,7 @@ namespace HorarioMaster.UI
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(273, 552);
+            this.button1.Location = new System.Drawing.Point(273, 556);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(126, 23);
             this.button1.TabIndex = 52;
@@ -676,6 +666,17 @@ namespace HorarioMaster.UI
             this.lbComplementaryActivities.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lbComplementaryActivities_MouseDown);
             this.lbComplementaryActivities.DragEnter += new System.Windows.Forms.DragEventHandler(this.lbComplementaryActivities_DragEnter);
             // 
+            // HA20
+            // 
+            this.HA20.AllowDrop = true;
+            this.HA20.Location = new System.Drawing.Point(550, 301);
+            this.HA20.Name = "HA20";
+            this.HA20.Size = new System.Drawing.Size(110, 60);
+            this.HA20.TabIndex = 57;
+            this.HA20.DragDrop += new System.Windows.Forms.DragEventHandler(this.HA20_DragDrop);
+            this.HA20.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HA20_MouseDown);
+            this.HA20.DragEnter += new System.Windows.Forms.DragEventHandler(this.HA20_DragEnter);
+            // 
             // frmHorario
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
@@ -683,6 +684,7 @@ namespace HorarioMaster.UI
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 607);
+            this.Controls.Add(this.HA20);
             this.Controls.Add(this.lbComplementaryActivities);
             this.Controls.Add(this.LimpiarHorario);
             this.Controls.Add(this.button1);
@@ -699,7 +701,6 @@ namespace HorarioMaster.UI
             this.Controls.Add(this.HA35);
             this.Controls.Add(this.HA30);
             this.Controls.Add(this.HA25);
-            this.Controls.Add(this.HA20);
             this.Controls.Add(this.HA15);
             this.Controls.Add(this.HA10);
             this.Controls.Add(this.HA5);
@@ -746,6 +747,8 @@ namespace HorarioMaster.UI
 
         }
 
+       
+
         #endregion
 
         private DevExpress.XtraEditors.SimpleButton HA1;
@@ -772,7 +775,6 @@ namespace HorarioMaster.UI
         private DevExpress.XtraEditors.SimpleButton HA35;
         private DevExpress.XtraEditors.SimpleButton HA30;
         private DevExpress.XtraEditors.SimpleButton HA25;
-        private DevExpress.XtraEditors.SimpleButton HA20;
         private DevExpress.XtraEditors.SimpleButton HA15;
         private DevExpress.XtraEditors.SimpleButton HA10;
         private DevExpress.XtraEditors.SimpleButton HA5;
@@ -800,6 +802,7 @@ namespace HorarioMaster.UI
         private DevExpress.XtraEditors.SimpleButton button1;
         private DevExpress.XtraEditors.SimpleButton LimpiarHorario;
         private System.Windows.Forms.ListBox lbComplementaryActivities;
+        private DevExpress.XtraEditors.SimpleButton HA20;
 
 
 

@@ -832,7 +832,7 @@ namespace HorarioMaster.UI
             }
         }
 
-        private void HA20_DragEnter(object sender, System.Windows.Forms.DragEventArgs e)
+        private void HA20_DragEnter(object sender, DragEventArgs e)
         {
             if (cmbScheduleType.Text == "Maestro")
             {
@@ -840,9 +840,8 @@ namespace HorarioMaster.UI
                 e.Effect = DragDropEffects.Link;
             }
             else { DROP[0] = DataSchedule[3][4]; e.Effect = DragDropEffects.Link; }
-
         }
-
+       
         private void HA20_MouseDown(object sender, MouseEventArgs e)
         {
             DRAG[0] = DataSchedule[3][4];
@@ -1487,7 +1486,7 @@ namespace HorarioMaster.UI
                 cmbShift.Visible = true;
                 cmbGroups.Width = 268;
                 DataBaseUtilities.OpenConnection(PathDataBase);
-                cmbGroups = DataBaseUtilities.FillComboBoxEdit("Select Nombre From Personal WHERE Puesto='DOCENTE'", "Nombre", cmbGroups);
+                cmbGroups = DataBaseUtilities.FillComboBoxEdit("Select Nombre From Personal WHERE Actividad='DOCENTE'", "Nombre", cmbGroups);
                 DataBaseUtilities.CloseConnection();
                 if (cmbGroups.Properties.Items.Count == 0)
                 {
@@ -1561,9 +1560,12 @@ namespace HorarioMaster.UI
                             DataBaseUtilities.OpenConnection(PathDataBase);
                             //                            SqlString = "Select Materia From HorarioMaterias Where Grupo='" + cmbGroups.Text + "' And PosicionFila="+nRow+@"
                             //                                         And PosicionColumna="+nColumn+"";
-                            SqlString = @"SELECT HorarioMaterias.Materia FROM MaestroMateria INNER JOIN HorarioMaterias ON MaestroMateria.Materia = HorarioMaterias.Materia
-                                          WHERE (((HorarioMaterias.Dia)='" + DataSchedule[nRow][nColumn].Day + "') AND ((HorarioMaterias.Hora)='" + DataSchedule[nRow][nColumn].Hour + "') AND ((MaestroMateria.Maestro)='" + DataFieldTemp.Teacher + @"') OR 
-                                          ((HorarioMaterias.Dia)='" + DataSchedule[nRow][nColumn].Day + "') AND ((HorarioMaterias.Hora)='" + DataSchedule[nRow][nColumn].Hour + "') AND ((MaestroMateria.Grupo)='" + cmbGroups.Text + "'))";
+//                            SqlString = @"SELECT HorarioMaterias.Materia FROM MaestroMateria INNER JOIN HorarioMaterias ON MaestroMateria.Materia = HorarioMaterias.Materia
+//                                          WHERE (((HorarioMaterias.Dia)='" + DataSchedule[nRow][nColumn].Day + "') AND ((HorarioMaterias.Hora)='" + DataSchedule[nRow][nColumn].Hour + "') AND ((MaestroMateria.Maestro)='" + DataFieldTemp.Teacher + @"') OR 
+//                                          ((HorarioMaterias.Dia)='" + DataSchedule[nRow][nColumn].Day + "') AND ((HorarioMaterias.Hora)='" + DataSchedule[nRow][nColumn].Hour + "') AND ((MaestroMateria.Grupo)='" + cmbGroups.Text + "'))";
+                            SqlString = @"SELECT HorarioMaterias.[Grupo], HorarioMaterias.[Dia], HorarioMaterias.[Hora], HorarioMaterias.[Maestro]
+                                          FROM HorarioMaterias WHERE (((HorarioMaterias.[Dia])='"+DataSchedule[nRow][nColumn].Day+"') AND ((HorarioMaterias.[Hora])='"+DataSchedule[nRow][nColumn].Hour+"') AND ((HorarioMaterias.[Maestro])='"+DataFieldTemp.Teacher+@"')) 
+                                          OR (((HorarioMaterias.[Grupo])='"+cmbGroups.Text+"') AND ((HorarioMaterias.[Dia])='"+DataSchedule[nRow][nColumn].Day+"') AND ((HorarioMaterias.[Hora])='"+DataSchedule[nRow][nColumn].Hour+"'))";
                             if (!DataBaseUtilities.RecordExist(SqlString))
                             {
                                 SqlString = "INSERT INTO HorarioMaterias (Materia,Hora,Dia,Grupo,PosicionFila,PosicionColumna,Turno,Maestro) Values('" + DataFieldTemp.Subject + "','" + DataSchedule[nRow][nColumn].Hour +
@@ -2076,6 +2078,19 @@ namespace HorarioMaster.UI
                 DROP[0].Subject = dr["Materia"].ToString();
                 DROP[0].Teacher = dr["Maestro"].ToString();
             }
+            else
+            {
+                SqlString = "SELECT ClaveHM,Grupo,Materia,Maestro FROM HorarioMaterias WHERE Grupo='" + DRAG[0].Group + "' AND Hora='" + DROP[0].Hour + "' AND Dia='" + DROP[0].Day + "'";
+                OleDbDataReader dr1 = DataBaseUtilities.ExecuteSql(SqlString);
+                dr1.Read();
+                if (dr1.HasRows)
+                {
+                    DROP[0].Key = Convert.ToInt32(dr1["ClaveHM"]);
+                    DROP[0].Group = dr1["Grupo"].ToString();
+                    DROP[0].Subject = dr1["Materia"].ToString();
+                    DROP[0].Teacher = dr1["Maestro"].ToString();
+                }
+            }
             DataBaseUtilities.CloseConnection();
         }
 
@@ -2190,6 +2205,6 @@ namespace HorarioMaster.UI
             }
         }
 
-        # endregion
+        # endregion      
     }
 }
