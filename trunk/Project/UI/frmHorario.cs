@@ -2188,7 +2188,7 @@ namespace HorarioMaster.UI
                 cmbShift.Visible = true;
                 cmbGroups.Width = 268;
                 DataBaseUtilities.OpenConnection(PathDataBase);
-                cmbGroups = DataBaseUtilities.FillComboBoxEdit("Select Nombre From Personal WHERE Puesto='DOCENTE'", "Nombre", cmbGroups);
+                cmbGroups = DataBaseUtilities.FillComboBoxEdit("Select Nombre From Personal WHERE Actividad='DOCENTE'", "Nombre", cmbGroups);
                 DataBaseUtilities.CloseConnection();
                 if (cmbGroups.Properties.Items.Count == 0)
                 {
