@@ -51,6 +51,7 @@ namespace HorarioMaster.Controls
             AddComboBoxColumn("SELECT Nombre FROM Materias WHERE Nombre NOT IN(SELECT Materia FROM HorarioMaterias)", "Materia", "Nombre");
             gridView1.Columns["Index"].Visible = false;
             gridView1.Columns["Maestro"].Visible = false;
+            gridView1.Columns["Maestro"].OptionsColumn.ReadOnly= true;
             HeadersColumnsNames(",,Materia,Clave de la Materia,Grupo");
             gridView1.BestFitColumns();
         }
@@ -121,6 +122,7 @@ namespace HorarioMaster.Controls
         {
             if (XtraMessageBox.Show("Estas seguro que deseas borrar este registro?", "Borrar Registro", MessageBoxButtons.YesNo) != DialogResult.No)
             {
+                gridView1.DeleteRow(gridView1.FocusedRowHandle);  
                 this.da.Update((DataTable)Binding1.DataSource);
                 Binding1.DataSource = tabla;
                 grdAsignaMateria.DataSource = Binding1;
