@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using HorarioMaster;
 using System.IO;
+using DevExpress.LookAndFeel;
 using HorarioMaster.Controls;
 
 namespace HorarioMaster.UI
@@ -17,6 +18,7 @@ namespace HorarioMaster.UI
         public frmPrincipal()
         {
             InitializeComponent();
+            navBarControl1.LookAndFeel.SetSkinStyle("Office 2007 Pink");
         }
 
         #region Global's

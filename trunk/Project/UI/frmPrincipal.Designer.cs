@@ -579,6 +579,7 @@ namespace HorarioMaster.UI
             this.navBarItem11,
             this.navBarItem12});
             this.navBarControl1.Location = new System.Drawing.Point(0, 0);
+            this.navBarControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 147;
             this.navBarControl1.Size = new System.Drawing.Size(200, 471);

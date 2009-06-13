@@ -40,24 +40,25 @@ namespace HorarioMaster.Controls
         private void grdPersonal_Load(object sender, EventArgs e)
         {
             DataBaseUtilities.OpenConnection(PathDataBase);
-            da = DataBaseUtilities.FillDataAdapter("Select Numero,NumeroTarjeta,Nombre,Sexo,RFC,CURP,Direccion,Colonia,CP,Localidad,Telefono,Celular,Email,INGGF,INGSEP,INGDGETI,Perfil,Puesto,Nombramiento,Descarga,NivelMaxEstudios,Actividad,Nivel From Personal");
+            //da = DataBaseUtilities.FillDataAdapter("Select Numero,NumeroTarjeta,Nombre,Sexo,RFC,CURP,Direccion,Colonia,CP,Localidad,Telefono,Celular,Email,INGGF,INGSEP,INGDGETI,Perfil,Puesto,Nombramiento,Descarga,NivelMaxEstudios,Actividad,Nivel From Personal");
+            da = DataBaseUtilities.FillDataAdapter("Select NumeroTarjeta,Nombre,Nombramiento,Descarga,Actividad From Personal");
             OleDbCommandBuilder cmd = new OleDbCommandBuilder(da);
             this.da.Fill(tabla);            
             Binding1.DataSource = tabla;
             grdPersonal.DataSource = Binding1;
             DataBaseUtilities.CloseConnection();
             AddPopupColumn("Clave", "Asignar Clave...");            
-            AddComboBoxColumn("","Masculino,Femenino", "Sexo","");
+            //AddComboBoxColumn("","Masculino,Femenino", "Sexo","");
             AddComboBoxColumn("","0,1,2,3,4,5,6,7,8,9,10", "Descarga","");
-            AddComboBoxColumn("","Sin Estudios,Primaria,Carrera Comercial,Carrera Tecnica,Secundaria,Bachillerato,Normal,Normal Superior,Licenciatura,Maestria,Doctorado,Tecnico Superior,Licenciatura Tecnica", "NivelMaxEstudios","");
+            //AddComboBoxColumn("","Sin Estudios,Primaria,Carrera Comercial,Carrera Tecnica,Secundaria,Bachillerato,Normal,Normal Superior,Licenciatura,Maestria,Doctorado,Tecnico Superior,Licenciatura Tecnica", "NivelMaxEstudios","");
             AddComboBoxColumn("","Docente,Administrativo", "Actividad","");
-            AddComboBoxColumn("","Pasante,Titulado,Otro", "Nivel","");            
-            AddDateColumn("INGGF");
-            AddDateColumn("INGSEP");
-            AddDateColumn("INGDGETI");
-            AddTextEditColumn("Telefono");
-            AddTextEditColumn("Celular");
-            HeadersColumnsNames("Numero,Numero de Tarjeta,Nombre,Sexo,RFC,CURP,Direccion,Colonia,CP,Localidad,Telefono de Casa,Telefono Celular,Correo Electronico,INGGF,INGSEP,INGDGETI,Perfil,Puesto,Nombramiento,Descarga,Nivel Maximo de Estudios,Actividad,Nivel");
+            //AddComboBoxColumn("","Pasante,Titulado,Otro", "Nivel","");            
+            //AddDateColumn("INGGF");
+            //AddDateColumn("INGSEP");
+            //AddDateColumn("INGDGETI");
+            //AddTextEditColumn("Telefono");
+            //AddTextEditColumn("Celular");
+            HeadersColumnsNames("Numero de Tarjeta,Nombre,Horas de Nombramiento,Descarga,Actividad");
             gridView1.BestFitColumns();
         }
 
@@ -131,13 +132,13 @@ namespace HorarioMaster.Controls
             DataRowView CurrentRow = (DataRowView)e.Row;
             for (int nColumn = 0; nColumn < CurrentRow.Row.ItemArray.Length; nColumn++)
             {
-                if (CurrentRow.Row["Numero"].ToString().Length > 4)
-                {
-                    e.Valid = false;
-                    XtraMessageBox.Show(gridView1.Columns["Numero"].ToString() + " no debe ser mayor de 4 digitos", "Error de Captura", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    gridView1.SetColumnError(gridView1.Columns["Numero"], "Este Campo no debe ser mayor de 4 digitos");
-                    return;
-                }
+                //if (CurrentRow.Row["Numero"].ToString().Length > 4)
+                //{
+                //    e.Valid = false;
+                //    XtraMessageBox.Show(gridView1.Columns["Numero"].ToString() + " no debe ser mayor de 4 digitos", "Error de Captura", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    gridView1.SetColumnError(gridView1.Columns["Numero"], "Este Campo no debe ser mayor de 4 digitos");
+                //    return;
+                //}
                 if (CurrentRow.Row["NumeroTarjeta"].ToString().Length > 4)
                 {
                     e.Valid = false;
@@ -145,28 +146,28 @@ namespace HorarioMaster.Controls
                     gridView1.SetColumnError(gridView1.Columns["NumeroTarjeta"], "Este Campo no debe ser mayor de 4 digitos");
                     return;
                 }
-                if (CurrentRow.Row["CP"].ToString().Length > 5)
-                {
-                    e.Valid = false;
-                    XtraMessageBox.Show(gridView1.Columns["CP"].ToString() + " no debe ser mayor de 5 digitos", "Error de Captura", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    gridView1.SetColumnError(gridView1.Columns["CP"], "Este Campo no debe ser mayor de 5 digitos");
-                    return;
-                }
-                if (CurrentRow.Row["RFC"].ToString().Length > 13)
-                {
-                    e.Valid = false;
-                    XtraMessageBox.Show(gridView1.Columns["RFC"].ToString() + " no debe ser mayor de 13 digitos", "Error de Captura", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    gridView1.SetColumnError(gridView1.Columns["RFC"], "Este Campo no debe ser mayor de 13 digitos");
-                    return;
-                }
-                if (CurrentRow.Row["CURP"].ToString().Length > 18)
-                {
-                    e.Valid = false;
-                    XtraMessageBox.Show(gridView1.Columns["CURP"].ToString() + " no debe ser mayor de 18 digitos", "Error de Captura", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    gridView1.SetColumnError(gridView1.Columns["CURP"], "Este Campo no debe ser mayor de 18 digitos");
-                    return;
-                }
-                if (CurrentRow.Row[nColumn].ToString() == "" && nColumn!=23)
+                //if (CurrentRow.Row["CP"].ToString().Length > 5)
+                //{
+                //    e.Valid = false;
+                //    XtraMessageBox.Show(gridView1.Columns["CP"].ToString() + " no debe ser mayor de 5 digitos", "Error de Captura", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    gridView1.SetColumnError(gridView1.Columns["CP"], "Este Campo no debe ser mayor de 5 digitos");
+                //    return;
+                //}
+                //if (CurrentRow.Row["RFC"].ToString().Length > 13)
+                //{
+                //    e.Valid = false;
+                //    XtraMessageBox.Show(gridView1.Columns["RFC"].ToString() + " no debe ser mayor de 13 digitos", "Error de Captura", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    gridView1.SetColumnError(gridView1.Columns["RFC"], "Este Campo no debe ser mayor de 13 digitos");
+                //    return;
+                //}
+                //if (CurrentRow.Row["CURP"].ToString().Length > 18)
+                //{
+                //    e.Valid = false;
+                //    XtraMessageBox.Show(gridView1.Columns["CURP"].ToString() + " no debe ser mayor de 18 digitos", "Error de Captura", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    gridView1.SetColumnError(gridView1.Columns["CURP"], "Este Campo no debe ser mayor de 18 digitos");
+                //    return;
+                //}
+                if (CurrentRow.Row[nColumn].ToString() == "" && nColumn!=5)
                 {
                     e.Valid = false;
                     XtraMessageBox.Show(gridView1.Columns[nColumn].ToString() + " no debe estar vacio", "Error de Captura", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -265,7 +266,7 @@ namespace HorarioMaster.Controls
         {
             if (e.FocusedRowHandle >= 0)
             {
-                sName = tabla.Rows[e.FocusedRowHandle].ItemArray[2].ToString();
+                sName = tabla.Rows[e.FocusedRowHandle].ItemArray[1].ToString();
                 if (gridView1.Columns["Clave"] != null)
                 {
                     gridView1.Columns["Clave"].OptionsColumn.AllowEdit = true;
