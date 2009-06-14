@@ -55,7 +55,7 @@ namespace HorarioMaster.Controls
             AddComboBoxColumn("Select Clave From Clave", "", "Clave", "Clave");
             HeadersColumnsNames("Index,Nombre,Clave");            
             gridView1.Columns["Nombre"].Visible = false;
-            gridView1.Columns["Index"].Visible = false;
+            //gridView1.Columns["Index"].Visible = false;
             gridView1.BestFitColumns();
         }
 
@@ -137,6 +137,7 @@ namespace HorarioMaster.Controls
         {
             if (XtraMessageBox.Show("Estas seguro que deseas borrar este registro?", "Borrar Registro", MessageBoxButtons.YesNo) != DialogResult.No)
             {
+                gridView1.DeleteRow(gridView1.FocusedRowHandle); 
                 this.da.Update((DataTable)Binding1.DataSource);
                 Binding1.DataSource = tabla;
                 grdClave.DataSource = Binding1;
