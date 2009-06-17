@@ -60,7 +60,8 @@ namespace HorarioMaster.Controls
             grdMaestroMateria.DataSource = Binding1;
             DataBaseUtilities.CloseConnection();
             AddPopupColumn("Materia", "Asignar Materia...");
-                HeadersColumnsNames("Maestro");
+            HeadersColumnsNames("Maestro");
+            gridView1.Columns["Nombre"].OptionsColumn.ReadOnly = true;
             gridView1.BestFitColumns();
         }
 

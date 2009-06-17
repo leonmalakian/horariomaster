@@ -296,8 +296,6 @@ namespace HorarioMaster.DataSets {
             
             private global::System.Data.DataColumn columnSemestre;
             
-            private global::System.Data.DataColumn columnGrupo;
-            
             private global::System.Data.DataColumn columnSG;
             
             private global::System.Data.DataColumn columnTurno;
@@ -346,13 +344,6 @@ namespace HorarioMaster.DataSets {
             public global::System.Data.DataColumn SemestreColumn {
                 get {
                     return this.columnSemestre;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn GrupoColumn {
-                get {
-                    return this.columnGrupo;
                 }
             }
             
@@ -434,11 +425,10 @@ namespace HorarioMaster.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public DTScheduleGroupsRow AddDTScheduleGroupsRow(string Semestre, string Grupo, string SG, string Turno, string Especialidad, string Dia, string Hora, string Materia, string Maestro) {
+            public DTScheduleGroupsRow AddDTScheduleGroupsRow(string Semestre, string SG, string Turno, string Especialidad, string Dia, string Hora, string Materia, string Maestro) {
                 DTScheduleGroupsRow rowDTScheduleGroupsRow = ((DTScheduleGroupsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Semestre,
-                        Grupo,
                         SG,
                         Turno,
                         Especialidad,
@@ -466,7 +456,6 @@ namespace HorarioMaster.DataSets {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             internal void InitVars() {
                 this.columnSemestre = base.Columns["Semestre"];
-                this.columnGrupo = base.Columns["Grupo"];
                 this.columnSG = base.Columns["SG"];
                 this.columnTurno = base.Columns["Turno"];
                 this.columnEspecialidad = base.Columns["Especialidad"];
@@ -480,8 +469,6 @@ namespace HorarioMaster.DataSets {
             private void InitClass() {
                 this.columnSemestre = new global::System.Data.DataColumn("Semestre", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSemestre);
-                this.columnGrupo = new global::System.Data.DataColumn("Grupo", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnGrupo);
                 this.columnSG = new global::System.Data.DataColumn("SG", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSG);
                 this.columnTurno = new global::System.Data.DataColumn("Turno", typeof(string), null, global::System.Data.MappingType.Element);
@@ -892,21 +879,6 @@ namespace HorarioMaster.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public string Grupo {
-                get {
-                    try {
-                        return ((string)(this[this.tableDTScheduleGroups.GrupoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Grupo\' in table \'DTScheduleGroups\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDTScheduleGroups.GrupoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public string SG {
                 get {
                     try {
@@ -1019,16 +991,6 @@ namespace HorarioMaster.DataSets {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public void SetSemestreNull() {
                 this[this.tableDTScheduleGroups.SemestreColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool IsGrupoNull() {
-                return this.IsNull(this.tableDTScheduleGroups.GrupoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void SetGrupoNull() {
-                this[this.tableDTScheduleGroups.GrupoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

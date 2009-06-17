@@ -168,7 +168,7 @@ namespace HorarioMaster.UI
             // HA32
             // 
             this.HA32.AllowDrop = true;
-            this.HA32.Location = new System.Drawing.Point(226, 417);
+            this.HA32.Location = new System.Drawing.Point(226, 475);
             this.HA32.Name = "HA32";
             this.HA32.Size = new System.Drawing.Size(110, 60);
             this.HA32.TabIndex = 13;
@@ -179,7 +179,7 @@ namespace HorarioMaster.UI
             // HA27
             // 
             this.HA27.AllowDrop = true;
-            this.HA27.Location = new System.Drawing.Point(226, 475);
+            this.HA27.Location = new System.Drawing.Point(226, 417);
             this.HA27.Name = "HA27";
             this.HA27.Size = new System.Drawing.Size(110, 60);
             this.HA27.TabIndex = 12;

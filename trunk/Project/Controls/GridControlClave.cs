@@ -55,7 +55,7 @@ namespace HorarioMaster.Controls
             AddComboBoxColumn("Select Clave From Clave", "", "Clave", "Clave");
             HeadersColumnsNames("Index,Nombre,Clave");            
             gridView1.Columns["Nombre"].Visible = false;
-            //gridView1.Columns["Index"].Visible = false;
+            gridView1.Columns["Index"].Visible = false;
             gridView1.BestFitColumns();
         }
 
