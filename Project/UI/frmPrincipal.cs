@@ -22,9 +22,6 @@ namespace HorarioMaster.UI
         }
 
         #region Global's
-        //private GridMasterControl Grid1 = new GridMasterControl();
-        //private GridMasterControl Grid2 = new GridMasterControl();
-        //private GridMasterControl Grid3 = new GridMasterControl();
         static public string PathDataBase = Path.GetDirectoryName(Application.ExecutablePath) + @"\Global.mdb";
         private int x = 0;
         #endregion
@@ -34,6 +31,14 @@ namespace HorarioMaster.UI
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
             frmPortada Portada = new frmPortada();
+            barBtnHide.SuperTip = new DevExpress.Utils.SuperToolTip();
+            barBtnHorario.SuperTip = new DevExpress.Utils.SuperToolTip();
+            barBtnCaptura.SuperTip = new DevExpress.Utils.SuperToolTip();
+            barButtonItem19.SuperTip = new DevExpress.Utils.SuperToolTip();
+            barBtnHide.SuperTip.Items.Add("Esconder Menu");
+            barBtnHorario.SuperTip.Items.Add("Abrir Horario");
+            barBtnCaptura.SuperTip.Items.Add("Abrir Captura");
+            barButtonItem19.SuperTip.Items.Add("Abrir Ayuda");
             Portada.TopLevel = false;
             Portada.Parent = this.splitContainerControl1.Panel2;
             Portada.Dock = DockStyle.Fill;
@@ -334,11 +339,11 @@ namespace HorarioMaster.UI
         private void bBtnALogotipo_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            openFileDialog1.InitialDirectory = "c:\\";
+            openFileDialog1.InitialDirectory = Environment.SpecialFolder.MyDocuments.ToString();
             openFileDialog1.Filter = "Mapas de bits (*.jpg)|*.jpg";
             openFileDialog1.FilterIndex = 2;
             openFileDialog1.RestoreDirectory = true;
-
+            openFileDialog1.Title = "Seleccionar Logotipo de Plantel";
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 DataBaseUtilities.OpenConnection(PathDataBase);
@@ -356,7 +361,8 @@ namespace HorarioMaster.UI
 
         private void barBtnHide_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            
+            barBtnHide.SuperTip = new DevExpress.Utils.SuperToolTip();
+            barBtnHide.SuperTip.Items.Add("Mostrar Menu");
             if (splitContainerControl1.Panel1.Visible && x==0)
             {
                 splitContainerControl1.PanelVisibility = SplitPanelVisibility.Panel2;
@@ -364,6 +370,8 @@ namespace HorarioMaster.UI
             }
             else
             {
+                barBtnHide.SuperTip = new DevExpress.Utils.SuperToolTip();
+                barBtnHide.SuperTip.Items.Add("Esconder Menu");
                 splitContainerControl1.PanelVisibility = SplitPanelVisibility.Both;
                 x = 0;
             }

@@ -29,7 +29,13 @@ namespace HorarioMaster.UI
             DataBaseUtilities.CloseConnection();
             DataBaseUtilities.OpenConnection(PathDataBase);
             cmbEspecial = DataBaseUtilities.FillComboBoxEdit("Select Nombre From Especialidad", "Nombre", cmbEspecial);
-            DataBaseUtilities.CloseConnection(); 
+            DataBaseUtilities.CloseConnection();
+            DataBaseUtilities.OpenConnection(PathDataBase);
+            cmbSemester = DataBaseUtilities.FillComboBoxEdit("SELECT Grupos.Semestre FROM Grupos INNER JOIN horariomaterias ON Grupos.SG = horariomaterias.Grupo WHERE (((Grupos.Semestre)='1'))", "Semestre", cmbSemester);
+            DataBaseUtilities.CloseConnection();
+            DataBaseUtilities.OpenConnection(PathDataBase);
+            cmbShift = DataBaseUtilities.FillComboBoxEdit("SELECT Grupos.Turno FROM Grupos INNER JOIN horariomaterias ON Grupos.SG = horariomaterias.Grupo", "Turno", cmbShift);
+            DataBaseUtilities.CloseConnection();
 
         }
 
@@ -67,42 +73,40 @@ namespace HorarioMaster.UI
         {
             if (cmbGroups.Enabled && cmbSemester.Enabled && cmbShift.Enabled && cmbEspecial.Enabled)
             {
-//               sSql  = @"SELECT Grupos.Semestre, Grupos.Grupo, Grupos.SG, Grupos.Turno, Grupos.Especialidad, HorarioMaterias.Dia, HorarioMaterias.Hora, HorarioMaterias.Materia
-//                         FROM Grupos INNER JOIN (MaestroMateria INNER JOIN HorarioMaterias ON MaestroMateria.Materia = HorarioMaterias.Materia) ON Grupos.SG = MaestroMateria.Grupo";
-               sSql = @"SELECT HorarioMaterias.Materia, HorarioMaterias.Hora, HorarioMaterias.Dia, HorarioMaterias.Turno, HorarioMaterias.Grupo, Grupos.Especialidad, Grupos.Semestre
-                        FROM Grupos INNER JOIN HorarioMaterias ON Grupos.[SG] = HorarioMaterias.[Grupo];";
+                sSql = @"SELECT horariomaterias.Dia, Grupos.Especialidad, horariomaterias.Hora, horariomaterias.Maestro, horariomaterias.Materia, Grupos.Semestre, Grupos.SG, Grupos.Turno, Grupos.SG, Grupos.SG
+                         FROM Grupos INNER JOIN horariomaterias ON Grupos.SG = horariomaterias.Grupo";
                 HG.FillScheduleGroups(sSql);
                 HG.ShowDialog();
             }
             else if (cmbGroups.Enabled)
             {
-                sSql = @"SELECT Grupos.Semestre, Grupos.Grupo, Grupos.SG, Grupos.Turno, Grupos.Especialidad, HorarioMaterias.Dia, HorarioMaterias.Hora, HorarioMaterias.Materia
-                         FROM Grupos INNER JOIN (MaestroMateria INNER JOIN HorarioMaterias ON MaestroMateria.Materia = HorarioMaterias.Materia) ON Grupos.SG = MaestroMateria.Grupo
-                         WHERE (((Grupos.SG)='" + cmbGroups.Text + "'))";
+                sSql = @"SELECT horariomaterias.Dia, Grupos.Especialidad, horariomaterias.Hora, horariomaterias.Maestro, horariomaterias.Materia, Grupos.Semestre, Grupos.SG, Grupos.Turno, Grupos.SG, Grupos.SG
+                         FROM Grupos INNER JOIN horariomaterias ON Grupos.SG = horariomaterias.Grupo
+                         WHERE (((Grupos.SG)='"+cmbGroups.Text+"'))";
                 HG.FillScheduleGroups(sSql);
                 HG.ShowDialog();
             }
             else if (cmbSemester.Enabled)
             {
-                sSql = @"SELECT Grupos.Semestre, Grupos.Grupo, Grupos.SG, Grupos.Turno, Grupos.Especialidad, HorarioMaterias.Dia, HorarioMaterias.Hora, HorarioMaterias.Materia
-                         FROM Grupos INNER JOIN (MaestroMateria INNER JOIN HorarioMaterias ON MaestroMateria.Materia = HorarioMaterias.Materia) ON Grupos.SG = MaestroMateria.Grupo
-                         WHERE (((Grupos.Semestre)='" + cmbSemester.Text + "'))";
+                sSql = @"SELECT horariomaterias.Dia, Grupos.Especialidad, horariomaterias.Hora, horariomaterias.Maestro, horariomaterias.Materia, Grupos.Semestre, Grupos.SG, Grupos.Turno, Grupos.SG, Grupos.SG
+                         FROM Grupos INNER JOIN horariomaterias ON Grupos.SG = horariomaterias.Grupo
+                         WHERE (((Grupos.Semestre)='"+cmbSemester.Text+"'))";
                 HG.FillScheduleGroups(sSql);
                 HG.ShowDialog();
             }
             else if (cmbShift.Enabled)
             {
-                  sSql = @"SELECT Grupos.Semestre, Grupos.Grupo, Grupos.SG, Grupos.Turno, Grupos.Especialidad, HorarioMaterias.Dia, HorarioMaterias.Hora, HorarioMaterias.Materia
-                         FROM Grupos INNER JOIN (MaestroMateria INNER JOIN HorarioMaterias ON MaestroMateria.Materia = HorarioMaterias.Materia) ON Grupos.SG = MaestroMateria.Grupo
-                         WHERE (((Grupos.Turno)='" + cmbShift.Text + "'))";
+                  sSql = @"SELECT horariomaterias.Dia, Grupos.Especialidad, horariomaterias.Hora, horariomaterias.Maestro, horariomaterias.Materia, Grupos.Semestre, Grupos.SG, Grupos.Turno
+                           FROM Grupos INNER JOIN horariomaterias ON Grupos.SG = horariomaterias.Grupo
+                           WHERE (((Grupos.Turno)='"+cmbShift.Text+"'))";
                 HG.FillScheduleGroups(sSql);
                 HG.ShowDialog();
             }
             else if (cmbEspecial.Enabled)
             {
-               sSql = @"SELECT Grupos.Semestre, Grupos.Grupo, Grupos.SG, Grupos.Turno, Grupos.Especialidad, HorarioMaterias.Dia, HorarioMaterias.Hora, HorarioMaterias.Materia
-                         FROM Grupos INNER JOIN (MaestroMateria INNER JOIN HorarioMaterias ON MaestroMateria.Materia = HorarioMaterias.Materia) ON Grupos.SG = MaestroMateria.Grupo
-                         WHERE (((Grupos.Especialidad)='" + cmbEspecial.Text + "'))";
+               sSql = @"SELECT horariomaterias.Dia, Grupos.Especialidad, horariomaterias.Hora, horariomaterias.Maestro, horariomaterias.Materia, Grupos.Semestre, Grupos.SG, Grupos.Turno
+                        FROM Grupos INNER JOIN horariomaterias ON Grupos.SG = horariomaterias.Grupo
+                        WHERE (((Grupos.Especialidad)='"+cmbEspecial.Text+"'))";
                 HG.FillScheduleGroups(sSql);
                 HG.ShowDialog();
             }

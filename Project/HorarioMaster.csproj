@@ -141,6 +141,10 @@
     <Compile Include="Controls\GridControlPlaza.Designer.cs">
       <DependentUpon>GridControlPlaza.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataSets\DataSetReports.cs">
+      <DependentUpon>DataSetReports.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DataSets\DataSetReports.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

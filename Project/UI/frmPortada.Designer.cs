@@ -56,6 +56,7 @@ namespace HorarioMaster.UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(643, 517);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);

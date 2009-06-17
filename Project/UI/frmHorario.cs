@@ -1083,7 +1083,7 @@ namespace HorarioMaster.UI
                 HA27.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
                 if (cmbShift.Text == "MATUTINO")
                 { DragDropLB("Martes", "12:00:13:00", 5, 1); }
-                else { DragDropLB("Martes", "19:00-20:00", 5, 1); } 
+                else { DragDropLB("Martes", "19:00-20:00", 5, 1); }
                 e.Effect = DragDropEffects.Move;
             }
             else
@@ -1113,6 +1113,7 @@ namespace HorarioMaster.UI
             DRAG[0] = DataSchedule[5][1];
             HA27.DoDragDrop(HA27, DragDropEffects.Link);
         }
+
         
         private void HA28_DragDrop(object sender, System.Windows.Forms.DragEventArgs e)
         {
@@ -1273,7 +1274,7 @@ namespace HorarioMaster.UI
                 HA32.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
                 if (cmbShift.Text == "MATUTINO")
                 { DragDropLB("Martes", "13:00:14:00", 6, 1); }
-                else { DragDropLB("Martes", "20:00-21:00", 6, 1); } 
+                else { DragDropLB("Martes", "20:00-21:00", 6, 1); }
                 e.Effect = DragDropEffects.Move;
             }
             else
