@@ -377,3 +377,4 @@ C:\HorarioMaster\obj\Debug\HorarioMaster.exe.licenses
 C:\HorarioMaster\obj\Debug\HorarioMaster.exe
 C:\HorarioMaster\obj\Debug\HorarioMaster.pdb
 C:\HorarioMaster\bin\Debug\HorarioMaster.exe.config
+C:\HorarioMaster\obj\Debug\HorarioMaster.UI.frmSkins.resources
