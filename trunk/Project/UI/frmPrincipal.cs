@@ -30,21 +30,13 @@ namespace HorarioMaster.UI
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            DevExpress.UserSkins.BonusSkins.Register();
-            DevExpress.UserSkins.OfficeSkins.Register();
-            repositoryItemComboBox2.Items.Add(new ComboBoxItem("Default"));
-            foreach (DevExpress.Skins.SkinContainer skin in DevExpress.Skins.SkinManager.Default.Skins)
-            {
-                repositoryItemComboBox2.Items.Add(new ComboBoxItem(skin.SkinName));
-            }
-
-            if (Properties.Settings.Default.LookandFeel != "Default")
-            {
-                DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle(Properties.Settings.Default.LookandFeel);
-                navBarControl1.LookAndFeel.SetSkinStyle(Properties.Settings.Default.LookandFeel);
-                UserLookAndFeel temp = new UserLookAndFeel(navBarControl1);
-                this.LookAndFeel.Assign(temp);
-            }
+            frmSkins.EnviarTema += new frmSkins.CambiarSkin(frmSkins_EnviarTema);
+            
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle(Properties.Settings.Default.LookandFeel);
+            navBarControl1.LookAndFeel.SetSkinStyle(Properties.Settings.Default.LookandFeel);
+            UserLookAndFeel temp = new UserLookAndFeel(navBarControl1);
+            this.LookAndFeel.Assign(temp);
+            
             frmPortada Portada = new frmPortada();
             barBtnHide.SuperTip = new DevExpress.Utils.SuperToolTip();
             barBtnHorario.SuperTip = new DevExpress.Utils.SuperToolTip();
@@ -60,6 +52,14 @@ namespace HorarioMaster.UI
             Portada.Enabled = false;
             Portada.ControlBox = false;
             Portada.Show();
+        }
+
+        void frmSkins_EnviarTema(string sTema)
+        {
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle(sTema);
+            navBarControl1.LookAndFeel.SetSkinStyle(sTema);
+            UserLookAndFeel temp = new UserLookAndFeel(navBarControl1);
+            this.LookAndFeel.Assign(temp);
         }
 
         void navBarControl1_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
@@ -374,6 +374,13 @@ namespace HorarioMaster.UI
             }
         }
 
+        private void bBtnCTema_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmSkins FormSkin = new frmSkins();
+            FormSkin.StartPosition = FormStartPosition.CenterScreen;
+            FormSkin.ShowDialog();
+        }        
+
         private void barBtnHide_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             barBtnHide.SuperTip = new DevExpress.Utils.SuperToolTip();
@@ -415,25 +422,6 @@ namespace HorarioMaster.UI
             Captura.ControlBox = false;
             Captura.Show();
         }
-        #endregion
-
-        private void btnSkins_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {            
-        }
-
-        private void cmbSkin_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-
-        }
-
-        private void cmbSkin_EditValueChanged(object sender, EventArgs e)
-        {         
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle(cmbSkin.EditValue.ToString());
-            navBarControl1.LookAndFeel.SetSkinStyle(cmbSkin.EditValue.ToString());
-            UserLookAndFeel temp = new UserLookAndFeel(navBarControl1);            
-            this.LookAndFeel.Assign(temp);
-            Properties.Settings.Default.LookandFeel = cmbSkin.EditValue.ToString();
-            Properties.Settings.Default.Save();
-        }
+        #endregion      
     }
 }
