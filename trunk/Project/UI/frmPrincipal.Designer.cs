@@ -53,6 +53,9 @@ namespace HorarioMaster.UI
             this.bBtnIndice = new DevExpress.XtraBars.BarButtonItem();
             this.bBtnContenido = new DevExpress.XtraBars.BarButtonItem();
             this.bBtnQSomos = new DevExpress.XtraBars.BarButtonItem();
+            this.btnSkins = new DevExpress.XtraBars.BarButtonItem();
+            this.cmbSkin = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemComboBox2 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.bar3 = new DevExpress.XtraBars.Bar();
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
             this.bar4 = new DevExpress.XtraBars.Bar();
@@ -83,6 +86,7 @@ namespace HorarioMaster.UI
             this.repositoryItemPictureEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.repositoryItemPictureEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
+            this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
             this.navBarInicio = new DevExpress.XtraNavBar.NavBarGroup();
@@ -103,11 +107,13 @@ namespace HorarioMaster.UI
             this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
             this.bar1 = new DevExpress.XtraBars.Bar();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
@@ -165,14 +171,18 @@ namespace HorarioMaster.UI
             this.bBtnContenido,
             this.bBtnQSomos,
             this.bBtnAsignarMaterias,
-            this.bBtnALogotipo});
+            this.bBtnALogotipo,
+            this.btnSkins,
+            this.cmbSkin});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 65;
+            this.barManager1.MaxItemId = 68;
             this.barManager1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit1,
             this.repositoryItemPictureEdit1,
             this.repositoryItemTextEdit2,
-            this.repositoryItemPictureEdit2});
+            this.repositoryItemPictureEdit2,
+            this.repositoryItemComboBox1,
+            this.repositoryItemComboBox2});
             this.barManager1.StatusBar = this.bar3;
             // 
             // bar2
@@ -186,7 +196,9 @@ namespace HorarioMaster.UI
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem2),
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem3),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem4)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem4),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnSkins),
+            new DevExpress.XtraBars.LinkPersistInfo(this.cmbSkin)});
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
             this.bar2.Text = "Main menu";
@@ -353,6 +365,30 @@ namespace HorarioMaster.UI
             this.bBtnQSomos.Id = 62;
             this.bBtnQSomos.Name = "bBtnQSomos";
             this.bBtnQSomos.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bBtnQSomos_ItemClick);
+            // 
+            // btnSkins
+            // 
+            this.btnSkins.Caption = "Skins";
+            this.btnSkins.Id = 66;
+            this.btnSkins.Name = "btnSkins";
+            this.btnSkins.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSkins_ItemClick);
+            // 
+            // cmbSkin
+            // 
+            this.cmbSkin.Caption = "Skin";
+            this.cmbSkin.Edit = this.repositoryItemComboBox2;
+            this.cmbSkin.Id = 67;
+            this.cmbSkin.Name = "cmbSkin";
+            this.cmbSkin.Width = 100;
+            this.cmbSkin.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.cmbSkin_ItemClick);
+            this.cmbSkin.EditValueChanged += new System.EventHandler(this.cmbSkin_EditValueChanged);
+            // 
+            // repositoryItemComboBox2
+            // 
+            this.repositoryItemComboBox2.AutoHeight = false;
+            this.repositoryItemComboBox2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemComboBox2.Name = "repositoryItemComboBox2";
             // 
             // bar3
             // 
@@ -549,6 +585,13 @@ namespace HorarioMaster.UI
             // 
             this.repositoryItemPictureEdit1.Name = "repositoryItemPictureEdit1";
             // 
+            // repositoryItemComboBox1
+            // 
+            this.repositoryItemComboBox1.AutoHeight = false;
+            this.repositoryItemComboBox1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemComboBox1.Name = "repositoryItemComboBox1";
+            // 
             // splitContainerControl1
             // 
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -557,7 +600,7 @@ namespace HorarioMaster.UI
             this.splitContainerControl1.Panel1.Controls.Add(this.navBarControl1);
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1028, 469);
+            this.splitContainerControl1.Size = new System.Drawing.Size(1026, 471);
             this.splitContainerControl1.SplitterPosition = 200;
             this.splitContainerControl1.TabIndex = 4;
             this.splitContainerControl1.Text = "splitContainerControl1";
@@ -589,10 +632,11 @@ namespace HorarioMaster.UI
             this.navBarControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 147;
-            this.navBarControl1.Size = new System.Drawing.Size(200, 469);
+            this.navBarControl1.PaintStyleKind = DevExpress.XtraNavBar.NavBarViewKind.NavigationPane;
+            this.navBarControl1.Size = new System.Drawing.Size(200, 471);
             this.navBarControl1.TabIndex = 0;
             this.navBarControl1.Text = "navBarControl1";
-            this.navBarControl1.View = new DevExpress.XtraNavBar.ViewInfo.NavigationPaneViewInfoRegistrator();
+            this.navBarControl1.View = new DevExpress.XtraNavBar.ViewInfo.SkinNavigationPaneViewInfoRegistrator();
             this.navBarControl1.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarControl1_LinkClicked);
             // 
             // navBarInicio
@@ -704,22 +748,25 @@ namespace HorarioMaster.UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 545);
+            this.ClientSize = new System.Drawing.Size(1026, 547);
             this.Controls.Add(this.splitContainerControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Name = "frmPrincipal";
             this.Text = "Principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
@@ -804,6 +851,10 @@ namespace HorarioMaster.UI
         private DevExpress.XtraNavBar.NavBarItem navBarItem12;
         private DevExpress.XtraBars.BarButtonItem bBtnAsignarMaterias;
         private DevExpress.XtraBars.BarButtonItem bBtnALogotipo;
+        private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemComboBox1;
+        private DevExpress.XtraBars.BarButtonItem btnSkins;
+        private DevExpress.XtraBars.BarEditItem cmbSkin;
+        private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemComboBox2;
     }
         
 }
