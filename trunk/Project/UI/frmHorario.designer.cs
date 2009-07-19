@@ -646,7 +646,7 @@ namespace HorarioMaster.UI
             // 
             // LimpiarHorario
             // 
-            this.LimpiarHorario.Location = new System.Drawing.Point(456, 552);
+            this.LimpiarHorario.Location = new System.Drawing.Point(468, 556);
             this.LimpiarHorario.Name = "LimpiarHorario";
             this.LimpiarHorario.Size = new System.Drawing.Size(84, 23);
             this.LimpiarHorario.TabIndex = 54;
