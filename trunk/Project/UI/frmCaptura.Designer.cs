@@ -62,7 +62,7 @@ namespace HorarioMaster.UI
             // 
             this.xtraTabPage1.Controls.Add(this.splitContainerControl1);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1019, 715);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1019, 716);
             this.xtraTabPage1.Text = "Especialidad, Grupos y Materias";
             // 
             // splitContainerControl1
@@ -74,7 +74,7 @@ namespace HorarioMaster.UI
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.splitContainerControl2);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1019, 715);
+            this.splitContainerControl1.Size = new System.Drawing.Size(1019, 716);
             this.splitContainerControl1.SplitterPosition = 180;
             this.splitContainerControl1.TabIndex = 0;
             this.splitContainerControl1.Text = "splitContainerControl1";
@@ -87,7 +87,7 @@ namespace HorarioMaster.UI
             this.splitContainerControl2.Name = "splitContainerControl2";
             this.splitContainerControl2.Panel1.Text = "Panel1";
             this.splitContainerControl2.Panel2.Text = "Panel2";
-            this.splitContainerControl2.Size = new System.Drawing.Size(1019, 529);
+            this.splitContainerControl2.Size = new System.Drawing.Size(1019, 530);
             this.splitContainerControl2.SplitterPosition = 194;
             this.splitContainerControl2.TabIndex = 0;
             this.splitContainerControl2.Text = "splitContainerControl2";
@@ -96,7 +96,7 @@ namespace HorarioMaster.UI
             // 
             this.xtraTabPage2.Controls.Add(this.splitContainerControl3);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1019, 715);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1019, 716);
             this.xtraTabPage2.Text = "Personal y Asignar Materias";
             // 
             // splitContainerControl3
@@ -107,7 +107,7 @@ namespace HorarioMaster.UI
             this.splitContainerControl3.Name = "splitContainerControl3";
             this.splitContainerControl3.Panel1.Text = "Panel1";
             this.splitContainerControl3.Panel2.Text = "Panel2";
-            this.splitContainerControl3.Size = new System.Drawing.Size(1019, 715);
+            this.splitContainerControl3.Size = new System.Drawing.Size(1019, 716);
             this.splitContainerControl3.SplitterPosition = 286;
             this.splitContainerControl3.TabIndex = 0;
             this.splitContainerControl3.Text = "splitContainerControl3";
@@ -116,6 +116,7 @@ namespace HorarioMaster.UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1028, 746);
             this.Controls.Add(this.xtraTabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;

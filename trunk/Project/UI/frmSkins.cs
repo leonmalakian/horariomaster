@@ -20,22 +20,22 @@ namespace HorarioMaster.UI
 
         private void cmbTemas_EditValueChanged(object sender, EventArgs e)
         {
-            EnviarTema(cmbTemas.SelectedText);
+            EnviarTema(cmbTemas.Text);
         }
 
         private void frmSkins_Load(object sender, EventArgs e)
         {
-            DevExpress.UserSkins.BonusSkins.Register();
-            DevExpress.UserSkins.OfficeSkins.Register();
+            cmbTemas.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             foreach (DevExpress.Skins.SkinContainer skin in DevExpress.Skins.SkinManager.Default.Skins)
             {
                 cmbTemas.Properties.Items.Add(skin.SkinName);
             }
+            cmbTemas.Text = Properties.Settings.Default.LookandFeel;
         }
 
         private void btnAplicar_Click(object sender, EventArgs e)
         {
-            Properties.Settings.Default.LookandFeel = cmbTemas.SelectedText;
+            Properties.Settings.Default.LookandFeel = cmbTemas.Text;         
             Properties.Settings.Default.Save();
             this.Close();
         }
@@ -44,6 +44,6 @@ namespace HorarioMaster.UI
         {
             EnviarTema(Properties.Settings.Default.LookandFeel);
             this.Close();
-        }       
+        }
     }
 }

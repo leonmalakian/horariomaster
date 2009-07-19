@@ -51,6 +51,15 @@ namespace HorarioMaster.UI
                 {
                     if (File.Exists(dr["Imagen"].ToString()))
                     {
+                        pictureBox1.Text = dr["Nombre"].ToString();
+                        pictureBox1.Left = mPadding.Left;
+                        //pictureBox1.Top = label1.Bottom;
+                        int width = Width - mPadding.Right - mPadding.Left;
+                        pictureBox1.Width = width > 0 ? width : 0;
+                        int heigth = Height - mPadding.Bottom - mPadding.Top;
+                        pictureBox1.Height = heigth > 0 ? heigth : 0;
+
+                        
                         pictureBox1.Image = System.Drawing.Image.FromFile(dr["Imagen"].ToString());
                         pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
                     }

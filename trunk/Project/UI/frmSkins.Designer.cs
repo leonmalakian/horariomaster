@@ -37,6 +37,7 @@ namespace HorarioMaster.UI
             // 
             // cmbTemas
             // 
+            this.cmbTemas.EditValue = "";
             this.cmbTemas.Location = new System.Drawing.Point(48, 26);
             this.cmbTemas.Name = "cmbTemas";
             this.cmbTemas.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
