@@ -52,6 +52,7 @@ namespace HorarioMaster.UI
             this.lblTurnoMatutino = new DevExpress.XtraEditors.LabelControl();
             this.BtnGrabar = new DevExpress.XtraEditors.SimpleButton();
             this.ErrorProvider = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
+            this.btnSalir = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombrePlantel.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtClavePlantel.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEntidadFederativa.Properties)).BeginInit();
@@ -241,7 +242,7 @@ namespace HorarioMaster.UI
             // 
             // BtnGrabar
             // 
-            this.BtnGrabar.Location = new System.Drawing.Point(654, 593);
+            this.BtnGrabar.Location = new System.Drawing.Point(626, 593);
             this.BtnGrabar.Name = "BtnGrabar";
             this.BtnGrabar.Size = new System.Drawing.Size(75, 23);
             this.BtnGrabar.TabIndex = 13;
@@ -252,11 +253,21 @@ namespace HorarioMaster.UI
             // 
             this.ErrorProvider.ContainerControl = this;
             // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(707, 593);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.TabIndex = 14;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // frmDatosPlantel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(786, 654);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.BtnGrabar);
             this.Controls.Add(this.grpCtrlSDocentes);
             this.Controls.Add(this.txtSubdirector);
@@ -322,6 +333,7 @@ namespace HorarioMaster.UI
         private DevExpress.XtraEditors.LabelControl lblPeriodo;
         private DevExpress.XtraEditors.SimpleButton BtnGrabar;      
         private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider ErrorProvider;
+        private DevExpress.XtraEditors.SimpleButton btnSalir;
         
     }
 }
