@@ -25,7 +25,7 @@ namespace HorarioMaster.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Default")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Caramel")]
         public string LookandFeel {
             get {
                 return ((string)(this["LookandFeel"]));

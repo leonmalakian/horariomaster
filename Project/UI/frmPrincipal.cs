@@ -30,22 +30,15 @@ namespace HorarioMaster.UI
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            frmSkins.EnviarTema += new frmSkins.CambiarSkin(frmSkins_EnviarTema);
-            
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle(Properties.Settings.Default.LookandFeel);
-            navBarControl1.LookAndFeel.SetSkinStyle(Properties.Settings.Default.LookandFeel);
-            UserLookAndFeel temp = new UserLookAndFeel(navBarControl1);
-            this.LookAndFeel.Assign(temp);
-            
+            frmSkins.EnviarTema += new frmSkins.CambiarSkin(frmSkins_EnviarTema);           
+            frmSkins_EnviarTema(Properties.Settings.Default.LookandFeel);            
+          
+            barBtnHide.SuperTip = new DevExpress.Utils.SuperToolTip();            
+            barBtnSalir.SuperTip = new DevExpress.Utils.SuperToolTip();
+            barBtnHide.SuperTip.Items.Add("Esconder Menu");            
+            barBtnSalir.SuperTip.Items.Add("Salir del Programa");
+
             frmPortada Portada = new frmPortada();
-            barBtnHide.SuperTip = new DevExpress.Utils.SuperToolTip();
-            barBtnHorario.SuperTip = new DevExpress.Utils.SuperToolTip();
-            barBtnCaptura.SuperTip = new DevExpress.Utils.SuperToolTip();
-            barButtonItem19.SuperTip = new DevExpress.Utils.SuperToolTip();
-            barBtnHide.SuperTip.Items.Add("Esconder Menu");
-            barBtnHorario.SuperTip.Items.Add("Abrir Horario");
-            barBtnCaptura.SuperTip.Items.Add("Abrir Captura");
-            barButtonItem19.SuperTip.Items.Add("Abrir Ayuda");
             Portada.TopLevel = false;
             Portada.Parent = this.splitContainerControl1.Panel2;
             Portada.Dock = DockStyle.Fill;
@@ -55,7 +48,7 @@ namespace HorarioMaster.UI
         }
 
         void frmSkins_EnviarTema(string sTema)
-        {
+        {            
             DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle(sTema);
             navBarControl1.LookAndFeel.SetSkinStyle(sTema);
             UserLookAndFeel temp = new UserLookAndFeel(navBarControl1);
@@ -72,7 +65,7 @@ namespace HorarioMaster.UI
                     Portada.TopLevel = false;
                     Portada.Parent = this.splitContainerControl1.Panel2;
                     Portada.Dock = DockStyle.Fill;
-                    Portada.Enabled = false;
+                    //Portada.Enabled = false;
                     Portada.ControlBox = false;
                     Portada.Show();
                     break;
@@ -422,6 +415,18 @@ namespace HorarioMaster.UI
             Captura.ControlBox = false;
             Captura.Show();
         }
-        #endregion      
+
+        private void barBtnSalir_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.Close();
+        }
+        #endregion                      
+
+        private void barBtnCTema_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmSkins FormSkin = new frmSkins();
+            FormSkin.StartPosition = FormStartPosition.CenterScreen;
+            FormSkin.ShowDialog();
+        }
     }
 }

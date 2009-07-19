@@ -15,7 +15,9 @@ namespace HorarioMaster
         [STAThread]
         static void Main()
         {
-            DevExpress.Skins.SkinManager.EnableFormSkins();            
+            DevExpress.UserSkins.BonusSkins.Register();
+            DevExpress.UserSkins.OfficeSkins.Register();
+            DevExpress.Skins.SkinManager.EnableFormSkins();
             Application.EnableVisualStyles();                        
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmPrincipal());
