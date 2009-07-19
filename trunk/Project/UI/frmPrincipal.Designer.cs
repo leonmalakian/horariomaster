@@ -563,15 +563,16 @@ namespace HorarioMaster.UI
             // splitContainerControl1
             // 
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainerControl1.Location = new System.Drawing.Point(0, 51);
+            this.splitContainerControl1.Location = new System.Drawing.Point(0, 53);
             this.splitContainerControl1.Name = "splitContainerControl1";
             this.splitContainerControl1.Panel1.Controls.Add(this.navBarControl1);
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(996, 503);
+            this.splitContainerControl1.Size = new System.Drawing.Size(994, 503);
             this.splitContainerControl1.SplitterPosition = 200;
             this.splitContainerControl1.TabIndex = 4;
             this.splitContainerControl1.Text = "splitContainerControl1";
+            this.splitContainerControl1.SplitterMoved += new System.EventHandler(this.splitContainerControl1_SplitterMoved);
             // 
             // navBarControl1
             // 
@@ -722,7 +723,7 @@ namespace HorarioMaster.UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(996, 577);
+            this.ClientSize = new System.Drawing.Size(994, 579);
             this.Controls.Add(this.splitContainerControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);

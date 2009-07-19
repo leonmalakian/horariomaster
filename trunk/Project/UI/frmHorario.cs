@@ -92,11 +92,16 @@ namespace HorarioMaster.UI
         {
             if (lbComplementaryActivities.SelectedItem != null)
             {
-                HA1.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
-                if (cmbShift.Text == "MATUTINO")
-                { DragDropLB("Lunes", "07:00-08:00", 0, 0); }
-                else { DragDropLB("Lunes", "14:00-15:00", 0, 0); }
-                e.Effect = DragDropEffects.Move;
+                if (EsActividadComplementaria(HA1.Text))
+                {
+                    HA1.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
+                    if (cmbShift.Text == "MATUTINO")
+                    { DragDropLB("Lunes", "07:00-08:00", 0, 0); }
+                    else { DragDropLB("Lunes", "14:00-15:00", 0, 0); }
+                    e.Effect = DragDropEffects.Move;
+                }
+                else
+                    e.Effect = DragDropEffects.None;
             }
             else
             {
@@ -130,12 +135,17 @@ namespace HorarioMaster.UI
         {
             if (lbComplementaryActivities.SelectedItem != null)
             {
-                HA2.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
-                HA1.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
-                if (cmbShift.Text == "MATUTINO")
-                { DragDropLB("Martes", "07:00-08:00", 0, 1); }
-                else { DragDropLB("Martes", "14:00-15:00", 0, 1); }                
-                e.Effect = DragDropEffects.Move;
+                if (EsActividadComplementaria(HA2.Text))
+                {
+                    HA2.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
+                    HA1.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
+                    if (cmbShift.Text == "MATUTINO")
+                    { DragDropLB("Martes", "07:00-08:00", 0, 1); }
+                    else { DragDropLB("Martes", "14:00-15:00", 0, 1); }
+                    e.Effect = DragDropEffects.Move;
+                }
+                else
+                    e.Effect = DragDropEffects.None;
             }
             else
             {
@@ -169,11 +179,16 @@ namespace HorarioMaster.UI
         {
             if (lbComplementaryActivities.SelectedItem != null)
             {
-                HA3.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
-                if (cmbShift.Text == "MATUTINO")
-                { DragDropLB("Miercoles", "07:00-08:00", 0, 2); }
-                else { DragDropLB("Miercoles", "14:00-15:00", 0, 2); } 
-                e.Effect = DragDropEffects.Move;
+                if (EsActividadComplementaria(HA3.Text))
+                {
+                    HA3.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
+                    if (cmbShift.Text == "MATUTINO")
+                    { DragDropLB("Miercoles", "07:00-08:00", 0, 2); }
+                    else { DragDropLB("Miercoles", "14:00-15:00", 0, 2); }
+                    e.Effect = DragDropEffects.Move;
+                }
+                else
+                    e.Effect = DragDropEffects.None;
             }
             else
             {
@@ -207,11 +222,16 @@ namespace HorarioMaster.UI
         {
             if (lbComplementaryActivities.SelectedItem != null)
             {
-                HA4.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
-                if (cmbShift.Text == "MATUTINO")
-                { DragDropLB("Jueves", "07:00-08:00", 0, 3); }
-                else { DragDropLB("Jueves", "14:00-15:00", 0, 3); } 
-                e.Effect = DragDropEffects.Move;
+                if (EsActividadComplementaria(HA4.Text))
+                {
+                    HA4.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
+                    if (cmbShift.Text == "MATUTINO")
+                    { DragDropLB("Jueves", "07:00-08:00", 0, 3); }
+                    else { DragDropLB("Jueves", "14:00-15:00", 0, 3); }
+                    e.Effect = DragDropEffects.Move;
+                }
+                else
+                    e.Effect = DragDropEffects.None;
             }
             else
             {
@@ -245,11 +265,16 @@ namespace HorarioMaster.UI
         {
             if (lbComplementaryActivities.SelectedItem != null)
             {
-                HA5.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
-                if (cmbShift.Text == "MATUTINO")
-                { DragDropLB("Viernes", "07:00-08:00", 0, 4); }
-                else { DragDropLB("Viernes", "14:00-15:00", 0, 4); } 
-                e.Effect = DragDropEffects.Move;
+                if (EsActividadComplementaria(HA5.Text))
+                {
+                    HA5.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
+                    if (cmbShift.Text == "MATUTINO")
+                    { DragDropLB("Viernes", "07:00-08:00", 0, 4); }
+                    else { DragDropLB("Viernes", "14:00-15:00", 0, 4); }
+                    e.Effect = DragDropEffects.Move;
+                }
+                else
+                    e.Effect = DragDropEffects.None;
             }
             else
             {
@@ -283,11 +308,16 @@ namespace HorarioMaster.UI
         {
             if (lbComplementaryActivities.SelectedItem != null)
             {
-                HA6.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
-                if (cmbShift.Text == "MATUTINO")
-                { DragDropLB("Lunes", "08:00-09:00", 1, 0); }
-                else { DragDropLB("Lunes", "15:00-16:00", 1, 0); } 
-                e.Effect = DragDropEffects.Move;
+                if (EsActividadComplementaria(HA6.Text))
+                {
+                    HA6.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
+                    if (cmbShift.Text == "MATUTINO")
+                    { DragDropLB("Lunes", "08:00-09:00", 1, 0); }
+                    else { DragDropLB("Lunes", "15:00-16:00", 1, 0); }
+                    e.Effect = DragDropEffects.Move;
+                }
+                else
+                    e.Effect = DragDropEffects.None;
             }
             else
             {
@@ -321,11 +351,16 @@ namespace HorarioMaster.UI
         {
             if (lbComplementaryActivities.SelectedItem != null)
             {
-                HA7.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
-                if (cmbShift.Text == "MATUTINO")
-                { DragDropLB("Martes", "08:00-09:00", 1, 1); }
-                else { DragDropLB("Martes", "15:00-16:00", 1, 1); } 
-                e.Effect = DragDropEffects.Move;
+                if (EsActividadComplementaria(HA7.Text))
+                {
+                    HA7.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
+                    if (cmbShift.Text == "MATUTINO")
+                    { DragDropLB("Martes", "08:00-09:00", 1, 1); }
+                    else { DragDropLB("Martes", "15:00-16:00", 1, 1); }
+                    e.Effect = DragDropEffects.Move;
+                }
+                else
+                    e.Effect = DragDropEffects.None;
             }
             else
             {
@@ -359,11 +394,16 @@ namespace HorarioMaster.UI
         {
             if (lbComplementaryActivities.SelectedItem != null)
             {
-                HA8.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
-                if (cmbShift.Text == "MATUTINO")
-                { DragDropLB("Miercoles", "08:00-09:00", 1, 2); }
-                else { DragDropLB("Miecoles", "15:00-16:00", 1, 2); } 
-                e.Effect = DragDropEffects.Move;
+                if (EsActividadComplementaria(HA8.Text))
+                {
+                    HA8.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
+                    if (cmbShift.Text == "MATUTINO")
+                    { DragDropLB("Miercoles", "08:00-09:00", 1, 2); }
+                    else { DragDropLB("Miecoles", "15:00-16:00", 1, 2); }
+                    e.Effect = DragDropEffects.Move;
+                }
+                else
+                    e.Effect = DragDropEffects.None;
             }
             else
             {
@@ -397,11 +437,16 @@ namespace HorarioMaster.UI
         {
             if (lbComplementaryActivities.SelectedItem != null)
             {
-                HA9.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
-                if (cmbShift.Text == "MATUTINO")
-                { DragDropLB("Jueves", "08:00-09:00", 1, 3); }
-                else { DragDropLB("Jueves", "15:00-16:00", 1, 3); } 
-                e.Effect = DragDropEffects.Move;
+                if (EsActividadComplementaria(HA9.Text))
+                {
+                    HA9.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
+                    if (cmbShift.Text == "MATUTINO")
+                    { DragDropLB("Jueves", "08:00-09:00", 1, 3); }
+                    else { DragDropLB("Jueves", "15:00-16:00", 1, 3); }
+                    e.Effect = DragDropEffects.Move;
+                }
+                else
+                    e.Effect = DragDropEffects.None;
             }
             else
             {
@@ -435,11 +480,16 @@ namespace HorarioMaster.UI
         {
             if (lbComplementaryActivities.SelectedItem != null)
             {
-                HA10.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
-                if (cmbShift.Text == "MATUTINO")
-                { DragDropLB("Viernes", "08:00-09:00", 1, 4); }
-                else { DragDropLB("Viernes", "15:00-16:00", 1, 4); } 
-                e.Effect = DragDropEffects.Move;
+                if (EsActividadComplementaria(HA10.Text))
+                {
+                    HA10.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
+                    if (cmbShift.Text == "MATUTINO")
+                    { DragDropLB("Viernes", "08:00-09:00", 1, 4); }
+                    else { DragDropLB("Viernes", "15:00-16:00", 1, 4); }
+                    e.Effect = DragDropEffects.Move;
+                }
+                else
+                    e.Effect = DragDropEffects.None;
             }
             else
             {
@@ -473,11 +523,16 @@ namespace HorarioMaster.UI
         {
             if (lbComplementaryActivities.SelectedItem != null)
             {
-                HA11.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
-                if (cmbShift.Text == "MATUTINO")
-                { DragDropLB("Lunes", "09:00-10:00", 2, 0); }
-                else { DragDropLB("Lunes", "16:00-17:00", 2, 0); } 
-                e.Effect = DragDropEffects.Move;
+                if (EsActividadComplementaria(HA11.Text))
+                {
+                    HA11.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
+                    if (cmbShift.Text == "MATUTINO")
+                    { DragDropLB("Lunes", "09:00-10:00", 2, 0); }
+                    else { DragDropLB("Lunes", "16:00-17:00", 2, 0); }
+                    e.Effect = DragDropEffects.Move;
+                }
+                else
+                    e.Effect = DragDropEffects.None;
             }
             else
             {
@@ -511,11 +566,16 @@ namespace HorarioMaster.UI
         {
             if (lbComplementaryActivities.SelectedItem != null)
             {
-                HA12.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
-                if (cmbShift.Text == "MATUTINO")
-                { DragDropLB("Martes", "09:00-10:00", 2, 1); }
-                else { DragDropLB("Martes", "16:00-17:00", 2, 1); } 
-                e.Effect = DragDropEffects.Move;
+                if (EsActividadComplementaria(HA12.Text))
+                {
+                    HA12.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
+                    if (cmbShift.Text == "MATUTINO")
+                    { DragDropLB("Martes", "09:00-10:00", 2, 1); }
+                    else { DragDropLB("Martes", "16:00-17:00", 2, 1); }
+                    e.Effect = DragDropEffects.Move;
+                }
+                else
+                    e.Effect = DragDropEffects.None;
             }
             else
             {
@@ -549,11 +609,16 @@ namespace HorarioMaster.UI
         {
             if (lbComplementaryActivities.SelectedItem != null)
             {
-                HA13.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
-                if (cmbShift.Text == "MATUTINO")
-                { DragDropLB("Miercoles", "09:00-10:00", 2, 2); }
-                else { DragDropLB("Miercoles", "16:00-17:00", 2, 2); } 
-                e.Effect = DragDropEffects.Move;
+                if (EsActividadComplementaria(HA13.Text))
+                {
+                    HA13.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
+                    if (cmbShift.Text == "MATUTINO")
+                    { DragDropLB("Miercoles", "09:00-10:00", 2, 2); }
+                    else { DragDropLB("Miercoles", "16:00-17:00", 2, 2); }
+                    e.Effect = DragDropEffects.Move;
+                }
+                else
+                    e.Effect = DragDropEffects.None;
             }
             else
             {
@@ -587,11 +652,16 @@ namespace HorarioMaster.UI
         {
             if (lbComplementaryActivities.SelectedItem != null)
             {
-                HA14.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
-                if (cmbShift.Text == "MATUTINO")
-                { DragDropLB("Jueves", "09:00-10:00", 2, 3); }
-                else { DragDropLB("Jueves", "16:00-17:00", 2, 3); } 
-                e.Effect = DragDropEffects.Move;
+                if (EsActividadComplementaria(HA14.Text))
+                {
+                    HA14.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
+                    if (cmbShift.Text == "MATUTINO")
+                    { DragDropLB("Jueves", "09:00-10:00", 2, 3); }
+                    else { DragDropLB("Jueves", "16:00-17:00", 2, 3); }
+                    e.Effect = DragDropEffects.Move;
+                }
+                else
+                    e.Effect = DragDropEffects.None;
             }
             else
             {
@@ -625,11 +695,16 @@ namespace HorarioMaster.UI
         {
             if (lbComplementaryActivities.SelectedItem != null)
             {
-                HA15.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
-                if (cmbShift.Text == "MATUTINO")
-                { DragDropLB("Viernes", "09:00-10:00", 2, 4); }
-                else { DragDropLB("Viernes", "16:00-17:00", 2, 4); }
-                e.Effect = DragDropEffects.Move;
+                if (EsActividadComplementaria(HA15.Text))
+                {
+                    HA15.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
+                    if (cmbShift.Text == "MATUTINO")
+                    { DragDropLB("Viernes", "09:00-10:00", 2, 4); }
+                    else { DragDropLB("Viernes", "16:00-17:00", 2, 4); }
+                    e.Effect = DragDropEffects.Move;
+                }
+                else
+                    e.Effect = DragDropEffects.None;
             }
             else
             {
@@ -663,11 +738,16 @@ namespace HorarioMaster.UI
         {
             if (lbComplementaryActivities.SelectedItem != null)
             {
-                HA16.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
-                if (cmbShift.Text == "MATUTINO")
-                { DragDropLB("Lunes", "10:00:11:00", 3, 0); }
-                else { DragDropLB("Lunes", "17:00-18:00", 3, 0); }  
-                e.Effect = DragDropEffects.Move;
+                if (EsActividadComplementaria(HA16.Text))
+                {
+                    HA16.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
+                    if (cmbShift.Text == "MATUTINO")
+                    { DragDropLB("Lunes", "10:00:11:00", 3, 0); }
+                    else { DragDropLB("Lunes", "17:00-18:00", 3, 0); }
+                    e.Effect = DragDropEffects.Move;
+                }
+                else
+                    e.Effect = DragDropEffects.None;
             }
             else
             {
@@ -701,11 +781,16 @@ namespace HorarioMaster.UI
         {
             if (lbComplementaryActivities.SelectedItem != null)
             {
-                HA17.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
-                if (cmbShift.Text == "MATUTINO")
-                { DragDropLB("Martes", "10:00:11:00", 3, 1); }
-                else { DragDropLB("Martes", "17:00-18:00", 3, 1); } 
-                e.Effect = DragDropEffects.Move;
+                if (EsActividadComplementaria(HA17.Text))
+                {
+                    HA17.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
+                    if (cmbShift.Text == "MATUTINO")
+                    { DragDropLB("Martes", "10:00:11:00", 3, 1); }
+                    else { DragDropLB("Martes", "17:00-18:00", 3, 1); }
+                    e.Effect = DragDropEffects.Move;
+                }
+                else
+                    e.Effect = DragDropEffects.None;
             }
             else
             {
@@ -739,11 +824,16 @@ namespace HorarioMaster.UI
         {
             if (lbComplementaryActivities.SelectedItem != null)
             {
-                HA18.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
-                if (cmbShift.Text == "MATUTINO")
-                { DragDropLB("Miercoles", "10:00:11:00", 3, 2); }
-                else { DragDropLB("Miercoles", "17:00-18:00", 3, 2); } 
-                e.Effect = DragDropEffects.Move;
+                if (EsActividadComplementaria(HA18.Text))
+                {
+                    HA18.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
+                    if (cmbShift.Text == "MATUTINO")
+                    { DragDropLB("Miercoles", "10:00:11:00", 3, 2); }
+                    else { DragDropLB("Miercoles", "17:00-18:00", 3, 2); }
+                    e.Effect = DragDropEffects.Move;
+                }
+                else
+                    e.Effect = DragDropEffects.None;
             }
             else
             {
@@ -777,11 +867,16 @@ namespace HorarioMaster.UI
         {
             if (lbComplementaryActivities.SelectedItem != null)
             {
-                HA19.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
-                if (cmbShift.Text == "MATUTINO")
-                { DragDropLB("Jueves", "10:00:11:00", 3, 3); }
-                else { DragDropLB("Jueves", "17:00-18:00", 3, 3); } 
-                e.Effect = DragDropEffects.Move;
+                if (EsActividadComplementaria(HA19.Text))
+                {
+                    HA19.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
+                    if (cmbShift.Text == "MATUTINO")
+                    { DragDropLB("Jueves", "10:00:11:00", 3, 3); }
+                    else { DragDropLB("Jueves", "17:00-18:00", 3, 3); }
+                    e.Effect = DragDropEffects.Move;
+                }
+                else
+                    e.Effect = DragDropEffects.None;
             }
             else
             {
@@ -815,11 +910,16 @@ namespace HorarioMaster.UI
         {
             if (lbComplementaryActivities.SelectedItem != null)
             {
-                HA20.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
-                if (cmbShift.Text == "MATUTINO")
-                { DragDropLB("Viernes", "10:00:11:00", 3, 4); }
-                else { DragDropLB("Viernes", "17:00-18:00", 3, 4); } 
-                e.Effect = DragDropEffects.Move;
+                if (EsActividadComplementaria(HA20.Text))
+                {
+                    HA20.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
+                    if (cmbShift.Text == "MATUTINO")
+                    { DragDropLB("Viernes", "10:00:11:00", 3, 4); }
+                    else { DragDropLB("Viernes", "17:00-18:00", 3, 4); }
+                    e.Effect = DragDropEffects.Move;
+                }
+                else
+                    e.Effect = DragDropEffects.None;
             }
             else
             {
@@ -852,11 +952,16 @@ namespace HorarioMaster.UI
         {
             if (lbComplementaryActivities.SelectedItem != null)
             {
-                HA21.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
-                if (cmbShift.Text == "MATUTINO")
-                { DragDropLB("Lunes", "11:00:12:00", 4, 0); }
-                else { DragDropLB("Lunes", "18:00-19:00", 4, 0); } 
-                e.Effect = DragDropEffects.Move;
+                if (EsActividadComplementaria(HA21.Text))
+                {
+                    HA21.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
+                    if (cmbShift.Text == "MATUTINO")
+                    { DragDropLB("Lunes", "11:00:12:00", 4, 0); }
+                    else { DragDropLB("Lunes", "18:00-19:00", 4, 0); }
+                    e.Effect = DragDropEffects.Move;
+                }
+                else
+                    e.Effect = DragDropEffects.None;
             }
             else
             {
@@ -890,11 +995,16 @@ namespace HorarioMaster.UI
         {
             if (lbComplementaryActivities.SelectedItem != null)
             {
-                HA22.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
-                if (cmbShift.Text == "MATUTINO")
-                { DragDropLB("Martes", "11:00:12:00", 4, 1); }
-                else { DragDropLB("Martes", "18:00-19:00", 4, 1); } 
-                e.Effect = DragDropEffects.Move;
+                if (EsActividadComplementaria(HA22.Text))
+                {
+                    HA22.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
+                    if (cmbShift.Text == "MATUTINO")
+                    { DragDropLB("Martes", "11:00:12:00", 4, 1); }
+                    else { DragDropLB("Martes", "18:00-19:00", 4, 1); }
+                    e.Effect = DragDropEffects.Move;
+                }
+                else
+                    e.Effect = DragDropEffects.None;
             }
             else
             {
@@ -928,11 +1038,16 @@ namespace HorarioMaster.UI
         {
             if (lbComplementaryActivities.SelectedItem != null)
             {
-                HA23.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
-                if (cmbShift.Text == "MATUTINO")
-                { DragDropLB("Miercoles", "11:00:12:00", 4, 2); }
-                else { DragDropLB("Miercoles", "18:00-19:00", 4, 2); } 
-                e.Effect = DragDropEffects.Move;
+                if (EsActividadComplementaria(HA23.Text))
+                {
+                    HA23.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
+                    if (cmbShift.Text == "MATUTINO")
+                    { DragDropLB("Miercoles", "11:00:12:00", 4, 2); }
+                    else { DragDropLB("Miercoles", "18:00-19:00", 4, 2); }
+                    e.Effect = DragDropEffects.Move;
+                }
+                else
+                    e.Effect = DragDropEffects.None;
             }
             else
             {
@@ -966,11 +1081,15 @@ namespace HorarioMaster.UI
         {
             if (lbComplementaryActivities.SelectedItem != null)
             {
-                HA24.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
-                if (cmbShift.Text == "MATUTINO")
-                { DragDropLB("Jueves", "11:00:12:00", 4, 3); }
-                else { DragDropLB("Jueves", "18:00-19:00", 4, 3); } 
-                e.Effect = DragDropEffects.Move;
+                if (EsActividadComplementaria(HA24.Text))
+                {
+                    HA24.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
+                    if (cmbShift.Text == "MATUTINO")
+                    { DragDropLB("Jueves", "11:00:12:00", 4, 3); }
+                    else { DragDropLB("Jueves", "18:00-19:00", 4, 3); }
+                    e.Effect = DragDropEffects.Move;
+                }
+                e.Effect = DragDropEffects.None;
             }
             else
             {
@@ -1004,11 +1123,16 @@ namespace HorarioMaster.UI
         {
             if (lbComplementaryActivities.SelectedItem != null)
             {
-                HA25.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
-                if (cmbShift.Text == "MATUTINO")
-                { DragDropLB("Viernes", "11:00:12:00", 4, 4); }
-                else { DragDropLB("Viernes", "18:00-19:00", 4, 4); } 
-                e.Effect = DragDropEffects.Move;
+                if (EsActividadComplementaria(HA20.Text))
+                {
+                    HA25.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
+                    if (cmbShift.Text == "MATUTINO")
+                    { DragDropLB("Viernes", "11:00:12:00", 4, 4); }
+                    else { DragDropLB("Viernes", "18:00-19:00", 4, 4); }
+                    e.Effect = DragDropEffects.Move;
+                }
+                else
+                    e.Effect = DragDropEffects.None;
             }
             else
             {
@@ -1042,11 +1166,16 @@ namespace HorarioMaster.UI
         {
             if (lbComplementaryActivities.SelectedItem != null)
             {
-                HA26.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
-                if (cmbShift.Text == "MATUTINO")
-                { DragDropLB("Lunes", "12:00:13:00", 5, 0); }
-                else { DragDropLB("Lunes", "19:00-20:00", 5, 0); }                 
-                e.Effect = DragDropEffects.Move;
+                if (EsActividadComplementaria(HA26.Text))
+                {
+                    HA26.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
+                    if (cmbShift.Text == "MATUTINO")
+                    { DragDropLB("Lunes", "12:00:13:00", 5, 0); }
+                    else { DragDropLB("Lunes", "19:00-20:00", 5, 0); }
+                    e.Effect = DragDropEffects.Move;
+                }
+                else
+                    e.Effect = DragDropEffects.None;
             }
             else
             {
@@ -1119,11 +1248,16 @@ namespace HorarioMaster.UI
         {
             if (lbComplementaryActivities.SelectedItem != null)
             {
-                HA28.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
-                if (cmbShift.Text == "MATUTINO")
-                { DragDropLB("Miercoles", "12:00:13:00", 5, 2); }
-                else { DragDropLB("Miercoles", "19:00-20:00", 5, 2); } 
-                e.Effect = DragDropEffects.Move;
+                if (EsActividadComplementaria(HA28.Text))
+                {
+                    HA28.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
+                    if (cmbShift.Text == "MATUTINO")
+                    { DragDropLB("Miercoles", "12:00:13:00", 5, 2); }
+                    else { DragDropLB("Miercoles", "19:00-20:00", 5, 2); }
+                    e.Effect = DragDropEffects.Move;
+                }
+                else
+                    e.Effect = DragDropEffects.None;
             }
             else
             {
@@ -1157,11 +1291,16 @@ namespace HorarioMaster.UI
         {
             if (lbComplementaryActivities.SelectedItem != null)
             {
-                HA29.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
-                if (cmbShift.Text == "MATUTINO")
-                { DragDropLB("Jueves", "12:00:13:00", 5, 3); }
-                else { DragDropLB("Jueves", "19:00-20:00", 5, 3); } 
-                e.Effect = DragDropEffects.Move;
+                if (EsActividadComplementaria(HA29.Text))
+                {
+                    HA29.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
+                    if (cmbShift.Text == "MATUTINO")
+                    { DragDropLB("Jueves", "12:00:13:00", 5, 3); }
+                    else { DragDropLB("Jueves", "19:00-20:00", 5, 3); }
+                    e.Effect = DragDropEffects.Move;
+                }
+                else
+                    e.Effect = DragDropEffects.None;
             }
             else
             {
@@ -1195,11 +1334,16 @@ namespace HorarioMaster.UI
         {
             if (lbComplementaryActivities.SelectedItem != null)
             {
-                HA30.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
-                if (cmbShift.Text == "MATUTINO")
-                { DragDropLB("Viernes", "12:00:13:00", 5, 4); }
-                else { DragDropLB("Viernes", "19:00-20:00", 5, 4); } 
-                e.Effect = DragDropEffects.Move;
+                if (EsActividadComplementaria(HA30.Text))
+                {
+                    HA30.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
+                    if (cmbShift.Text == "MATUTINO")
+                    { DragDropLB("Viernes", "12:00:13:00", 5, 4); }
+                    else { DragDropLB("Viernes", "19:00-20:00", 5, 4); }
+                    e.Effect = DragDropEffects.Move;
+                }
+                else
+                    e.Effect = DragDropEffects.None;
             }
             else
             {
@@ -1233,11 +1377,16 @@ namespace HorarioMaster.UI
         {
             if (lbComplementaryActivities.SelectedItem != null)
             {
-                HA31.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
-                if (cmbShift.Text == "MATUTINO")
-                { DragDropLB("Lunes", "13:00:14:00", 6, 0); }
-                else { DragDropLB("Lunes", "20:00-21:00", 6, 0); } 
-                e.Effect = DragDropEffects.Move;
+                if (EsActividadComplementaria(HA31.Text))
+                {
+                    HA31.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
+                    if (cmbShift.Text == "MATUTINO")
+                    { DragDropLB("Lunes", "13:00:14:00", 6, 0); }
+                    else { DragDropLB("Lunes", "20:00-21:00", 6, 0); }
+                    e.Effect = DragDropEffects.Move;
+                }
+                else
+                    e.Effect = DragDropEffects.None;
             }
             else
             {
@@ -1271,11 +1420,15 @@ namespace HorarioMaster.UI
         {
             if (lbComplementaryActivities.SelectedItem != null)
             {
-                HA32.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
-                if (cmbShift.Text == "MATUTINO")
-                { DragDropLB("Martes", "13:00:14:00", 6, 1); }
-                else { DragDropLB("Martes", "20:00-21:00", 6, 1); }
-                e.Effect = DragDropEffects.Move;
+                if (EsActividadComplementaria(HA32.Text))
+                {
+                    HA32.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
+                    if (cmbShift.Text == "MATUTINO")
+                    { DragDropLB("Martes", "13:00:14:00", 6, 1); }
+                    else { DragDropLB("Martes", "20:00-21:00", 6, 1); }
+                    e.Effect = DragDropEffects.Move;
+                }
+                e.Effect = DragDropEffects.None;
             }
             else
             {
@@ -1309,11 +1462,16 @@ namespace HorarioMaster.UI
         {
             if (lbComplementaryActivities.SelectedItem != null)
             {
-                HA33.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
-                if (cmbShift.Text == "MATUTINO")
-                { DragDropLB("Miercoles", "13:00:14:00", 6, 2); }
-                else { DragDropLB("Miercoles", "20:00-21:00", 6, 2); } 
-                e.Effect = DragDropEffects.Move;
+                if (EsActividadComplementaria(HA33.Text))
+                {
+                    HA33.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
+                    if (cmbShift.Text == "MATUTINO")
+                    { DragDropLB("Miercoles", "13:00:14:00", 6, 2); }
+                    else { DragDropLB("Miercoles", "20:00-21:00", 6, 2); }
+                    e.Effect = DragDropEffects.Move;
+                }
+                else
+                    e.Effect = DragDropEffects.None;
             }
             else
             {
@@ -1347,11 +1505,16 @@ namespace HorarioMaster.UI
         {
             if (lbComplementaryActivities.SelectedItem != null)
             {
-                HA34.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
-                if (cmbShift.Text == "MATUTINO")
-                { DragDropLB("Jueves", "13:00:14:00", 6, 3); }
-                else { DragDropLB("Jueves", "20:00-21:00", 6, 3); } 
-                e.Effect = DragDropEffects.Move;
+                if (EsActividadComplementaria(HA34.Text))
+                {
+                    HA34.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
+                    if (cmbShift.Text == "MATUTINO")
+                    { DragDropLB("Jueves", "13:00:14:00", 6, 3); }
+                    else { DragDropLB("Jueves", "20:00-21:00", 6, 3); }
+                    e.Effect = DragDropEffects.Move;
+                }
+                else
+                    e.Effect = DragDropEffects.None;
             }
             else
             {
@@ -1385,11 +1548,16 @@ namespace HorarioMaster.UI
         {
             if (lbComplementaryActivities.SelectedItem != null)
             {
-                HA35.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
-                if (cmbShift.Text == "MATUTINO")
-                { DragDropLB("Viernes", "13:00:14:00", 6, 4); }
-                else { DragDropLB("Viernes", "20:00-21:00", 6, 4); } 
-                e.Effect = DragDropEffects.Move;
+                if (EsActividadComplementaria(HA35.Text))
+                {
+                    HA35.Text = JustifyString(lbComplementaryActivities.SelectedItem.ToString());
+                    if (cmbShift.Text == "MATUTINO")
+                    { DragDropLB("Viernes", "13:00:14:00", 6, 4); }
+                    else { DragDropLB("Viernes", "20:00-21:00", 6, 4); }
+                    e.Effect = DragDropEffects.Move;
+                }
+                else
+                    e.Effect = DragDropEffects.None;
             }
             else
             {
@@ -2204,6 +2372,11 @@ namespace HorarioMaster.UI
                 }
 
             }
+        }
+
+        private bool EsActividadComplementaria(string sText)
+        {
+            return lbComplementaryActivities.Items.Contains(sText.Replace("\r\n", "")) || sText == "";            
         }
 
         # endregion      

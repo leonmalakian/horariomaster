@@ -51,11 +51,11 @@ namespace HorarioMaster.UI
                 {
                     if (File.Exists(dr["Imagen"].ToString()))
                     {
-                        pictureBox1.Text = dr["Nombre"].ToString();
-                        pictureBox1.Left = mPadding.Left;
-                        //pictureBox1.Top = label1.Bottom;
-                        int width = Width - mPadding.Right - mPadding.Left;
-                        pictureBox1.Width = width > 0 ? width : 0;
+                        //pictureBox1.Text = dr["Nombre"].ToString();
+                        //pictureBox1.Left = mPadding.Left;
+                        ////pictureBox1.Top = label1.Bottom;
+                        //int width = Width - mPadding.Right - mPadding.Left;
+                        //pictureBox1.Width = width > 0 ? width : 0;
                         int heigth = Height - mPadding.Bottom - mPadding.Top;
                         pictureBox1.Height = heigth > 0 ? heigth : 0;
 
@@ -67,6 +67,17 @@ namespace HorarioMaster.UI
 
             }
             DataBaseUtilities.CloseConnection();
+        }
+
+        private void frmPortada_ParentChanged(object sender, EventArgs e)
+        {
+            //this.Size = Parent.Size;
+        }
+
+        private void frmPortada_Paint(object sender, PaintEventArgs e)
+        {
+            //this.Height = 2;
+            //this.Size = Parent.Size;
         }
     }
 }
