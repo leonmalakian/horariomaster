@@ -735,7 +735,6 @@ namespace HorarioMaster.UI
             this.LookAndFeel.SkinName = "The Asphalt World";
             this.Name = "frmHorario";
             this.Text = "Horario";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.cmbScheduleType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbGroups.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbShift.Properties)).EndInit();

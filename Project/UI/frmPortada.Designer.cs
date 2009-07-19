@@ -46,9 +46,9 @@ namespace HorarioMaster.UI
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(42, 166);
+            this.pictureBox1.Location = new System.Drawing.Point(167, 147);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(559, 339);
+            this.pictureBox1.Size = new System.Drawing.Size(399, 174);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -62,9 +62,11 @@ namespace HorarioMaster.UI
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Name = "frmPortada";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Portada";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmPortada_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.frmPortada_Paint);
+            this.ParentChanged += new System.EventHandler(this.frmPortada_ParentChanged);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

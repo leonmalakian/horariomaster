@@ -77,10 +77,13 @@ namespace HorarioMaster.UI
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(294, 111);
+            this.ControlBox = false;
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAplicar);
             this.Controls.Add(this.lSkin);
             this.Controls.Add(this.cmbTemas);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmSkins";
             this.Text = "Cambiar Tema";
             this.Load += new System.EventHandler(this.frmSkins_Load);

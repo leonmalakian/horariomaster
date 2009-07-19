@@ -41,7 +41,7 @@ namespace HorarioMaster.UI
             frmPortada Portada = new frmPortada();
             Portada.TopLevel = false;
             Portada.Parent = this.splitContainerControl1.Panel2;
-            Portada.Dock = DockStyle.Fill;
+            Portada.Dock = DockStyle.Top;
             Portada.Enabled = false;
             Portada.ControlBox = false;
             Portada.Show();
@@ -382,6 +382,17 @@ namespace HorarioMaster.UI
             {
                 splitContainerControl1.PanelVisibility = SplitPanelVisibility.Panel2;
                 x = 1;
+                //splitContainerControl1.FixedPanel = SplitFixedPanel.Panel2;
+                //splitContainerControl1.FixedPanel = SplitFixedPanel.Panel1;
+                //splitContainerControl1.Panel2.Controls[0].Size = splitContainerControl1.Panel2.Size;
+                splitContainerControl1.Panel2.Controls[0].Enabled = true;
+                splitContainerControl1.Panel2.Controls[0].Update(); ;
+                ////splitContainerControl1.Panel2.Controls[0].Show();
+                //splitContainerControl1.Panel2.Controls[0].Height= splitContainerControl1.Panel2.Height;
+                //splitContainerControl1.Panel2.Controls[0].Width = splitContainerControl1.Panel2.Width;
+                //splitContainerControl1.Panel2.Controls[0].Parent = splitContainerControl1.Panel1;
+                //splitContainerControl1.Panel1.Controls[1].Parent = splitContainerControl1.Panel2;
+
             }
             else
             {
@@ -427,6 +438,12 @@ namespace HorarioMaster.UI
             frmSkins FormSkin = new frmSkins();
             FormSkin.StartPosition = FormStartPosition.CenterScreen;
             FormSkin.ShowDialog();
+        }
+
+        private void splitContainerControl1_SplitterMoved(object sender, EventArgs e)
+        {
+            splitContainerControl1.Panel2.Controls[0].Size = splitContainerControl1.Panel2.Size;
+
         }
     }
 }
